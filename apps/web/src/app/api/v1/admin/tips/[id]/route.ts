@@ -1,16 +1,15 @@
 import { UpdateTipCandidateSchema } from "@cosmic-gateway/contracts";
 import { prisma } from "@/lib/db";
 import { apiError } from "@/lib/content";
-import { isAdminAuthenticated } from "@/lib/admin-auth";
+import { requireAdminWrite } from "@/lib/admin-auth";
 
 export const dynamic = "force-dynamic";
 
 type Props = { params: Promise<{ id: string }> };
 
 export async function PATCH(request: Request, { params }: Props) {
-  if (!(await isAdminAuthenticated())) {
-    return apiError("UNAUTHORIZED", "Admin authentication required.", undefined, 401);
-  }
+  const gate = await requireAdminWrite();
+  if (!gate.ok) return gate.response;
 
   const { id } = await params;
   let body: unknown;

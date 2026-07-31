@@ -4,13 +4,15 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "dev": "pnpm --filter @cosmic-gateway/web dev",
-    "build": "pnpm -r build",
+    "build": "pnpm db:generate && pnpm -r build",
     "lint": "pnpm -r lint",
     "typecheck": "pnpm -r typecheck",
     "db:generate": "pnpm --filter @cosmic-gateway/database generate",
     "db:migrate": "pnpm --filter @cosmic-gateway/database migrate:dev",
+    "db:migrate:deploy": "pnpm --filter @cosmic-gateway/database migrate:deploy",
     "db:seed": "pnpm --filter @cosmic-gateway/database seed",
     "db:studio": "pnpm --filter @cosmic-gateway/database studio",
+    "hash-admin-password": "node scripts/hash-admin-password.mjs",
     "test": "pnpm --filter @cosmic-gateway/web test"
   },
   "engines": {

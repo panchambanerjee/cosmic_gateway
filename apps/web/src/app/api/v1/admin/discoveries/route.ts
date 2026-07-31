@@ -7,14 +7,13 @@ import {
   validatePublishGates,
 } from "@/lib/content";
 import { discoveryInclude } from "@/lib/db";
-import { isAdminAuthenticated } from "@/lib/admin-auth";
+import { isAdminAuthenticated, requireAdminWrite } from "@/lib/admin-auth";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
-  if (!(await isAdminAuthenticated())) {
-    return apiError("UNAUTHORIZED", "Admin authentication required.", undefined, 401);
-  }
+  const gate = await requireAdminWrite();
+  if (!gate.ok) return gate.response;
 
   let body: unknown;
   try {

@@ -1,38 +1,30 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { AdminLogoutButton } from "@/components/admin-logout-button";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
 import { listAllDiscoveriesForAdmin } from "@/lib/db";
 import { latestVersion, validatePublishGates } from "@/lib/content";
-import { AdminLoginForm } from "@/components/admin-login-form";
 
 export const dynamic = "force-dynamic";
 
 export default async function AdminPage() {
   if (!(await isAdminAuthenticated())) {
-    return (
-      <div className="mx-auto max-w-md">
-        <h1 className="font-display text-3xl text-star-50">Admin</h1>
-        <p className="mt-2 text-star-200/70">
-          Enter the admin password to manage discoveries.
-        </p>
-        <div className="mt-6">
-          <AdminLoginForm />
-        </div>
-      </div>
-    );
+    redirect("/admin/login");
   }
 
   const discoveries = await listAllDiscoveriesForAdmin();
 
   return (
     <div>
-        <div className="flex flex-wrap items-end justify-between gap-4">
+      <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h1 className="font-display text-3xl text-star-50">Editorial</h1>
           <p className="mt-2 text-star-200/70">
             Manual publish path — sources and image rights required.
           </p>
         </div>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap items-center gap-2">
+          <AdminLogoutButton />
           <Link
             href="/admin/tips"
             className="rounded-md border border-white/20 px-4 py-2 text-sm font-semibold text-star-50 hover:border-nebula-400/50"

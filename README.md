@@ -48,22 +48,77 @@ API examples:
 
 - `GET http://localhost:3000/api/v1/discoveries`
 - `GET http://localhost:3000/api/v1/discoveries/<slug>`
+- `GET http://localhost:3000/api/health`
 
 Admin (same app): [http://localhost:3000/admin](http://localhost:3000/admin)
 
-Optional: set `ADMIN_PASSWORD` in `.env` to require a simple cookie gate for admin routes.
+### Local admin auth
+
+- With empty `AUTH_SECRET` / password vars, development uses **open admin** (no login).
+- To require login locally, generate credentials and put them in `.env`:
+
+```bash
+pnpm hash-admin-password -- "your-strong-password"
+# paste AUTH_SECRET, ADMIN_PASSWORD_HASH, ADMIN_USERNAME into .env
+```
+
+Prefer `ADMIN_PASSWORD_HASH` over plaintext `ADMIN_PASSWORD`.
+
+## Production / Vercel deploy
+
+1. Create a managed Postgres database (Neon, Supabase, Vercel Postgres, etc.).
+2. In Vercel, import the GitHub repo (`panchambanerjee/cosmic_gateway`).
+3. Set the project root to the monorepo root (not `apps/web` alone).
+4. Configure build settings:
+
+| Setting | Value |
+|---------|--------|
+| Install | `pnpm install` |
+| Build | `pnpm db:migrate:deploy && pnpm build` |
+| Output | Next.js default for `apps/web` — set **Root Directory** empty and Framework to Next.js with app under `apps/web`, **or** set Root Directory to `apps/web` and ensure workspace packages still install from the monorepo root |
+
+Recommended Vercel approach for this monorepo:
+
+- **Root Directory:** `apps/web`
+- **Install Command:** `cd ../.. && pnpm install`
+- **Build Command:** `cd ../.. && pnpm db:migrate:deploy && pnpm --filter @cosmic-gateway/web build`
+- **Framework Preset:** Next.js
+
+(Root `vercel.json` is a fallback if you deploy from the repo root instead.)
+
+Environment variables (Production):
+
+| Variable | Required | Notes |
+|----------|----------|--------|
+| `DATABASE_URL` | yes | Production Postgres connection string |
+| `AUTH_SECRET` | yes | Long random string (from hash script) |
+| `ADMIN_USERNAME` | yes | Default `admin` |
+| `ADMIN_PASSWORD_HASH` | yes | From `pnpm hash-admin-password` |
+| `NEXT_PUBLIC_SITE_URL` | yes | `https://your-domain` |
+| `ALLOW_ADMIN_WRITES_ON_PREVIEW` | no | Defaults to blocked writes on Vercel preview |
+
+Do **not** run `pnpm db:seed` against production automatically. Seed is for local demo content only.
+
+After deploy:
+
+- Public site should load over HTTPS
+- `GET /api/health` should return `database: "reachable"` with HTTP 200
+- `/admin` should redirect to `/admin/login` until signed in
+- Preview deployments reject admin mutations unless `ALLOW_ADMIN_WRITES_ON_PREVIEW=true`
 
 ## Useful commands
 
 | Command | Purpose |
 |---------|---------|
 | `pnpm dev` | Start Next.js |
-| `pnpm db:migrate` | Apply Prisma migrations |
+| `pnpm db:migrate` | Apply Prisma migrations (dev) |
+| `pnpm db:migrate:deploy` | Apply migrations (production) |
 | `pnpm db:seed` | Seed sample discovery + concept + lesson |
 | `pnpm db:studio` | Prisma Studio |
+| `pnpm hash-admin-password -- "pw"` | Generate admin hash + AUTH_SECRET |
 | `pnpm typecheck` | TypeScript across packages |
 | `pnpm lint` | Lint |
-| `pnpm build` | Production build |
+| `pnpm build` | Generate Prisma client + production build |
 
 ## Git remote
 
@@ -85,6 +140,8 @@ Never commit `.env`. Only `.env.example` is tracked.
 ## Product plan
 
 See [docs/product/product-engineering-plan.md](docs/product/product-engineering-plan.md).
+
+Public beta / validation plan: [docs/product/public-beta-validation-plan.md](docs/product/public-beta-validation-plan.md).
 
 ## Progress and backlog
 

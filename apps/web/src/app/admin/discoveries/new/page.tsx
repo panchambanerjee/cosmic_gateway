@@ -7,7 +7,7 @@ export const dynamic = "force-dynamic";
 
 export default async function NewDiscoveryPage() {
   if (!(await isAdminAuthenticated())) {
-    redirect("/admin");
+    redirect("/admin/login");
   }
 
   const [topics, sources, images, concepts, lessons] = await Promise.all([

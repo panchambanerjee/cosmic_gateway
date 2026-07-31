@@ -8,6 +8,14 @@ Last updated: 2026-07-31
 
 ---
 
+## Active plan
+
+Public beta / usage validation: [docs/product/public-beta-validation-plan.md](./product/public-beta-validation-plan.md)
+
+Original product/engineering plan: [docs/product/product-engineering-plan.md](./product/product-engineering-plan.md)
+
+---
+
 ## What we have built
 
 ### Foundation
@@ -35,11 +43,12 @@ Last updated: 2026-07-31
 - Publish gates: ≥1 source; image rights or no-image exception
 - Editorial workflow states: draft → science review → rights review → ready → published → archived
 - Audit log for status transitions
+- TipCandidate queue (metadata only)
 
 ### Admin
 - `/admin` discovery queue and draft form
 - Status transition controls with publish-gate blocking
-- `/admin/tips` tip-candidate queue (URL metadata only — no scrape/auto-publish)
+- `/admin/tips` tip-candidate queue
 - Tip import API + status updates (`new` / `triaged` / `used` / `rejected`)
 
 ### Seeded / published content (local seed)
@@ -58,20 +67,6 @@ Last updated: 2026-07-31
 
 ---
 
-## Product rules locked in
-
-| Layer | Role |
-|-------|------|
-| Tip / secondary | Space.com, phys.org — signal only |
-| Primary sources | ESO/NASA releases, papers |
-| Our article | Quick / Learn / Deep + evidence status + credited image |
-| Learning terms | In-app `/concepts/[slug]` |
-| Deeper links | Wikipedia + papers / facility pages |
-
-Do **not** scrape news bodies into published content. Do **not** auto-publish. Do **not** ship iOS/Android until web cadence works.
-
----
-
 ## To-dos
 
 ### Done
@@ -79,29 +74,29 @@ Do **not** scrape news bodies into published content. Do **not** auto-publish. D
 - [x] Discovery vertical slice (API + web UI + depths + sources + credits)
 - [x] Manual admin publish path with gates
 - [x] Concept + lesson links from discoveries
-- [x] Fix broken/misassigned hero images
-- [x] Expand early-galaxies depth copy
-- [x] Betelgeuse pilot (ESO + A&A + Space.com tip)
-- [x] Concept Wikipedia/external URLs
-- [x] Learning-term chips + concept linking in discovery reader
+- [x] Betelgeuse pilot + learning-term / Wikipedia links
 - [x] TipCandidate queue (admin UI + API)
 - [x] Markdown rendering for concepts/lessons
-- [x] Layout hydration/syntax fixes for local DX
+- [x] Public-beta validation plan filed under `docs/product/`
 
-### Next (recommended order)
-- [ ] Re-seed / polish Carina “Cosmic Cliffs” as a third polished discovery if desired
-- [ ] Expand Betelgeuse Learn/Deep word counts so reading times diverge more
-- [ ] Deploy web (Vercel) + managed Postgres for a shareable URL
-- [ ] Optional: email digest or web push after publishing cadence is real
-- [ ] Optional: RSS poller that only creates TipCandidates (still human publish)
-- [ ] Optional: LLM-assisted draft behind review gates (never public-direct)
-- [ ] Later: Expo iOS/Android consuming the same API contracts
-- [ ] Later: Today in Astronomy, search index, auth, quizzes
+### In progress — Milestone 1 (public beta)
+- [x] Production deploy scripts + env documentation (`db:migrate:deploy`, `vercel.json`, `.env.example`)
+- [x] Health check with DB reachability (`GET /api/health`)
+- [x] Signed-cookie admin auth for `/admin` and `/api/v1/admin` (+ preview write lock)
+- [x] README deployment instructions
+- [ ] Deploy to Vercel + managed Postgres (manual account step)
+
+### Next after Milestone 1
+- [ ] Milestone 2: analytics + reading progress
+- [ ] Milestone 3: end-of-article feedback
+- [ ] Milestone 4: sharing, OG, sitemap, privacy
+- [ ] Milestone 5: launch content inventory + 4-week beta
+- [ ] Milestone 6: Today in Astronomy (only after P0 stable)
 
 ### Explicitly not next
 - [ ] Scraping Space.com HTML as canonical text
 - [ ] Auto-publish without review
-- [ ] Planetarium / AR / unconstrained chatbot
+- [ ] Native iOS/Android
 - [ ] NestJS extraction or Kubernetes
 
 ---
@@ -120,25 +115,3 @@ pnpm dev
 Open http://localhost:3000  
 Admin: http://localhost:3000/admin  
 Tips: http://localhost:3000/admin/tips
-
----
-
-## Key paths
-
-| Path | Purpose |
-|------|---------|
-| [`apps/web`](../apps/web) | Next.js public UI + API routes |
-| [`packages/database`](../packages/database) | Prisma schema, migrations, seed |
-| [`packages/contracts`](../packages/contracts) | Shared Zod schemas |
-| [`docs/product/product-engineering-plan.md`](./product/product-engineering-plan.md) | Full product/engineering plan |
-| This file | Living progress + backlog |
-
----
-
-## Success checks (current)
-
-- Home shows distinct JWST and Betelgeuse imagery
-- Discovery pages expose learning terms that open in-app concepts
-- Concept pages link out to Wikipedia
-- Sources list ESO/paper before news tips
-- Tip queue accepts URLs without publishing them automatically

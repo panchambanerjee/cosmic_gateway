@@ -9,7 +9,7 @@ export const dynamic = "force-dynamic";
 
 export default async function AdminTipsPage() {
   if (!(await isAdminAuthenticated())) {
-    redirect("/admin");
+    redirect("/admin/login");
   }
 
   const tips = await prisma.tipCandidate.findMany({

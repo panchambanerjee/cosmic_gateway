@@ -2,7 +2,7 @@ import { z } from "zod";
 import { prisma, discoveryInclude } from "@/lib/db";
 import { apiError, toDiscoveryDetail, validatePublishGates } from "@/lib/content";
 import { canTransition } from "@/lib/status";
-import { isAdminAuthenticated } from "@/lib/admin-auth";
+import { requireAdminWrite } from "@/lib/admin-auth";
 import type { DiscoveryStatus } from "@cosmic-gateway/contracts";
 
 export const dynamic = "force-dynamic";
@@ -22,9 +22,8 @@ const TransitionSchema = z.object({
 });
 
 export async function POST(request: Request, { params }: Props) {
-  if (!(await isAdminAuthenticated())) {
-    return apiError("UNAUTHORIZED", "Admin authentication required.", undefined, 401);
-  }
+  const gate = await requireAdminWrite();
+  if (!gate.ok) return gate.response;
 
   const { id } = await params;
   let body: unknown;
