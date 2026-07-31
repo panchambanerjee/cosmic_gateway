@@ -143,6 +143,8 @@ See [docs/product/product-engineering-plan.md](docs/product/product-engineering-
 
 Public beta / validation plan: [docs/product/public-beta-validation-plan.md](docs/product/public-beta-validation-plan.md).
 
+Architecture: [docs/architecture.md](docs/architecture.md).
+
 ## Progress and backlog
 
 See [docs/PROGRESS.md](docs/PROGRESS.md) for what is built, what is done, and what is next.

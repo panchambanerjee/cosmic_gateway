@@ -1,6 +1,7 @@
 import { PrismaClient } from "@prisma/client";
 import { config } from "dotenv";
 import { resolve } from "node:path";
+import { seedLaunchBatch } from "./seed-launch-batch.js";
 
 config({ path: resolve(process.cwd(), "../../.env") });
 config({ path: resolve(process.cwd(), ".env") });
@@ -43,6 +44,42 @@ async function main() {
       name: "Stars and stellar evolution",
       description: "How stars live, change brightness, and end their lives.",
       icon: "star",
+    },
+  });
+
+  const exoplanetsTopic = await prisma.topic.create({
+    data: {
+      slug: "exoplanets",
+      name: "Exoplanets",
+      description: "Worlds around other stars, from hot giants to temperate candidates.",
+      icon: "planet",
+    },
+  });
+
+  const blackHolesTopic = await prisma.topic.create({
+    data: {
+      slug: "black-holes-and-extreme-gravity",
+      name: "Black holes and extreme gravity",
+      description: "Event horizons, mergers, and multi-messenger extremes.",
+      icon: "black-hole",
+    },
+  });
+
+  const cosmologyTopic = await prisma.topic.create({
+    data: {
+      slug: "cosmology",
+      name: "Cosmology",
+      description: "The large-scale universe: expansion, dark matter, and dark energy.",
+      icon: "cosmos",
+    },
+  });
+
+  const solarSystemTopic = await prisma.topic.create({
+    data: {
+      slug: "solar-system",
+      name: "Solar system",
+      description: "Planets, moons, and nearby worlds we can study in detail.",
+      icon: "solar-system",
     },
   });
 
@@ -236,6 +273,170 @@ A coronagraph suppresses the blinding light of a star, similar in spirit to cove
       difficulty: "intermediate",
     },
   });
+
+  const launchConcepts = await Promise.all(
+    [
+      {
+        slug: "star-formation",
+        name: "Star formation",
+        shortDefinition:
+          "The process by which dense clouds of gas and dust collapse under gravity to form new stars.",
+        explanationMarkdown: `## Star formation
+
+Stars form inside cold, dense molecular clouds. Gravity pulls material inward while pressure, magnetic fields, and radiation push back. When a dense core collapses and heats enough to fuse hydrogen, a star is born.
+
+Infrared telescopes matter because dust that blocks optical light still glows — or becomes translucent — at longer wavelengths, revealing embedded protostars and jets.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Star_formation",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "infrared-astronomy",
+        name: "Infrared astronomy",
+        shortDefinition:
+          "Observing the universe in infrared light to see cool dust, embedded stars, and redshifted galaxies.",
+        explanationMarkdown: `## Infrared astronomy
+
+Infrared light sits beyond the red end of the rainbow. Cool dust emits infrared, and expansion stretches ancient starlight into infrared. That is why missions like Webb unlock both nearby star nurseries and the early universe.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Infrared_astronomy",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "supernova",
+        name: "Supernova",
+        shortDefinition:
+          "A catastrophic stellar explosion that can outshine a galaxy for weeks and leave behind a remnant and compact object.",
+        explanationMarkdown: `## Supernovae
+
+Massive stars can explode as core-collapse supernovae; white dwarfs in binaries can explode as Type Ia events. The debris becomes a supernova remnant, enriching space with heavy elements that later form planets and people.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Supernova",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "neutron-star",
+        name: "Neutron star",
+        shortDefinition:
+          "An extremely dense remnant of a massive star's core, packed mostly with neutrons after a supernova.",
+        explanationMarkdown: `## Neutron stars
+
+A neutron star packs more than the Sun's mass into a city-sized sphere. Some spin rapidly and beam radio waves as pulsars. Mergers of neutron stars produce gravitational waves and heavy elements.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Neutron_star",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "pulsar",
+        name: "Pulsar",
+        shortDefinition:
+          "A rotating neutron star that emits beams of radiation, appearing to pulse when a beam sweeps past Earth.",
+        explanationMarkdown: `## Pulsars
+
+Pulsars are cosmic lighthouses powered by spinning neutron stars and strong magnetic fields. The Crab Pulsar powers the Crab Nebula's glowing wind.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Pulsar",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "exoplanet",
+        name: "Exoplanet",
+        shortDefinition: "A planet that orbits a star other than the Sun.",
+        explanationMarkdown: `## Exoplanets
+
+Thousands of exoplanets are known, spanning hot Jupiters, mini-Neptunes, and rocky worlds. Atmosphere studies ask what they are made of — not just that they exist.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Exoplanet",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "transit-spectroscopy",
+        name: "Transit spectroscopy",
+        shortDefinition:
+          "Measuring a planet's atmosphere by watching starlight filter through it during a transit.",
+        explanationMarkdown: `## Transit spectroscopy
+
+When a planet crosses its star, a tiny fraction of starlight passes through the atmosphere. Molecules imprint absorption features. Webb's infrared sensitivity makes this method powerful for many worlds.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Astronomical_spectroscopy#Exoplanets",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "black-hole",
+        name: "Black hole",
+        shortDefinition:
+          "A region of spacetime where gravity is so strong that nothing, not even light, can escape from inside the event horizon.",
+        explanationMarkdown: `## Black holes
+
+Stellar-mass black holes form from collapsing stars; supermassive ones sit in galaxy centers. We infer them from orbits, accretion light, gravitational waves, and — for the largest nearby ones — horizon-scale images.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Black_hole",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "event-horizon",
+        name: "Event horizon",
+        shortDefinition:
+          "The boundary around a black hole beyond which light cannot escape to the outside universe.",
+        explanationMarkdown: `## Event horizon
+
+The event horizon is not a solid surface. Crossing it is a one-way trip in classical general relativity. Horizon-scale images show a larger "shadow" shaped by light bending near the hole.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Event_horizon",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "gravitational-wave",
+        name: "Gravitational wave",
+        shortDefinition:
+          "A ripple in spacetime produced by accelerating massive objects, detected on Earth by laser interferometers.",
+        explanationMarkdown: `## Gravitational waves
+
+Merging black holes and neutron stars shake spacetime. LIGO, Virgo, and KAGRA detect those ripples. When light arrives too, the event becomes multi-messenger astronomy.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Gravitational_wave",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "ice-giant",
+        name: "Ice giant",
+        shortDefinition:
+          "A giant planet rich in water, ammonia, and methane ices beneath a hydrogen-helium atmosphere — like Uranus and Neptune.",
+        explanationMarkdown: `## Ice giants
+
+Ice giants differ from gas giants like Jupiter. Their interiors hold more "ices," and their atmospheres show methane absorption that shapes how they look in different wavelengths.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Ice_giant",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "ocean-world",
+        name: "Ocean world",
+        shortDefinition:
+          "A moon or planet with a substantial liquid water ocean, often under an icy crust.",
+        explanationMarkdown: `## Ocean worlds
+
+Enceladus and Europa are leading examples. Subsurface oceans plus chemistry and energy make them high-priority targets in the search for habitable environments — without equating habitability with inhabited.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Ocean_world",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "dark-matter",
+        name: "Dark matter",
+        shortDefinition:
+          "Invisible matter inferred from gravity that outweighs ordinary atoms in galaxies and clusters.",
+        explanationMarkdown: `## Dark matter
+
+Galaxy rotation curves, gravitational lensing, and cluster dynamics imply far more mass than stars and gas alone. Dark matter does not emit light we detect, but it shapes the cosmic web.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Dark_matter",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "dark-energy",
+        name: "Dark energy",
+        shortDefinition:
+          "The unknown component driving the accelerated expansion of the universe.",
+        explanationMarkdown: `## Dark energy
+
+Distant supernovae revealed acceleration. Surveys like Euclid map how structure grows over time to test whether dark energy is a cosmological constant or something that evolves.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Dark_energy",
+        difficulty: "intermediate" as const,
+      },
+    ].map((c) => prisma.concept.create({ data: c })),
+  );
+
+  const launchConceptBySlug = Object.fromEntries(
+    launchConcepts.map((c) => [c.slug, c.id]),
+  );
 
   const lesson = await prisma.lesson.create({
     data: {
@@ -624,6 +825,84 @@ Space.com and similar outlets are useful discovery signals. The primary account 
     },
   });
 
+  const howSpectraWork = await prisma.lesson.create({
+    data: {
+      slug: "how-transit-spectra-reveal-atmospheres",
+      title: "How Transit Spectra Reveal Atmospheres",
+      summary:
+        "Learn why a tiny dip in starlight during transit can expose molecules in an exoplanet's air.",
+      bodyMarkdown: `## Learning goal
+
+Explain transit spectroscopy in plain language and know why infrared wavelengths help.
+
+## Steps
+
+1. A planet crosses its star (transit).
+2. A sliver of starlight filters through the atmosphere.
+3. Molecules absorb specific wavelengths.
+4. Comparing in-transit and out-of-transit spectra reveals atmospheric fingerprints.
+
+Webb's infrared range is especially useful for water, carbon dioxide, and other key molecules.
+`,
+      difficulty: "beginner",
+      estimatedMinutes: 6,
+      includeMath: false,
+      concepts: {
+        create: [
+          { conceptId: launchConceptBySlug.exoplanet },
+          { conceptId: launchConceptBySlug["transit-spectroscopy"] },
+        ],
+      },
+    },
+  });
+
+  const blackHoleLesson = await prisma.lesson.create({
+    data: {
+      slug: "what-a-black-hole-shadow-means",
+      title: "What a Black Hole Shadow Means",
+      summary:
+        "Separate the event horizon from the larger shadow seen in Event Horizon Telescope images.",
+      bodyMarkdown: `## Learning goal
+
+Distinguish the event horizon from the observed black-hole shadow.
+
+## Key idea
+
+Light bends near a black hole. The dark central region in EHT images is a shadow shaped by photon orbits and the horizon — larger than the horizon itself. The bright ring is emission from hot plasma around the hole, distorted by gravity.
+`,
+      difficulty: "beginner",
+      estimatedMinutes: 5,
+      includeMath: false,
+      concepts: {
+        create: [
+          { conceptId: launchConceptBySlug["black-hole"] },
+          { conceptId: launchConceptBySlug["event-horizon"] },
+        ],
+      },
+    },
+  });
+
+  const launchSlugs = await seedLaunchBatch(prisma, {
+    topics: {
+      jwst: topic.id,
+      stars: starsTopic.id,
+      exoplanets: exoplanetsTopic.id,
+      blackHoles: blackHolesTopic.id,
+      cosmology: cosmologyTopic.id,
+      solarSystem: solarSystemTopic.id,
+    },
+    concepts: {
+      redshift: redshift.id,
+      spectroscopy: spectroscopy.id,
+      ...launchConceptBySlug,
+    },
+    lessons: {
+      "why-infrared-sees-the-early-universe": lesson.id,
+      "how-transit-spectra-reveal-atmospheres": howSpectraWork.id,
+      "what-a-black-hole-shadow-means": blackHoleLesson.id,
+    },
+  });
+
   await prisma.tipCandidate.createMany({
     data: [
       {
@@ -654,8 +933,20 @@ Space.com and similar outlets are useful discovery signals. The primary account 
     ],
   });
 
+  const discoveryCount = await prisma.discovery.count();
+  const conceptCount = await prisma.concept.count();
+  const lessonCount = await prisma.lesson.count();
+  const topicCount = await prisma.topic.count();
+
   console.log("Secondary image for admin tests:", secondaryImage.id);
   console.log("Seeded Betelgeuse discovery:", betelgeuseDiscovery.slug);
+  console.log("Launch batch discoveries:", launchSlugs);
+  console.log("Inventory:", {
+    discoveries: discoveryCount,
+    concepts: conceptCount,
+    lessons: lessonCount,
+    topics: topicCount,
+  });
   console.log("Reading times (approx minutes):", {
     earlyGalaxies: {
       quick: estimateReadingMinutes(quickMarkdown),

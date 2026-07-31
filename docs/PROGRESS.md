@@ -14,6 +14,8 @@ Public beta / usage validation: [docs/product/public-beta-validation-plan.md](./
 
 Original product/engineering plan: [docs/product/product-engineering-plan.md](./product/product-engineering-plan.md)
 
+Architecture: [docs/architecture.md](./architecture.md)
+
 ---
 
 ## What we have built
@@ -52,9 +54,26 @@ Original product/engineering plan: [docs/product/product-engineering-plan.md](./
 - Tip import API + status updates (`new` / `triaged` / `used` / `rejected`)
 
 ### Seeded / published content (local seed)
-1. Early galaxies (JWST / SMACS deep field) — with redshift & spectroscopy concepts
-2. Betelgeuse companion (ESO + A&A primary; Space.com as tip) — with Betelgeuse, red-supergiant, binary-star, coronagraph concepts
-3. Sample tip candidates in the admin tip queue
+**14 discoveries** (Quick / Learn / Deep), spanning JWST, stars, exoplanets, black holes / GW, cosmology, and solar system:
+
+1. Early galaxies (JWST / SMACS) — redshift & spectroscopy
+2. Betelgeuse companion (ESO + A&A; Space.com tip secondary)
+3. Pillars of Creation (Webb)
+4. Cosmic Cliffs / Carina (Webb)
+5. Cassiopeia A supernova remnant (Webb)
+6. Crab Nebula (Webb)
+7. WASP-39b atmosphere / photochemistry (Webb)
+8. K2-18b atmosphere signals (preliminary — uncertainty emphasized)
+9. Sagittarius A* first image (EHT)
+10. M87* first black hole image (EHT)
+11. Neutron-star merger GW170817 (multi-messenger)
+12. Neptune close-up (Webb)
+13. Enceladus water plume (Webb)
+14. Euclid Perseus cluster / dark universe
+
+Also: **6 topics**, **20 concepts**, **3 lessons**, tip queue samples.
+
+Launch seed lives in `packages/database/prisma/seed-launch-batch.ts` (plus original two in `seed.ts`).
 
 ### APIs (same Next.js app)
 - `GET /api/v1/discoveries`
