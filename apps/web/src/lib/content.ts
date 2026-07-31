@@ -72,6 +72,25 @@ export function toSourceDto(source: SourceRecord): SourceRecordDto {
   };
 }
 
+function sourceRank(sourceType: string): number {
+  switch (sourceType) {
+    case "official_release":
+      return 0;
+    case "paper":
+      return 1;
+    case "dataset":
+      return 2;
+    case "press_release":
+      return 3;
+    case "archive":
+      return 4;
+    case "news":
+      return 5;
+    default:
+      return 6;
+  }
+}
+
 export function toConceptSummary(concept: Concept): ConceptSummary {
   return {
     id: concept.id,
@@ -79,6 +98,8 @@ export function toConceptSummary(concept: Concept): ConceptSummary {
     name: concept.name,
     shortDefinition: concept.shortDefinition,
     difficulty: concept.difficulty,
+    wikipediaUrl: concept.wikipediaUrl,
+    externalUrl: concept.externalUrl,
   };
 }
 
@@ -146,7 +167,10 @@ export function toDiscoveryDetail(
       priorUnderstanding: version.priorUnderstandingMarkdown,
       uncertainty: version.uncertaintyMarkdown,
     },
-    sources: (discovery.sources ?? []).map((row) => toSourceDto(row.sourceRecord)),
+    sources: [...(discovery.sources ?? [])]
+      .map((row) => row.sourceRecord)
+      .sort((a, b) => sourceRank(a.sourceType) - sourceRank(b.sourceType))
+      .map(toSourceDto),
     concepts: (discovery.concepts ?? []).map((row) => toConceptSummary(row.concept)),
     relatedLessons: (discovery.lessons ?? []).map((row) =>
       toLessonSummary(row.lesson),

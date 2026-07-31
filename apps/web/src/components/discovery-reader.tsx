@@ -7,7 +7,63 @@ import { DepthSwitcher } from "./depth-switcher";
 import { EvidenceBadge } from "./evidence-badge";
 import { CreditedImage } from "./credited-image";
 
-function renderMarkdownLite(markdown: string) {
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function linkConceptsInText(
+  text: string,
+  concepts: DiscoveryDetail["concepts"],
+) {
+  if (!concepts.length) return [<span key="t">{text}</span>];
+
+  const sorted = [...concepts].sort((a, b) => b.name.length - a.name.length);
+  const pattern = new RegExp(
+    `\\b(${sorted.map((c) => escapeRegExp(c.name)).join("|")})\\b`,
+    "gi",
+  );
+  const slugByName = new Map(
+    sorted.map((c) => [c.name.toLowerCase(), c.slug] as const),
+  );
+
+  const parts: React.ReactNode[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  let key = 0;
+
+  while ((match = pattern.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(<span key={key++}>{text.slice(lastIndex, match.index)}</span>);
+    }
+    const matched = match[1];
+    const slug = slugByName.get(matched.toLowerCase());
+    if (slug) {
+      parts.push(
+        <Link
+          key={key++}
+          href={`/concepts/${slug}`}
+          className="text-nebula-400 underline decoration-nebula-400/40 underline-offset-2 hover:decoration-nebula-400"
+        >
+          {matched}
+        </Link>,
+      );
+    } else {
+      parts.push(<span key={key++}>{matched}</span>);
+    }
+    lastIndex = match.index + matched.length;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(<span key={key++}>{text.slice(lastIndex)}</span>);
+  }
+
+  return parts.length ? parts : [<span key="empty">{text}</span>];
+}
+
+function renderMarkdownLite(
+  markdown: string,
+  concepts: DiscoveryDetail["concepts"],
+) {
   return markdown.split("\n\n").map((block, index) => {
     const trimmed = block.trim();
     if (!trimmed) return null;
@@ -23,7 +79,9 @@ function renderMarkdownLite(markdown: string) {
       return (
         <ul key={index} className="list-disc space-y-2 pl-5">
           {items.map((item) => (
-            <li key={item}>{item.replace(/^-+\s*/, "")}</li>
+            <li key={item}>
+              {linkConceptsInText(item.replace(/^-+\s*/, ""), concepts)}
+            </li>
           ))}
         </ul>
       );
@@ -32,13 +90,24 @@ function renderMarkdownLite(markdown: string) {
       <p key={index} className="text-base md:text-lg leading-relaxed">
         {trimmed.split(/(\*\*[^*]+\*\*)/).map((part, i) => {
           if (part.startsWith("**") && part.endsWith("**")) {
-            return <strong key={i}>{part.slice(2, -2)}</strong>;
+            return (
+              <strong key={i}>
+                {linkConceptsInText(part.slice(2, -2), concepts)}
+              </strong>
+            );
           }
-          return <span key={i}>{part}</span>;
+          return <span key={i}>{linkConceptsInText(part, concepts)}</span>;
         })}
       </p>
     );
   });
+}
+
+function sourceLabel(sourceType: string) {
+  if (sourceType === "news") return "Secondary tip / news";
+  if (sourceType === "official_release") return "Primary · official release";
+  if (sourceType === "paper") return "Primary · paper";
+  return sourceType.replaceAll("_", " ");
 }
 
 export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
@@ -68,6 +137,25 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
         </p>
       ) : null}
 
+      {discovery.concepts.length > 0 ? (
+        <div className="mt-6">
+          <p className="text-xs uppercase tracking-[0.14em] text-star-300/70">
+            Learning terms
+          </p>
+          <div className="mt-2 flex flex-wrap gap-2">
+            {discovery.concepts.map((concept) => (
+              <Link
+                key={concept.id}
+                href={`/concepts/${concept.slug}`}
+                className="rounded-md border border-nebula-500/30 bg-nebula-500/10 px-2.5 py-1 text-sm text-nebula-400 hover:border-nebula-400/60"
+              >
+                {concept.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
       {discovery.heroImage ? (
         <CreditedImage
           image={discovery.heroImage}
@@ -92,7 +180,9 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
         </p>
       </div>
 
-      <div className="prose-cosmo mt-8 max-w-3xl">{renderMarkdownLite(body)}</div>
+      <div className="prose-cosmo mt-8 max-w-3xl">
+        {renderMarkdownLite(body, discovery.concepts)}
+      </div>
 
       <section className="mt-12 max-w-3xl border-t border-white/10 pt-8">
         <h2 className="font-display text-2xl text-star-50">Key sections</h2>
@@ -110,7 +200,9 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
               <dt className="text-sm font-semibold uppercase tracking-[0.14em] text-nebula-400">
                 {label}
               </dt>
-              <dd className="mt-1 text-star-100/85">{text}</dd>
+              <dd className="mt-1 text-star-100/85">
+                {linkConceptsInText(text, discovery.concepts)}
+              </dd>
             </div>
           ))}
         </dl>
@@ -160,6 +252,10 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
 
       <section className="mt-12 max-w-3xl border-t border-white/10 pt-8">
         <h2 className="font-display text-2xl text-star-50">Sources</h2>
+        <p className="mt-1 text-sm text-star-200/60">
+          Primary sources first. News tips are secondary signals, not the
+          canonical account.
+        </p>
         <ul className="mt-4 space-y-3">
           {discovery.sources.map((source) => (
             <li key={source.id}>
@@ -172,7 +268,7 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
                 {source.title}
               </a>
               <p className="text-xs text-star-200/60">
-                {source.sourceType.replaceAll("_", " ")}
+                {sourceLabel(source.sourceType)}
                 {source.organization ? ` · ${source.organization}` : ""}
               </p>
             </li>

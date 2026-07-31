@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="min-h-screen bg-cosmos-radial">
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-cosmos-radial" suppressHydrationWarning>
         <SiteHeader />
         <main className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
           {children}
@@ -27,3 +27,4 @@ export default function RootLayout({
     </html>
   );
 }
+

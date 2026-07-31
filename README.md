@@ -85,3 +85,7 @@ Never commit `.env`. Only `.env.example` is tracked.
 ## Product plan
 
 See [docs/product/product-engineering-plan.md](docs/product/product-engineering-plan.md).
+
+## Progress and backlog
+
+See [docs/PROGRESS.md](docs/PROGRESS.md) for what is built, what is done, and what is next.

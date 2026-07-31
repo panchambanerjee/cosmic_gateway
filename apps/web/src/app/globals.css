@@ -28,15 +28,15 @@ a {
 }
 
 .prose-cosmo h2 {
-  @apply font-display text-xl text-star-50 mt-8 mb-3;
+  @apply font-display text-2xl text-star-50 mt-8 mb-3 tracking-tight;
 }
 
 .prose-cosmo h3 {
-  @apply font-display text-lg text-star-100 mt-6 mb-2;
+  @apply font-display text-xl text-star-100 mt-6 mb-2;
 }
 
 .prose-cosmo p {
-  @apply text-base md:text-lg;
+  @apply text-base md:text-lg text-star-100/90;
 }
 
 .prose-cosmo strong {
@@ -47,6 +47,10 @@ a {
   @apply list-disc pl-5 space-y-2;
 }
 
+.prose-cosmo ol {
+  @apply list-decimal pl-5 space-y-2 text-base md:text-lg;
+}
+
 .prose-cosmo li {
-  @apply text-base md:text-lg;
+  @apply text-base md:text-lg text-star-100/90;
 }

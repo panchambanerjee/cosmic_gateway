@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
 import { toConceptSummary } from "@/lib/content";
+import { MarkdownBody } from "@/components/markdown-body";
 
 export const dynamic = "force-dynamic";
 
@@ -36,9 +37,39 @@ export default async function ConceptPage({ params }: Props) {
       </p>
       <h1 className="mt-2 font-display text-4xl text-star-50">{concept.name}</h1>
       <p className="mt-4 text-lg text-star-100/85">{concept.shortDefinition}</p>
-      <div className="prose-cosmo mt-8 whitespace-pre-wrap">
-        {concept.explanationMarkdown}
-      </div>
+      <MarkdownBody markdown={concept.explanationMarkdown} />
+
+      {(concept.wikipediaUrl || concept.externalUrl) && (
+        <section className="mt-8 border-t border-white/10 pt-6">
+          <h2 className="font-display text-xl text-star-50">Go deeper</h2>
+          <ul className="mt-3 space-y-2 text-sm">
+            {concept.wikipediaUrl ? (
+              <li>
+                <a
+                  href={concept.wikipediaUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-nebula-400 hover:underline"
+                >
+                  Wikipedia
+                </a>
+              </li>
+            ) : null}
+            {concept.externalUrl ? (
+              <li>
+                <a
+                  href={concept.externalUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-nebula-400 hover:underline"
+                >
+                  Further reading
+                </a>
+              </li>
+            ) : null}
+          </ul>
+        </section>
+      )}
 
       {concept.discoveries.length > 0 ? (
         <section className="mt-12 border-t border-white/10 pt-8">

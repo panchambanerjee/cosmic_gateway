@@ -79,6 +79,8 @@ export const ConceptSummarySchema = z.object({
   name: z.string(),
   shortDefinition: z.string(),
   difficulty: DifficultySchema,
+  wikipediaUrl: z.string().url().nullable().optional(),
+  externalUrl: z.string().url().nullable().optional(),
 });
 
 export const LessonSummarySchema = z.object({
@@ -138,6 +140,35 @@ export const DiscoveryDetailSchema = DiscoveryListItemSchema.extend({
 
 export const ConceptDetailSchema = ConceptSummarySchema.extend({
   explanationMarkdown: z.string(),
+  wikipediaUrl: z.string().url().nullable(),
+  externalUrl: z.string().url().nullable(),
+});
+
+export const TipStatusSchema = z.enum(["new", "triaged", "used", "rejected"]);
+
+export const TipCandidateSchema = z.object({
+  id: z.string().uuid(),
+  title: z.string(),
+  tipUrl: z.string().url(),
+  primarySourceUrls: z.array(z.string().url()),
+  status: TipStatusSchema,
+  notes: z.string().nullable(),
+  organization: z.string().nullable(),
+  fetchedAt: z.string().datetime(),
+});
+
+export const CreateTipCandidateSchema = z.object({
+  title: z.string().min(3),
+  tipUrl: z.string().url(),
+  primarySourceUrls: z.array(z.string().url()).default([]),
+  notes: z.string().optional(),
+  organization: z.string().optional(),
+});
+
+export const UpdateTipCandidateSchema = z.object({
+  status: TipStatusSchema.optional(),
+  primarySourceUrls: z.array(z.string().url()).optional(),
+  notes: z.string().optional(),
 });
 
 export const LessonDetailSchema = LessonSummarySchema.extend({
@@ -205,3 +236,7 @@ export type DiscoveryDetail = z.infer<typeof DiscoveryDetailSchema>;
 export type ConceptDetail = z.infer<typeof ConceptDetailSchema>;
 export type LessonDetail = z.infer<typeof LessonDetailSchema>;
 export type CreateDiscoveryDraft = z.infer<typeof CreateDiscoveryDraftSchema>;
+export type TipStatus = z.infer<typeof TipStatusSchema>;
+export type TipCandidate = z.infer<typeof TipCandidateSchema>;
+export type CreateTipCandidate = z.infer<typeof CreateTipCandidateSchema>;
+export type UpdateTipCandidate = z.infer<typeof UpdateTipCandidateSchema>;

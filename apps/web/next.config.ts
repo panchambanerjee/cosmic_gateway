@@ -6,19 +6,31 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "stsci-opo.org",
+        hostname: "cdn.esawebb.org",
       },
       {
         protocol: "https",
-        hostname: "**.nasa.gov",
+        hostname: "esawebb.org",
       },
       {
         protocol: "https",
-        hostname: "assets.science.nasa.gov",
+        hostname: "cdn.eso.org",
+      },
+      {
+        protocol: "https",
+        hostname: "www.eso.org",
+      },
+      {
+        protocol: "https",
+        hostname: "images-assets.nasa.gov",
       },
       {
         protocol: "https",
         hostname: "www.nasa.gov",
+      },
+      {
+        protocol: "https",
+        hostname: "assets.science.nasa.gov",
       },
     ],
   },

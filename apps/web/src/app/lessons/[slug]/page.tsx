@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { prisma } from "@/lib/db";
+import { MarkdownBody } from "@/components/markdown-body";
 
 export const dynamic = "force-dynamic";
 
@@ -27,9 +28,7 @@ export default async function LessonPage({ params }: Props) {
       </p>
       <h1 className="mt-2 font-display text-4xl text-star-50">{lesson.title}</h1>
       <p className="mt-4 text-lg text-star-100/85">{lesson.summary}</p>
-      <div className="prose-cosmo mt-8 whitespace-pre-wrap">
-        {lesson.bodyMarkdown}
-      </div>
+      <MarkdownBody markdown={lesson.bodyMarkdown} />
 
       {lesson.concepts.length > 0 ? (
         <section className="mt-12 border-t border-white/10 pt-8">
