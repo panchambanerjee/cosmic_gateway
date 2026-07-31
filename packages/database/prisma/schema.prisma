@@ -1,0 +1,261 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EvidenceStatus {
+  official_release
+  preliminary
+  preprint
+  peer_reviewed
+  confirmed
+  disputed
+}
+
+enum DiscoveryStatus {
+  draft
+  science_review
+  rights_review
+  ready_to_publish
+  published
+  archived
+}
+
+enum Difficulty {
+  beginner
+  intermediate
+  advanced
+}
+
+enum SourceType {
+  official_release
+  paper
+  dataset
+  press_release
+  news
+  archive
+}
+
+enum ContentStatus {
+  draft
+  published
+  archived
+}
+
+model Topic {
+  id          String   @id @default(uuid()) @db.Uuid
+  slug        String   @unique
+  name        String
+  description String?
+  icon        String?
+  status      ContentStatus @default(published)
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  discoveries Discovery[]
+
+  @@map("topics")
+}
+
+model ImageAsset {
+  id                    String   @id @default(uuid()) @db.Uuid
+  sourceUrl             String   @map("source_url")
+  storageUrl            String?  @map("storage_url")
+  thumbnailUrl          String?  @map("thumbnail_url")
+  altText               String   @map("alt_text")
+  caption               String?
+  creator               String?
+  organization          String?
+  creditLine            String   @map("credit_line")
+  licenseName           String?  @map("license_name")
+  rightsUrl             String?  @map("rights_url")
+  copyrightStatus       String?  @map("copyright_status")
+  commercialUseAllowed  Boolean? @map("commercial_use_allowed")
+  modificationAllowed   Boolean? @map("modification_allowed")
+  publicationAllowed    Boolean  @default(false) @map("publication_allowed")
+  verificationNotes     String?  @map("verification_notes")
+  verifiedAt            DateTime? @map("verified_at")
+  width                 Int?
+  height                Int?
+  mediaType             String?  @map("media_type")
+  createdAt             DateTime @default(now()) @map("created_at")
+  updatedAt             DateTime @updatedAt @map("updated_at")
+
+  discoveriesAsHero Discovery[]
+  lessonsAsHero     Lesson[]
+
+  @@map("image_assets")
+}
+
+model SourceRecord {
+  id              String     @id @default(uuid()) @db.Uuid
+  sourceType      SourceType @map("source_type")
+  organization    String?
+  title           String
+  canonicalUrl    String     @map("canonical_url")
+  externalId      String?    @map("external_id")
+  publicationDate DateTime?  @map("publication_date")
+  retrievedAt     DateTime   @default(now()) @map("retrieved_at")
+  rawTextLocation String?    @map("raw_text_location")
+  metadataJson    Json?      @map("metadata_json")
+  checksum        String?
+  createdAt       DateTime   @default(now()) @map("created_at")
+  updatedAt       DateTime   @updatedAt @map("updated_at")
+
+  discoveries DiscoverySource[]
+
+  @@map("source_records")
+}
+
+model Discovery {
+  id               String          @id @default(uuid()) @db.Uuid
+  slug             String          @unique
+  title            String
+  subtitle         String?
+  dek              String?
+  status           DiscoveryStatus @default(draft)
+  evidenceStatus   EvidenceStatus  @map("evidence_status")
+  difficulty       Difficulty      @default(beginner)
+  publishedAt      DateTime?       @map("published_at")
+  firstSourceDate  DateTime?       @map("first_source_date")
+  lastReviewedAt   DateTime?       @map("last_reviewed_at")
+  heroImageId      String?         @map("hero_image_id") @db.Uuid
+  primaryTopicId   String?         @map("primary_topic_id") @db.Uuid
+  noImageException Boolean         @default(false) @map("no_image_exception")
+  seoTitle         String?         @map("seo_title")
+  seoDescription   String?         @map("seo_description")
+  createdAt        DateTime        @default(now()) @map("created_at")
+  updatedAt        DateTime        @updatedAt @map("updated_at")
+
+  heroImage    ImageAsset?         @relation(fields: [heroImageId], references: [id])
+  primaryTopic Topic?              @relation(fields: [primaryTopicId], references: [id])
+  versions     DiscoveryVersion[]
+  sources      DiscoverySource[]
+  concepts     DiscoveryConcept[]
+  lessons      DiscoveryLesson[]
+  auditLogs    AuditLog[]
+
+  @@map("discoveries")
+}
+
+model DiscoveryVersion {
+  id                          String   @id @default(uuid()) @db.Uuid
+  discoveryId                 String   @map("discovery_id") @db.Uuid
+  versionNumber               Int      @map("version_number")
+  quickMarkdown               String   @map("quick_markdown")
+  learnMarkdown               String   @map("learn_markdown")
+  deepMarkdown                String   @map("deep_markdown")
+  whatHappenedMarkdown        String   @map("what_happened_markdown")
+  whyItMattersMarkdown        String   @map("why_it_matters_markdown")
+  howMeasuredMarkdown         String   @map("how_measured_markdown")
+  priorUnderstandingMarkdown  String   @map("prior_understanding_markdown")
+  uncertaintyMarkdown         String   @map("uncertainty_markdown")
+  changeSummary               String?  @map("change_summary")
+  createdAt                   DateTime @default(now()) @map("created_at")
+
+  discovery Discovery @relation(fields: [discoveryId], references: [id], onDelete: Cascade)
+
+  @@unique([discoveryId, versionNumber])
+  @@map("discovery_versions")
+}
+
+model DiscoverySource {
+  discoveryId    String @map("discovery_id") @db.Uuid
+  sourceRecordId String @map("source_record_id") @db.Uuid
+
+  discovery    Discovery    @relation(fields: [discoveryId], references: [id], onDelete: Cascade)
+  sourceRecord SourceRecord @relation(fields: [sourceRecordId], references: [id], onDelete: Cascade)
+
+  @@id([discoveryId, sourceRecordId])
+  @@map("discovery_sources")
+}
+
+model Concept {
+  id                   String         @id @default(uuid()) @db.Uuid
+  slug                 String         @unique
+  name                 String
+  shortDefinition      String         @map("short_definition")
+  explanationMarkdown  String         @map("explanation_markdown")
+  difficulty           Difficulty     @default(beginner)
+  status               ContentStatus  @default(published)
+  createdAt            DateTime       @default(now()) @map("created_at")
+  updatedAt            DateTime       @updatedAt @map("updated_at")
+
+  discoveries DiscoveryConcept[]
+  lessons     LessonConcept[]
+
+  @@map("concepts")
+}
+
+model DiscoveryConcept {
+  discoveryId String @map("discovery_id") @db.Uuid
+  conceptId   String @map("concept_id") @db.Uuid
+
+  discovery Discovery @relation(fields: [discoveryId], references: [id], onDelete: Cascade)
+  concept   Concept   @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+
+  @@id([discoveryId, conceptId])
+  @@map("discovery_concepts")
+}
+
+model Lesson {
+  id               String        @id @default(uuid()) @db.Uuid
+  slug             String        @unique
+  title            String
+  summary          String
+  bodyMarkdown     String        @map("body_markdown")
+  difficulty       Difficulty    @default(beginner)
+  estimatedMinutes Int           @default(5) @map("estimated_minutes")
+  includeMath      Boolean       @default(false) @map("include_math")
+  status           ContentStatus @default(published)
+  heroImageId      String?       @map("hero_image_id") @db.Uuid
+  createdAt        DateTime      @default(now()) @map("created_at")
+  updatedAt        DateTime      @updatedAt @map("updated_at")
+
+  heroImage   ImageAsset?      @relation(fields: [heroImageId], references: [id])
+  concepts    LessonConcept[]
+  discoveries DiscoveryLesson[]
+
+  @@map("lessons")
+}
+
+model LessonConcept {
+  lessonId  String @map("lesson_id") @db.Uuid
+  conceptId String @map("concept_id") @db.Uuid
+
+  lesson  Lesson  @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+  concept Concept @relation(fields: [conceptId], references: [id], onDelete: Cascade)
+
+  @@id([lessonId, conceptId])
+  @@map("lesson_concepts")
+}
+
+model DiscoveryLesson {
+  discoveryId String @map("discovery_id") @db.Uuid
+  lessonId    String @map("lesson_id") @db.Uuid
+
+  discovery Discovery @relation(fields: [discoveryId], references: [id], onDelete: Cascade)
+  lesson    Lesson    @relation(fields: [lessonId], references: [id], onDelete: Cascade)
+
+  @@id([discoveryId, lessonId])
+  @@map("discovery_lessons")
+}
+
+model AuditLog {
+  id          String   @id @default(uuid()) @db.Uuid
+  discoveryId String?  @map("discovery_id") @db.Uuid
+  action      String
+  fromStatus  String?  @map("from_status")
+  toStatus    String?  @map("to_status")
+  message     String?
+  metadata    Json?
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  discovery Discovery? @relation(fields: [discoveryId], references: [id], onDelete: SetNull)
+
+  @@map("audit_logs")
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cosmic-gateway",
+  "private": true,
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev": "pnpm --filter @cosmic-gateway/web dev",
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "db:generate": "pnpm --filter @cosmic-gateway/database generate",
+    "db:migrate": "pnpm --filter @cosmic-gateway/database migrate:dev",
+    "db:seed": "pnpm --filter @cosmic-gateway/database seed",
+    "db:studio": "pnpm --filter @cosmic-gateway/database studio",
+    "test": "pnpm --filter @cosmic-gateway/web test"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
