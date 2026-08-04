@@ -20,6 +20,15 @@ Update this file whenever you add or retarget discovery↔concept / lesson links
 
 **Editorial depth (all discoveries):** Quick ~110–150 words · Learn ~580–700 · Deep ~1000–1200, with shared section structure (Learn: What happened / Why it matters / How measured / Prior understanding / Uncertainty; Deep: Context / Methods / Interpretations / Prior understanding / How to read sources / Uncertainty).
 
+**Evidence-status rule:** Use `peer_reviewed` only when at least one linked source has `sourceType: paper` (journal or arXiv paper). Facility photo/science releases alone → `official_release`. Unsettled claims → `preliminary`. Independently demonstrated mission results may use `confirmed`.
+
+| Evidence status | Discoveries |
+|-----------------|-------------|
+| `peer_reviewed` | Early galaxies · Betelgeuse companion · WASP-39b |
+| `preliminary` | K2-18b |
+| `confirmed` | DART asteroid impact |
+| `official_release` | All other seeded discoveries (facility releases without a linked paper yet) |
+
 Last updated: 2026-08-04 · **25 discoveries** · **28 concepts** · **3 lessons**
 
 ---
@@ -373,8 +382,9 @@ When adding or editing a discovery:
 [ ] Confirm concept names appear in Quick/Learn/Deep where you want auto-links
 [ ] Set wikipediaUrl / externalUrl on new concepts
 [ ] Attach lessons only when they genuinely extend the discovery
+[ ] Set evidenceStatus honestly: peer_reviewed only if a paper source is linked
 [ ] Update this document with the same detail level for every discovery:
-      slug + route, in-app concept routes, lessons, and Go deeper URLs
+      slug + route, in-app concept routes, lessons, Go deeper URLs, and evidence badge
 ```
 
 Related: [PROGRESS.md](../PROGRESS.md) · [architecture.md](../architecture.md)

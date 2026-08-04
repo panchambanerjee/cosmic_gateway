@@ -153,6 +153,8 @@ Editorial workflow for discoveries:
 
 Publish gates require at least one source and either a rights-cleared hero image or an explicit no-image exception. Each published discovery stores Quick / Learn / Deep markdown versions, linked concepts and lessons, evidence status, and source records (primary facilities/papers first; news tips secondary).
 
+**Evidence status policy:** `peer_reviewed` requires at least one linked `paper` source. Facility announcements without a paper link use `official_release`. Track per-article badges in [content/article-concept-links.md](./content/article-concept-links.md).
+
 ---
 
 ## Related docs

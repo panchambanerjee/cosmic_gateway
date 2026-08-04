@@ -61,7 +61,7 @@ function buildDiscoveries(ctx: ExpansionBatchContext): SeedDiscoveryInput[] {
       subtitle:
         "Mid-infrared imaging reveals a new debris structure in a nearby planet-forming system.",
       dek: "Webb's MIRI view of Beta Pictoris shows a sharply inclined dust feature resembling a cat's tail, plus compositional clues in its debris disks.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-06-20T16:00:00.000Z"),
       firstSourceDate: new Date("2024-01-10T00:00:00.000Z"),
@@ -230,7 +230,7 @@ Hold the ESA/Webb weic2401 image as the public door, then treat every collision 
       subtitle:
         "Near-infrared imaging resolves twin jets from a pair of forming stars in Vela.",
       dek: "Webb captures the most detailed near-infrared view yet of HH 46/47, revealing jet history hidden by dusty natal clouds.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-06-22T16:00:00.000Z"),
       firstSourceDate: new Date("2023-07-26T00:00:00.000Z"),
@@ -405,7 +405,7 @@ Herbig-Haro brightness alone does not measure shock speed; line widths and prope
       subtitle:
         "A compact galaxy group becomes a laboratory for mergers, shocks, and black-hole feedback.",
       dek: "Webb's enormous mosaic of Stephan's Quintet resolves colliding gas, triggered star formation, and AGN-driven outflows in unprecedented infrared detail.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-06-24T16:00:00.000Z"),
       firstSourceDate: new Date("2022-07-12T00:00:00.000Z"),
@@ -582,7 +582,7 @@ Keep redshift hygiene beside the spectacle: one interloper already warns that sk
       subtitle:
         "A rare massive star sheds shells of gas and dust on the road toward a supernova.",
       dek: "Webb's infrared view of WR 124 resolves knotty winds and newly forming dust around a Wolf-Rayet star — a brief prelude to core collapse.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-06-26T16:00:00.000Z"),
       firstSourceDate: new Date("2023-03-14T00:00:00.000Z"),
@@ -760,7 +760,7 @@ Treat 'prelude to a supernova' as evolutionary context, not a countdown clock st
       subtitle:
         "A nearby galactic wind laboratory lit by intense star formation.",
       dek: "Webb resolves the dusty heart and outflowing structures of M82, a classic starburst galaxy seen nearly edge-on.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-06-28T16:00:00.000Z"),
       firstSourceDate: new Date("2024-03-11T00:00:00.000Z"),
@@ -938,7 +938,7 @@ Distinguish fountain from wind with velocities relative to escape speed, and dis
       subtitle:
         "Spectroscopy reveals a forming galaxy cluster core in the early Universe.",
       dek: "Webb uncovers a concentration of massive galaxies assembling around an extremely red quasar, probing how early cosmic nodes grew.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "advanced",
       publishedAt: new Date("2026-06-30T16:00:00.000Z"),
       firstSourceDate: new Date("2022-10-20T00:00:00.000Z"),
@@ -1121,7 +1121,7 @@ An extremely red quasar is a selection-dependent spotlight on buried black hole 
       subtitle:
         "A ring galaxy forged by a head-on collision, seen in infrared dust and star formation.",
       dek: "Webb resolves the Cartwheel's rings and spokes in infrared light, mapping dust and young stars in a classic collisional ring galaxy.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-07-02T16:00:00.000Z"),
       firstSourceDate: new Date("2022-08-02T00:00:00.000Z"),
@@ -1303,7 +1303,7 @@ Remember that collisional rings are rare successful geometries among many galaxy
       subtitle:
         "Gravitational lensing turns a massive cluster into a natural telescope for distant galaxies.",
       dek: "Webb's view of Pandora's Cluster (Abell 2744) uses gravitational lensing to reveal faint background galaxies and map dark matter's pull.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "advanced",
       publishedAt: new Date("2026-07-04T16:00:00.000Z"),
       firstSourceDate: new Date("2022-11-15T00:00:00.000Z"),
@@ -1492,7 +1492,7 @@ Quote intrinsic luminosities for lensed galaxies only with magnification and its
       subtitle:
         "A nearby planetary nebula resolved into shells, filaments, and molecular structure.",
       dek: "Webb revisits the Ring Nebula (M57) in infrared light, revealing intricate shells from a sun-like star's final mass loss.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-07-06T16:00:00.000Z"),
       firstSourceDate: new Date("2023-08-21T00:00:00.000Z"),
@@ -1868,7 +1868,7 @@ Celebrate the confirmed orbital change without generalizing Dimorphos to every n
       subtitle:
         "A star-forming complex near the Milky Way's center, revealed through dust.",
       dek: "Webb resolves Sagittarius C near the Galactic Center, exposing star formation, luminous gas features, and structure in an extreme environment.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-07-10T16:00:00.000Z"),
       firstSourceDate: new Date("2023-11-20T00:00:00.000Z"),

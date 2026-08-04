@@ -74,7 +74,7 @@ function buildDiscoveries(ctx: LaunchBatchContext): SeedDiscoveryInput[] {
       subtitle:
         "Infrared light turns Hubble's iconic towers into a nursery of forming stars.",
       dek: "Webb pierces dust in the Eagle Nebula to reveal young stars embedded in the famous pillars.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-07-01T16:00:00.000Z"),
       firstSourceDate: new Date("2022-10-19T00:00:00.000Z"),
@@ -238,7 +238,7 @@ Photoevaporation timescales, the initial mass function of embedded stars, and th
       subtitle:
         "A glittering edge of star birth sculpted by radiation from massive stars.",
       dek: "NIRCam captures a wall of gas and dust in NGC 3324 where new stars are emerging.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-07-03T16:00:00.000Z"),
       firstSourceDate: new Date("2022-07-12T00:00:00.000Z"),
@@ -403,7 +403,7 @@ A useful comparison for readers is the Pillars of Creation, another Webb debut i
       subtitle:
         "A nearby supernova remnant shows clumpy debris and a cooling neutron-star heart.",
       dek: "Webb's mid- and near-infrared views refine the structure of Cas A's expanding ejecta.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-07-06T16:00:00.000Z"),
       firstSourceDate: new Date("2023-12-10T00:00:00.000Z"),
@@ -553,7 +553,7 @@ Readers comparing Cas A with the Crab Nebula, another well-known supernova remna
       subtitle:
         "Dust, filaments, and the pulsar-powered remnant of a historic supernova.",
       dek: "Webb revisits the Crab to map dust and structure in a pulsar wind nebula.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-07-08T16:00:00.000Z"),
       firstSourceDate: new Date("2023-10-30T00:00:00.000Z"),
@@ -1016,7 +1016,7 @@ Readers may find it useful to compare K2-18b with WASP-39b, another exoplanet co
       subtitle:
         "The Event Horizon Telescope resolves the shadow of our Galaxy's central black hole.",
       dek: "A ring of glowing plasma reveals the silhouette of a four-million-solar-mass black hole.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-07-15T16:00:00.000Z"),
       firstSourceDate: new Date("2022-05-12T00:00:00.000Z"),
@@ -1166,7 +1166,7 @@ Readers comparing this entry with the M87* image will notice the two results wer
       subtitle:
         "The Event Horizon Telescope resolves the shadow of a galaxy's central giant.",
       dek: "A luminous ring around a dark shadow inaugurated horizon-scale astronomy in 2019.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-07-17T16:00:00.000Z"),
       firstSourceDate: new Date("2019-04-10T00:00:00.000Z"),
@@ -1315,7 +1315,7 @@ Readers comparing this entry with the Sagittarius A* image released three years 
       subtitle:
         "Gravitational waves and a kilonova confirmed how heavy elements can form.",
       dek: "LIGO, Virgo, and telescopes worldwide watched two neutron stars collide.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "intermediate",
       publishedAt: new Date("2026-07-20T16:00:00.000Z"),
       firstSourceDate: new Date("2017-10-16T00:00:00.000Z"),
@@ -1474,7 +1474,7 @@ Readers may find it useful to compare GW170817 with the black hole merger detect
       subtitle:
         "Infrared imaging sharpens Neptune's rings, moons, and storm-world atmosphere.",
       dek: "A new look at the ice giant reveals rings and weather features with Webb's clarity.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-07-22T16:00:00.000Z"),
       firstSourceDate: new Date("2022-09-21T00:00:00.000Z"),
@@ -1620,7 +1620,7 @@ Readers comparing this image with other solar system observations on Cosmic Gate
       subtitle:
         "Infrared observations follow the ocean moon's geyser-fed spray into space.",
       dek: "Saturn's icy moon vents material from a subsurface ocean — and Webb can watch the plume.",
-      evidenceStatus: "peer_reviewed",
+      evidenceStatus: "official_release",
       difficulty: "beginner",
       publishedAt: new Date("2026-07-25T16:00:00.000Z"),
       firstSourceDate: new Date("2023-05-30T00:00:00.000Z"),
