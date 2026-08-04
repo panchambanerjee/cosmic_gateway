@@ -68,23 +68,17 @@ Prefer `ADMIN_PASSWORD_HASH` over plaintext `ADMIN_PASSWORD`.
 
 1. Create a managed Postgres database (Neon, Supabase, Vercel Postgres, etc.).
 2. In Vercel, import the GitHub repo (`panchambanerjee/cosmic_gateway`).
-3. Set the project root to the monorepo root (not `apps/web` alone).
-4. Configure build settings:
+3. Configure build settings:
 
 | Setting | Value |
 |---------|--------|
-| Install | `pnpm install` |
-| Build | `pnpm db:migrate:deploy && pnpm build` |
-| Output | Next.js default for `apps/web` — set **Root Directory** empty and Framework to Next.js with app under `apps/web`, **or** set Root Directory to `apps/web` and ensure workspace packages still install from the monorepo root |
+| Root Directory | `apps/web` |
+| Framework Preset | Next.js |
+| Install / Build | Prefer defaults — `apps/web/vercel.json` already sets `cd ../.. && …` |
 
-Recommended Vercel approach for this monorepo:
+If you override Install/Build in the Vercel UI, they **must** start with `cd ../.. &&`. Without that, cwd is `apps/web` and you get `db:migrate:deploy` not found.
 
-- **Root Directory:** `apps/web`
-- **Install Command:** `cd ../.. && pnpm install`
-- **Build Command:** `cd ../.. && pnpm db:migrate:deploy && pnpm --filter @cosmic-gateway/web build`
-- **Framework Preset:** Next.js
-
-(Root `vercel.json` is a fallback if you deploy from the repo root instead.)
+Do **not** leave Project Settings Build Command as `pnpm db:migrate:deploy && …` alone — that matches the old root `vercel.json` failure mode.
 
 Environment variables (Production):
 
