@@ -25,6 +25,28 @@ type DiscoveryWithRelations = Discovery & {
   sources?: Array<{ sourceRecord: SourceRecord }>;
   concepts?: Array<{ concept: Concept }>;
   lessons?: Array<{ lesson: Lesson }>;
+  relatedFrom?: Array<{
+    note: string | null;
+    sortOrder: number;
+    related: {
+      id: string;
+      slug: string;
+      title: string;
+      subtitle: string | null;
+      status: string;
+    };
+  }>;
+  relatedTo?: Array<{
+    note: string | null;
+    sortOrder: number;
+    discovery: {
+      id: string;
+      slug: string;
+      title: string;
+      subtitle: string | null;
+      status: string;
+    };
+  }>;
 };
 
 export function estimateReadingMinutes(text: string): number {
@@ -114,6 +136,45 @@ export function toLessonSummary(lesson: Lesson): LessonSummary {
   };
 }
 
+function collectRelatedDiscoveries(discovery: DiscoveryWithRelations) {
+  const seen = new Set<string>();
+  const related: Array<{
+    id: string;
+    slug: string;
+    title: string;
+    subtitle: string | null;
+    note?: string | null;
+  }> = [];
+
+  for (const row of discovery.relatedFrom ?? []) {
+    if (row.related.status !== "published" || seen.has(row.related.id)) continue;
+    seen.add(row.related.id);
+    related.push({
+      id: row.related.id,
+      slug: row.related.slug,
+      title: row.related.title,
+      subtitle: row.related.subtitle,
+      note: row.note,
+    });
+  }
+
+  for (const row of discovery.relatedTo ?? []) {
+    if (row.discovery.status !== "published" || seen.has(row.discovery.id)) {
+      continue;
+    }
+    seen.add(row.discovery.id);
+    related.push({
+      id: row.discovery.id,
+      slug: row.discovery.slug,
+      title: row.discovery.title,
+      subtitle: row.discovery.subtitle,
+      note: row.note,
+    });
+  }
+
+  return related;
+}
+
 export function toDiscoveryListItem(
   discovery: DiscoveryWithRelations,
 ): DiscoveryListItem | null {
@@ -175,6 +236,7 @@ export function toDiscoveryDetail(
     relatedLessons: (discovery.lessons ?? []).map((row) =>
       toLessonSummary(row.lesson),
     ),
+    relatedDiscoveries: collectRelatedDiscoveries(discovery),
     versionNumber: version.versionNumber,
     changeSummary: version.changeSummary,
     noImageException: discovery.noImageException,

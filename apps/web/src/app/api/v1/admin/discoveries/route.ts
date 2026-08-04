@@ -90,6 +90,12 @@ export async function POST(request: Request) {
       lessons: {
         create: input.lessonIds.map((lessonId) => ({ lessonId })),
       },
+      relatedFrom: {
+        create: input.relatedDiscoveryIds.map((relatedId, index) => ({
+          relatedId,
+          sortOrder: index,
+        })),
+      },
       auditLogs: {
         create: {
           action: "create_draft",

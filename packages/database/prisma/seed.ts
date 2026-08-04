@@ -3,6 +3,7 @@ import { config } from "dotenv";
 import { resolve } from "node:path";
 import { seedLaunchBatch } from "./seed-launch-batch.js";
 import { seedExpansionBatch } from "./seed-expansion-batch.js";
+import { linkRelatedDiscoveries } from "./seed-helpers.js";
 
 config({ path: resolve(process.cwd(), "../../.env") });
 config({ path: resolve(process.cwd(), ".env") });
@@ -16,6 +17,7 @@ function estimateReadingMinutes(text: string): number {
 
 async function main() {
   await prisma.auditLog.deleteMany();
+  await prisma.discoveryRelation.deleteMany();
   await prisma.tipCandidate.deleteMany();
   await prisma.discoveryLesson.deleteMany();
   await prisma.discoveryConcept.deleteMany();
@@ -1082,6 +1084,127 @@ Light bends near a black hole. The dark central region in EHT images is a shadow
     },
   });
 
+  const relatedCount = await linkRelatedDiscoveries(prisma, [
+    // Star formation / nebulae
+    {
+      fromSlug: "pillars-of-creation-webb",
+      toSlug: "cosmic-cliffs-carina",
+      note: "Two Webb portraits of star-forming gas and dust.",
+    },
+    {
+      fromSlug: "pillars-of-creation-webb",
+      toSlug: "hh-46-47-protostellar-jets",
+      note: "From pillars of gas to resolved protostellar jets.",
+    },
+    {
+      fromSlug: "cosmic-cliffs-carina",
+      toSlug: "sagittarius-c-galactic-center",
+      note: "Crowded star-forming environments in infrared light.",
+    },
+    {
+      fromSlug: "hh-46-47-protostellar-jets",
+      toSlug: "wolf-rayet-124-winds",
+      note: "Outflows and winds that reshape stellar surroundings.",
+    },
+    // Stellar death / remnants
+    {
+      fromSlug: "cassiopeia-a-webb",
+      toSlug: "crab-nebula-webb",
+      note: "Young supernova remnants seen by Webb.",
+    },
+    {
+      fromSlug: "crab-nebula-webb",
+      toSlug: "ring-nebula-webb",
+      note: "Different endings: core-collapse remnant vs planetary nebula.",
+    },
+    {
+      fromSlug: "cassiopeia-a-webb",
+      toSlug: "neutron-star-merger-gw170817",
+      note: "Neutron stars as leftovers — and as gravitational-wave sources.",
+    },
+    // Exoplanets / disks
+    {
+      fromSlug: "wasp-39b-atmosphere",
+      toSlug: "k2-18b-atmosphere-signals",
+      note: "Transit spectroscopy: clear chemistry vs unsettled claims.",
+    },
+    {
+      fromSlug: "beta-pictoris-debris-disk",
+      toSlug: "wasp-39b-atmosphere",
+      note: "From dusty disks to measured exoplanet atmospheres.",
+    },
+    // Black holes / AGN
+    {
+      fromSlug: "sagittarius-a-star-image",
+      toSlug: "m87-black-hole-first-image",
+      note: "Two Event Horizon Telescope shadows — Milky Way and M87.",
+    },
+    {
+      fromSlug: "extremely-red-quasar-webb",
+      toSlug: "sagittarius-a-star-image",
+      note: "Growing black holes nearby and in the early universe.",
+    },
+    {
+      fromSlug: "extremely-red-quasar-webb",
+      toSlug: "m87-black-hole-first-image",
+      note: "Quasar engines and horizon-scale imaging of SMBHs.",
+    },
+    // Galaxies / interactions
+    {
+      fromSlug: "stephans-quintet-interactions",
+      toSlug: "cartwheel-galaxy-collision",
+      note: "Galaxy interactions that drive new structure and star formation.",
+    },
+    {
+      fromSlug: "m82-starburst-galaxy",
+      toSlug: "stephans-quintet-interactions",
+      note: "Violent star formation and interacting systems.",
+    },
+    {
+      fromSlug: "cartwheel-galaxy-collision",
+      toSlug: "m82-starburst-galaxy",
+      note: "Collisions and starbursts as cosmic construction sites.",
+    },
+    // Cosmology / early universe / lensing
+    {
+      fromSlug: "early-galaxies-challenge-simple-growth-models",
+      toSlug: "pandoras-cluster-lensed-galaxies",
+      note: "Distant galaxies — direct deep fields and cluster lenses.",
+    },
+    {
+      fromSlug: "pandoras-cluster-lensed-galaxies",
+      toSlug: "euclid-perseus-cluster",
+      note: "Clusters as dark-matter laboratories and natural telescopes.",
+    },
+    {
+      fromSlug: "early-galaxies-challenge-simple-growth-models",
+      toSlug: "euclid-perseus-cluster",
+      note: "From early-galaxy tension to wide-field cosmology mapping.",
+    },
+    // Solar system
+    {
+      fromSlug: "webb-neptune-close-up",
+      toSlug: "enceladus-webb-plume",
+      note: "Ice giants and ocean moons in the outer solar system.",
+    },
+    {
+      fromSlug: "dart-asteroid-impact",
+      toSlug: "webb-neptune-close-up",
+      note: "Nearby solar-system targets observed across missions.",
+    },
+    // Stars continuity
+    {
+      fromSlug: "betelgeuse-companion-clearest-image-yet",
+      toSlug: "wolf-rayet-124-winds",
+      note: "Evolved massive stars and the winds that shape them.",
+    },
+    {
+      fromSlug: "betelgeuse-companion-clearest-image-yet",
+      toSlug: "crab-nebula-webb",
+      note: "Massive-star evolution toward supernova remnants.",
+    },
+  ]);
+
   await prisma.tipCandidate.createMany({
     data: [
       {
@@ -1121,6 +1244,7 @@ Light bends near a black hole. The dark central region in EHT images is a shadow
   console.log("Seeded Betelgeuse discovery:", betelgeuseDiscovery.slug);
   console.log("Launch batch discoveries:", launchSlugs);
   console.log("Expansion batch discoveries:", expansionSlugs);
+  console.log("Related discovery links created:", relatedCount);
   console.log("Inventory:", {
     discoveries: discoveryCount,
     concepts: conceptCount,

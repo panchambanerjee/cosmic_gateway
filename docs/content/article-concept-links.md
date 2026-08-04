@@ -29,6 +29,8 @@ Update this file whenever you add or retarget discovery↔concept / lesson links
 | `confirmed` | DART asteroid impact |
 | `official_release` | All other seeded discoveries (facility releases without a linked paper yet) |
 
+**Related discoveries:** Articles can link to each other (bidirectional in the UI). Seeded clusters include star formation, stellar remnants, exoplanet atmospheres, black holes, galaxy interactions, cosmology/lensing, and solar-system pairs. See [Related discoveries](#related-discoveries) below.
+
 Last updated: 2026-08-04 · **25 discoveries** · **28 concepts** · **3 lessons**
 
 ---
@@ -293,6 +295,22 @@ Last updated: 2026-08-04 · **25 discoveries** · **28 concepts** · **3 lessons
 
 ---
 
+## Related discoveries
+
+Editorial links between articles (`discovery_relations`). The UI shows a **Related discoveries** section; links are treated as undirected for readers (A→B also appears on B).
+
+| Cluster | Linked articles |
+|---------|-----------------|
+| Star formation | Pillars ↔ Cosmic Cliffs ↔ HH 46/47 ↔ Sagittarius C · HH 46/47 ↔ WR 124 |
+| Stellar death | Cas A ↔ Crab ↔ Ring Nebula · Cas A ↔ GW170817 · Betelgeuse ↔ Crab / WR 124 |
+| Exoplanets | WASP-39b ↔ K2-18b · Beta Pictoris ↔ WASP-39b |
+| Black holes | Sgr A* ↔ M87* · Extremely red quasar ↔ Sgr A* / M87* |
+| Galaxy interactions | Stephan’s Quintet ↔ Cartwheel ↔ M82 |
+| Cosmology | Early galaxies ↔ Pandora’s Cluster ↔ Euclid Perseus |
+| Solar system | Neptune ↔ Enceladus · DART ↔ Neptune |
+
+---
+
 ## Concept catalog (Go deeper targets)
 
 | Slug | Name | Wikipedia | Other external |
@@ -383,8 +401,10 @@ When adding or editing a discovery:
 [ ] Set wikipediaUrl / externalUrl on new concepts
 [ ] Attach lessons only when they genuinely extend the discovery
 [ ] Set evidenceStatus honestly: peer_reviewed only if a paper source is linked
+[ ] Link related discoveries when another article genuinely continues the trail
 [ ] Update this document with the same detail level for every discovery:
-      slug + route, in-app concept routes, lessons, Go deeper URLs, and evidence badge
+      slug + route, in-app concept routes, lessons, Go deeper URLs, evidence badge,
+      and related-discovery clusters when changed
 ```
 
 Related: [PROGRESS.md](../PROGRESS.md) · [architecture.md](../architecture.md)

@@ -137,6 +137,8 @@ model Discovery {
   sources      DiscoverySource[]
   concepts     DiscoveryConcept[]
   lessons      DiscoveryLesson[]
+  relatedFrom  DiscoveryRelation[] @relation("DiscoveryRelationsFrom")
+  relatedTo    DiscoveryRelation[] @relation("DiscoveryRelationsTo")
   auditLogs    AuditLog[]
 
   @@map("discoveries")
@@ -245,6 +247,22 @@ model DiscoveryLesson {
 
   @@id([discoveryId, lessonId])
   @@map("discovery_lessons")
+}
+
+model DiscoveryRelation {
+  id          String  @id @default(uuid()) @db.Uuid
+  discoveryId String  @map("discovery_id") @db.Uuid
+  relatedId   String  @map("related_id") @db.Uuid
+  note        String?
+  sortOrder   Int     @default(0) @map("sort_order")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  discovery Discovery @relation("DiscoveryRelationsFrom", fields: [discoveryId], references: [id], onDelete: Cascade)
+  related   Discovery @relation("DiscoveryRelationsTo", fields: [relatedId], references: [id], onDelete: Cascade)
+
+  @@unique([discoveryId, relatedId])
+  @@index([relatedId])
+  @@map("discovery_relations")
 }
 
 model AuditLog {

@@ -95,6 +95,8 @@ Also: **6 topics**, **~29 concepts**, **3 lessons**, tip queue samples.
 
 **Evidence badges:** `peer_reviewed` only when a paper source is linked (currently: Early galaxies, Betelgeuse, WASP-39b). Most others are `official_release`; K2-18b is `preliminary`; DART is `confirmed`. See [article-concept-links.md](./content/article-concept-links.md).
 
+**Related discoveries:** Discoveries can link to each other; seeded clusters and the public “Related discoveries” section are documented in the same content inventory.
+
 Seed entry: `packages/database/prisma/seed.ts` → launch + expansion batches.
 
 ### APIs (same Next.js app)

@@ -250,6 +250,36 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
         </section>
       ) : null}
 
+      {discovery.relatedDiscoveries.length > 0 ? (
+        <section className="mt-12 max-w-3xl border-t border-white/10 pt-8">
+          <h2 className="font-display text-2xl text-star-50">
+            Related discoveries
+          </h2>
+          <p className="mt-1 text-sm text-star-200/60">
+            Continue through nearby stories that share instruments, objects, or
+            ideas.
+          </p>
+          <ul className="mt-4 space-y-3">
+            {discovery.relatedDiscoveries.map((item) => (
+              <li key={item.id}>
+                <Link
+                  href={`/discoveries/${item.slug}`}
+                  className="text-nebula-400 hover:underline"
+                >
+                  {item.title}
+                </Link>
+                {item.subtitle ? (
+                  <p className="text-sm text-star-200/70">{item.subtitle}</p>
+                ) : null}
+                {item.note ? (
+                  <p className="text-xs text-star-200/55">{item.note}</p>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       <section className="mt-12 max-w-3xl border-t border-white/10 pt-8">
         <h2 className="font-display text-2xl text-star-50">Sources</h2>
         <p className="mt-1 text-sm text-star-200/60">

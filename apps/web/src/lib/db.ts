@@ -7,6 +7,20 @@ export const discoveryInclude = {
   sources: { include: { sourceRecord: true } },
   concepts: { include: { concept: true } },
   lessons: { include: { lesson: true } },
+  relatedFrom: {
+    include: {
+      related: { select: { id: true, slug: true, title: true, subtitle: true, status: true } },
+    },
+    orderBy: { sortOrder: "asc" as const },
+  },
+  relatedTo: {
+    include: {
+      discovery: {
+        select: { id: true, slug: true, title: true, subtitle: true, status: true },
+      },
+    },
+    orderBy: { sortOrder: "asc" as const },
+  },
 } as const;
 
 export async function listPublishedDiscoveries() {

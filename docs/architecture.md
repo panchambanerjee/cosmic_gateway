@@ -155,6 +155,8 @@ Publish gates require at least one source and either a rights-cleared hero image
 
 **Evidence status policy:** `peer_reviewed` requires at least one linked `paper` source. Facility announcements without a paper link use `official_release`. Track per-article badges in [content/article-concept-links.md](./content/article-concept-links.md).
 
+**Related discoveries:** `discovery_relations` joins articles. Public pages show bidirectional related links; drafts can pass `relatedDiscoveryIds` on create. Seeded clusters are listed in the content inventory.
+
 ---
 
 ## Related docs

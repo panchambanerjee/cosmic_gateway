@@ -149,3 +149,44 @@ export async function publishSeedDiscovery(
     },
   });
 }
+
+/** Undirected editorial links: stores one row per ordered pair (a → b). */
+export async function linkRelatedDiscoveries(
+  prisma: PrismaClient,
+  pairs: Array<{ fromSlug: string; toSlug: string; note?: string }>,
+) {
+  const slugs = [...new Set(pairs.flatMap((p) => [p.fromSlug, p.toSlug]))];
+  const discoveries = await prisma.discovery.findMany({
+    where: { slug: { in: slugs } },
+    select: { id: true, slug: true },
+  });
+  const bySlug = new Map(discoveries.map((d) => [d.slug, d.id]));
+
+  let created = 0;
+  for (const [index, pair] of pairs.entries()) {
+    const discoveryId = bySlug.get(pair.fromSlug);
+    const relatedId = bySlug.get(pair.toSlug);
+    if (!discoveryId || !relatedId || discoveryId === relatedId) {
+      throw new Error(
+        `Cannot link related discoveries: ${pair.fromSlug} → ${pair.toSlug}`,
+      );
+    }
+    await prisma.discoveryRelation.upsert({
+      where: {
+        discoveryId_relatedId: { discoveryId, relatedId },
+      },
+      create: {
+        discoveryId,
+        relatedId,
+        note: pair.note,
+        sortOrder: index,
+      },
+      update: {
+        note: pair.note,
+        sortOrder: index,
+      },
+    });
+    created += 1;
+  }
+  return created;
+}

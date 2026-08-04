@@ -110,6 +110,14 @@ export const DiscoveryListItemSchema = z.object({
   }),
 });
 
+export const RelatedDiscoverySummarySchema = z.object({
+  id: z.string().uuid(),
+  slug: z.string(),
+  title: z.string(),
+  subtitle: z.string().nullable(),
+  note: z.string().nullable().optional(),
+});
+
 export const DiscoveryDetailSchema = DiscoveryListItemSchema.extend({
   content: z.object({
     quick: z.string(),
@@ -126,6 +134,7 @@ export const DiscoveryDetailSchema = DiscoveryListItemSchema.extend({
   sources: z.array(SourceRecordSchema),
   concepts: z.array(ConceptSummarySchema),
   relatedLessons: z.array(LessonSummarySchema),
+  relatedDiscoveries: z.array(RelatedDiscoverySummarySchema).default([]),
   versionNumber: z.number().int(),
   changeSummary: z.string().nullable(),
   noImageException: z.boolean(),
@@ -208,6 +217,7 @@ export const CreateDiscoveryDraftSchema = z.object({
   sourceIds: z.array(z.string().uuid()).default([]),
   conceptIds: z.array(z.string().uuid()).default([]),
   lessonIds: z.array(z.string().uuid()).default([]),
+  relatedDiscoveryIds: z.array(z.string().uuid()).default([]),
   changeSummary: z.string().optional(),
 });
 
@@ -231,6 +241,7 @@ export type ImageAsset = z.infer<typeof ImageAssetSchema>;
 export type SourceRecord = z.infer<typeof SourceRecordSchema>;
 export type ConceptSummary = z.infer<typeof ConceptSummarySchema>;
 export type LessonSummary = z.infer<typeof LessonSummarySchema>;
+export type RelatedDiscoverySummary = z.infer<typeof RelatedDiscoverySummarySchema>;
 export type DiscoveryListItem = z.infer<typeof DiscoveryListItemSchema>;
 export type DiscoveryDetail = z.infer<typeof DiscoveryDetailSchema>;
 export type ConceptDetail = z.infer<typeof ConceptDetailSchema>;
