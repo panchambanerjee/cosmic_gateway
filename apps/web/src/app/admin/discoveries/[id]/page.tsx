@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { isAdminAuthenticated } from "@/lib/admin-auth";
-import { prisma, discoveryInclude } from "@/lib/db";
+import { prisma } from "@/lib/db";
 import {
   DISCOVERY_STATUS_FLOW,
   latestVersion,
@@ -22,7 +22,10 @@ export default async function AdminDiscoveryDetailPage({ params }: Props) {
   const discovery = await prisma.discovery.findUnique({
     where: { id },
     include: {
-      ...discoveryInclude,
+      primaryTopic: true,
+      heroImage: true,
+      versions: true,
+      sources: { include: { sourceRecord: true } },
       auditLogs: { orderBy: { createdAt: "desc" }, take: 30 },
     },
   });
