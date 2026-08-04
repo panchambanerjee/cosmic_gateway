@@ -2,6 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { config } from "dotenv";
 import { resolve } from "node:path";
 import { seedLaunchBatch } from "./seed-launch-batch.js";
+import { seedExpansionBatch } from "./seed-expansion-batch.js";
 
 config({ path: resolve(process.cwd(), "../../.env") });
 config({ path: resolve(process.cwd(), ".env") });
@@ -431,6 +432,94 @@ Distant supernovae revealed acceleration. Surveys like Euclid map how structure 
         wikipediaUrl: "https://en.wikipedia.org/wiki/Dark_energy",
         difficulty: "intermediate" as const,
       },
+      {
+        slug: "debris-disk",
+        name: "Debris disk",
+        shortDefinition:
+          "A belt of dust and planetesimals around a star, leftover from planet formation or refreshed by collisions.",
+        explanationMarkdown: `## Debris disks
+
+Debris disks are the dusty leftovers of planet building. Collisions grind rocks into dust that shines in infrared light. Structures in the disk can hint at planets sculpting the material.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Debris_disk",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "herbig-haro",
+        name: "Herbig–Haro object",
+        shortDefinition:
+          "Bright knots and shocks formed where jets from a young star slam into surrounding gas.",
+        explanationMarkdown: `## Herbig–Haro objects
+
+When a newborn star launches jets, the outflow hits the cloud and lights up shock fronts called Herbig–Haro objects. They are signposts of ongoing star formation.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Herbig%E2%80%93Haro_object",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "galaxy-merger",
+        name: "Galaxy merger",
+        shortDefinition:
+          "The gravitational encounter and eventual coalescence of two or more galaxies.",
+        explanationMarkdown: `## Galaxy mergers
+
+Gravity can pull galaxies together. Interactions trigger star formation, reshape disks into rings or tails, and can feed central black holes. Many large galaxies today grew through mergers.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Galaxy_merger",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "starburst-galaxy",
+        name: "Starburst galaxy",
+        shortDefinition:
+          "A galaxy forming stars at an exceptionally high rate for a short cosmic interval.",
+        explanationMarkdown: `## Starburst galaxies
+
+Starbursts pack intense star formation into a small region, often driven by interactions or gas inflows. Infrared and radio light reveal dust-obscured activity optical views can miss.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Starburst_galaxy",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "quasar",
+        name: "Quasar",
+        shortDefinition:
+          "An extremely luminous galactic nucleus powered by a rapidly accreting supermassive black hole.",
+        explanationMarkdown: `## Quasars
+
+Quasars outshine their host galaxies. Matter spiraling into a supermassive black hole forms a hot accretion disk that radiates across the spectrum. Dust can redden and obscure that light.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Quasar",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "gravitational-lensing",
+        name: "Gravitational lensing",
+        shortDefinition:
+          "The bending of light by mass, which can magnify and distort background galaxies.",
+        explanationMarkdown: `## Gravitational lensing
+
+Mass bends spacetime, so light from distant galaxies can be stretched into arcs or multiple images. Clusters act as natural telescopes and map dark matter through the distortion pattern.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Gravitational_lens",
+        difficulty: "intermediate" as const,
+      },
+      {
+        slug: "planetary-nebula",
+        name: "Planetary nebula",
+        shortDefinition:
+          "Glowing shells of gas ejected by a dying Sun-like star, lit by the hot stellar remnant.",
+        explanationMarkdown: `## Planetary nebulae
+
+Despite the name, they have nothing to do with planets. Aging stars shed outer layers; ultraviolet light from the exposed core ionizes the shells into colorful nebulae before the remnant cools as a white dwarf.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Planetary_nebula",
+        difficulty: "beginner" as const,
+      },
+      {
+        slug: "asteroid",
+        name: "Asteroid",
+        shortDefinition:
+          "A rocky body orbiting the Sun, leftover from solar-system formation.",
+        explanationMarkdown: `## Asteroids
+
+Asteroids range from rubble piles to solid rock. Missions like DART test whether we can change an asteroid's path — planetary defense grounded in orbital mechanics, not science fiction.`,
+        wikipediaUrl: "https://en.wikipedia.org/wiki/Asteroid",
+        difficulty: "beginner" as const,
+      },
     ].map((c) => prisma.concept.create({ data: c })),
   );
 
@@ -473,7 +562,7 @@ When you read a Webb headline about an unexpectedly mature early galaxy, ask two
 
   const quickMarkdown = `Webb's infrared deep fields revealed galaxies that look surprisingly developed for the universe's first few hundred million years. Instead of only faint, immature clumps, astronomers found systems with more starlight and structure than many simple growth models expected.
 
-That does not mean cosmology is broken. It means the earliest chapter of galaxy assembly was more efficient — or more bursty — than the simplest textbook sketches suggested.
+That does not mean cosmology is broken. It means the earliest chapter of galaxy assembly was more efficient — or more bursty — than the simplest textbook sketches suggested. Infrared sensitivity is what made the census possible: expansion stretches ancient starlight into wavelengths Webb was built to collect, so deep fields become catalogs of early systems rather than only postcard images.
 
 **Takeaway:** the early universe built complex galaxies faster than many people assumed, and infrared telescopes are the reason we can finally see it.`;
 
@@ -717,45 +806,114 @@ If you take one learning habit from this discovery, make it this: every dramatic
     },
   });
 
-  const betelgeuseQuick = `Astronomers using ESO's Very Large Telescope have captured the clearest image yet of a faint companion near Betelgeuse, the famous red supergiant in Orion. After roughly a century of suspicion, the star looks less like a loner and more like a binary star system.
+  const betelgeuseQuick = `Astronomers using ESO's Very Large Telescope have captured the clearest image yet of a faint companion near Betelgeuse, the famous red supergiant in Orion. After roughly a century of suspicion that the star might not be alone, the new high-contrast view makes Betelgeuse look less like a loner and more like a binary star system.
 
-The detection used SPHERE, an instrument with a coronagraph originally built to find exoplanets. Follow-up is still needed, but doubt has narrowed sharply.
+The detection used SPHERE, an instrument with a coronagraph originally built to find exoplanets by blocking a bright star's glare. Timing mattered: the team observed near a predicted maximum elongation, when the companion should sit farthest from the primary in projection. Follow-up is still needed to confirm orbital motion, but the visual case has narrowed doubt sharply.
 
-**Takeaway:** Betelgeuse likely has a companion, and high-contrast imaging made the case visual.`;
+**Takeaway:** Betelgeuse likely has a companion, and high-contrast imaging made the case visual rather than only statistical.`;
 
   const betelgeuseLearn = `## What happened
 
-A team led by Miguel Montargès used the SPHERE instrument on ESO's VLT to image a source consistent with Betelgeuse B, a companion orbiting the red supergiant Betelgeuse. The observation timed for a predicted maximum elongation, when the companion should be easiest to separate from the primary's glare.
+A team led by Miguel Montargès used the SPHERE instrument on ESO's Very Large Telescope to image a faint source consistent with Betelgeuse B, a companion orbiting the red supergiant Betelgeuse. The observation was timed for a predicted maximum elongation, when the companion should be easiest to separate from the primary's overwhelming glare.
+
+The result, reported through an ESO release and a peer-reviewed Astronomy & Astrophysics paper, is the clearest visual evidence yet that Betelgeuse is part of a binary star system. For about a century, astronomers had suspected a companion from long brightness cycles and other clues. This campaign turns that suspicion into a resolved point source next to one of the sky's most familiar stars.
+
+The candidate sits close enough that ordinary imaging would drown it. SPHERE's coronagraph and adaptive optics suppress Betelgeuse's light so a much fainter neighbor can emerge. That technical leap is why the same exoplanet-hunting toolkit now answers a classical stellar puzzle.
 
 ## Why it matters
 
-Betelgeuse's long brightness cycles have been debated for decades. A binary companion could help explain some of that behavior and may influence how the red supergiant evolves. The result also shows how exoplanet-hunting tools can solve classical stellar mysteries.
+Betelgeuse's brightness changes for more than one reason. Dust ejections and pulsations explained dramatic dimming episodes in recent years, but a longer secondary period kept the companion idea alive. A gravitationally bound partner could help shape that longer cycle and may influence the red supergiant's wind, surface activity, and late evolution.
+
+The discovery also matters pedagogically. It shows that instruments built for one frontier — imaging exoplanets — can reopen older questions about nearby giants. Learning terms such as Betelgeuse, red supergiant, binary star, and coronagraph make the measurement intelligible.
+
+For Cosmic Gateway readers, the story is also a source lesson. Space.com and similar outlets can tip you to a result. The durable account lives in the facility release and the journal paper, where methods, significance, and caveats are stated carefully.
 
 ## How it was measured
 
-SPHERE combines adaptive optics with a coronagraph that blocks most of Betelgeuse's light so fainter nearby sources can emerge. Advanced post-processing then isolates the candidate companion.
+SPHERE combines extreme adaptive optics with a coronagraph that blocks most of Betelgeuse's light. High-contrast post-processing then searches for a faint point source at the predicted separation and position angle. The published analysis reports a detection at high significance, with an estimated companion mass of roughly two to three solar masses if the stars formed together and share an age.
+
+That mass estimate is model-dependent. It assumes coevality and uses brightness plus evolutionary tracks. The key observational claim is simpler: a compact source appears where a companion should be when elongation is favorable. Timing relative to earlier predictions strengthens the interpretation beyond a random speck in residual starlight.
+
+Readers should separate the imaging detection from later dynamical proof. Seeing a source once at the right place is powerful. Watching it move to the other side of the orbit is how astronomers cement that the source is gravitationally bound rather than a chance alignment or residual artifact.
+
+## What scientists thought before
+
+For decades, Betelgeuse was treated as a solitary red supergiant whose variability came from pulsations, convection, and dust. The companion hypothesis never fully died because some photometric and spectroscopic patterns looked hard to explain with a single star alone. Earlier work around 2024 sharpened the case by predicting when a putative companion would reach favorable separation for direct imaging — roughly late 2024.
+
+That forecast set up the VLT/SPHERE campaign. In other words, this was not a lucky snapshot. It was a planned observation guided by orbital expectations. The prior understanding was therefore mixed: dust and pulsations were established for short-term dimming, while a binary explanation remained plausible for longer cycles and awaited a decisive visual test.
 
 ## What remains uncertain
 
-The team still wants a second-epoch observation on the other side of the orbit to cement the companion interpretation. Evidence is strong, not absolute.`;
+The team still wants a second-epoch observation on the other side of the orbit to confirm that the source moves as a bound companion should. Until then, the evidence is strong but not absolute. Chance alignments and residual speckles can still be debated in good faith.
 
-  const betelgeuseDeep = `## Context
+Uncertainty also remains about how strongly the companion shapes Betelgeuse's future — including mass loss and the path toward a supernova. Responsible reading keeps those open questions visible while still explaining why the image is a breakthrough. If you leave this Learn layer with one habit, ask what was imaged, what still needs orbital confirmation, and which concept unlocks the next sentence.`;
 
-Betelgeuse is among the best-studied red supergiants in the sky. Naked-eye observers have watched its brightness change for centuries. In recent years, dust ejections and pulsations explained dramatic dimming episodes, but a longer secondary period kept the companion hypothesis alive.
+  const betelgeuseDeep = `## Context: why Betelgeuse's companion became a flashpoint
 
-Earlier work in 2024 predicted that a putative companion would reach favorable separation around December 2024. That forecast set up the VLT/SPHERE campaign.
+Betelgeuse is among the best-studied red supergiants in the sky. Naked-eye observers have watched its brightness change for centuries, and modern campaigns tracked dramatic dimming episodes that dust ejections and pulsations can explain. A longer secondary period, however, kept alive an older idea: that Betelgeuse might not be alone.
 
-## Methods and evidence
+That idea is scientifically sticky because companions can alter winds, mass loss, and late stellar evolution. A binary star interpretation also offers a physical clock for some photometric cycles that a single star struggles to produce. For roughly a century, the companion remained inferred rather than seen. The glare of Betelgeuse itself was the obstacle.
 
-High-contrast imaging is usually associated with exoplanets. Here, the same logic applies: suppress the primary, stabilize the optics, and search for a faint point source at the predicted location. The candidate detection is reported at high significance in the published analysis, with an estimated companion mass of roughly two to three solar masses if the stars are coeval.
+Earlier modeling and observations around 2024 predicted that a putative companion would reach favorable projected separation around December 2024. That forecast transformed a century-old suspicion into an observing plan. When a team led by Miguel Montargès pointed ESO's Very Large Telescope and the SPHERE instrument at Betelgeuse near that window, the goal was explicit: catch Betelgeuse B where it should be easiest to pull out of the primary's light.
 
-## Competing interpretations and open questions
+Cosmic Gateway frames the result as a learning gateway, not only a viral image. The hero frame from ESO shows the candidate after glare suppression. Credits, the ESO release, and the Astronomy & Astrophysics paper stay one click away because astronomy communication depends on both the picture and the methods behind it.
 
-The leading interpretation is a gravitationally bound companion. Remaining work includes confirming orbital motion with a later epoch and assessing how the companion might affect Betelgeuse's wind, surface, and eventual fate. Responsible communication keeps the candidate label until that follow-up lands.
+## Methods and evidence, without the jargon wall
 
-## How Cosmic Gateway treats the tip
+High-contrast imaging is usually associated with exoplanets. The logic is the same next to a red supergiant: stabilize the wavefront with adaptive optics, block the bright core with a coronagraph, and search the residual field for a faint point source. SPHERE was built for that workflow. Using it on Betelgeuse is a reminder that instrument categories are less rigid than press categories.
 
-Space.com and similar outlets are useful discovery signals. The primary account remains the ESO release and the Astronomy & Astrophysics paper. Learning terms on this page — Betelgeuse, red supergiant, binary star, coronagraph — open short in-app explainers and deeper Wikipedia or facility links.`;
+The published analysis reports a candidate detection at high significance at the predicted location. If the stars are coeval, the companion's brightness implies a mass of roughly two to three solar masses — a substantial star in its own right, still vastly outshone by Betelgeuse's extended atmosphere and luminosity. Mass estimates depend on distance, extinction, age assumptions, and evolutionary tracks. The imaging detection and the mass number are related but not identical claims.
+
+Evidence quality improves when prediction and detection align. Observing at predicted maximum elongation is not cosmetic timing; it increases the chance that a real companion is separable and that a null result would have been informative. Post-processing must still convince readers that the source is not a leftover speckle or processing artifact. That is why papers spend pages on significance tests that headlines compress into a single adjective.
+
+When you read this discovery on Cosmic Gateway, ask:
+
+- Was the observation timed to a predicted elongation?
+- Is the claim an imaging detection, a full orbit, or both?
+- How model-dependent is the companion mass?
+- Which sources are primary (ESO, A&A) versus tip-level news?
+- Does the evidence status match what has actually been confirmed?
+
+## Competing interpretations / open questions
+
+The leading interpretation is a gravitationally bound companion — Betelgeuse B — consistent with long-standing binary hypotheses. Remaining work includes confirming orbital motion with a later epoch on the other side of the orbit. Until that second-epoch confirmation lands, careful language keeps a candidate label even when the first-epoch image is compelling.
+
+Alternative worries are familiar from high-contrast imaging: residual speckles, imperfect subtraction, and chance alignment with an unrelated background source. Each alternative becomes less likely when location matches prediction and significance is high, but none is dismissed by rhetoric alone. Follow-up motion is the cleanest discriminator.
+
+Open scientific questions go beyond existence. How does the companion interact with Betelgeuse's wind and convective surface? Does it help drive the long secondary period? Will it change mass-loss history enough to matter for the eventual core-collapse supernova? Those questions remain active research even if the companion's presence becomes settled.
+
+A burst of coverage can also inflate certainty. Space.com and similar outlets are useful discovery signals that point non-specialists to a result. They are not substitutes for the ESO release or the journal methods section. Cosmic Gateway keeps that ladder visible on purpose.
+
+## Prior understanding versus current tension
+
+Before this image, the mainstream picture already accepted that Betelgeuse's short-term dimming can arise from dust and pulsations. The unresolved tension was the longer cycle and whether a companion was required. Hierarchical storytelling that jumps from "dimming explained" to "no companion needed" oversimplified a literature that kept both dust physics and binary hypotheses in play.
+
+The current result does not erase dust and pulsation physics. It adds a spatially resolved companion candidate that earlier photometry could only hint at. The productive tension is therefore narrow and healthy: how much of Betelgeuse's behavior belongs to the red supergiant alone, and how much belongs to the binary architecture?
+
+Historically, astronomy often resolves such tensions with better angular resolution and better prediction. Interferometry, photometry, and spectroscopy built the case; a coronagraphic imager delivered the visual breakthrough. That sequence — hypothesis, forecast, targeted observation — is itself the lesson worth preserving.
+
+## How to read sources like a scientist
+
+Official releases explain why a result matters and often highlight a striking image. Papers contain reduction steps, detection significance, and caveats. News tips accelerate awareness but may compress uncertainty. Peer review raises confidence without freezing truth. When Cosmic Gateway labels evidence status, it is mapping that ladder, not decorating the page.
+
+A practical reading order for this topic:
+
+1. Look at the ESO image and credit line.
+2. Read the Quick takeaway.
+3. Check evidence status.
+4. Skim What happened and How measured in Learn.
+5. Open linked concepts — Betelgeuse, red supergiant, binary star, coronagraph — if a term blocks understanding.
+6. Visit the ESO release and A&A paper before sharing a strong claim; treat Space.com as the tip that started the trail.
+
+## Uncertainty to preserve
+
+A responsible reading distinguishes a high-significance first-epoch detection from fully confirmed orbital motion. It also distinguishes "companion likely influences long-term variability" from a finished theory of every Betelgeuse light curve. Peer-reviewed papers, facility releases, and news tips are not interchangeable.
+
+Uncertainty is not a failure of explanation. It is part of the explanation. The team has been explicit that a second-epoch observation is still needed to cement the companion interpretation. Until that confirmation arrives, Cosmic Gateway keeps the caveat next to the excitement.
+
+The image on this page is an invitation, not a conclusion. Credits and rights remain visible because trust depends on both the data and the people who obtained it. When the next claim about Betelgeuse's fate or brightness appears tomorrow, you will already know which questions to ask first: what was measured, what remains unconfirmed, and which primary source carries the methods.
+
+If you take one learning habit from this discovery, make it this: every dramatic stellar-companion claim deserves a method sentence, an uncertainty sentence, and a path into the concepts that make the measurement possible. From there, the gateway continues — into what a red supergiant is, why binary stars matter, and how a coronagraph turns glare into evidence.`;
 
   const betelgeuseDiscovery = await prisma.discovery.create({
     data: {
@@ -903,6 +1061,27 @@ Light bends near a black hole. The dark central region in EHT images is a shadow
     },
   });
 
+  const expansionSlugs = await seedExpansionBatch(prisma, {
+    topics: {
+      jwst: topic.id,
+      stars: starsTopic.id,
+      exoplanets: exoplanetsTopic.id,
+      blackHoles: blackHolesTopic.id,
+      cosmology: cosmologyTopic.id,
+      solarSystem: solarSystemTopic.id,
+    },
+    concepts: {
+      redshift: redshift.id,
+      spectroscopy: spectroscopy.id,
+      ...launchConceptBySlug,
+    },
+    lessons: {
+      "why-infrared-sees-the-early-universe": lesson.id,
+      "how-transit-spectra-reveal-atmospheres": howSpectraWork.id,
+      "what-a-black-hole-shadow-means": blackHoleLesson.id,
+    },
+  });
+
   await prisma.tipCandidate.createMany({
     data: [
       {
@@ -941,6 +1120,7 @@ Light bends near a black hole. The dark central region in EHT images is a shadow
   console.log("Secondary image for admin tests:", secondaryImage.id);
   console.log("Seeded Betelgeuse discovery:", betelgeuseDiscovery.slug);
   console.log("Launch batch discoveries:", launchSlugs);
+  console.log("Expansion batch discoveries:", expansionSlugs);
   console.log("Inventory:", {
     discoveries: discoveryCount,
     concepts: conceptCount,

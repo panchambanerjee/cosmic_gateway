@@ -145,6 +145,8 @@ Public beta / validation plan: [docs/product/public-beta-validation-plan.md](doc
 
 Architecture: [docs/architecture.md](docs/architecture.md).
 
+Content link inventory (articles → concepts / lessons / Wikipedia): [docs/content/article-concept-links.md](docs/content/article-concept-links.md).
+
 ## Progress and backlog
 
 See [docs/PROGRESS.md](docs/PROGRESS.md) for what is built, what is done, and what is next.

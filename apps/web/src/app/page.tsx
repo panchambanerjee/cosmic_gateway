@@ -25,8 +25,8 @@ export default async function HomePage() {
           A daily gateway from astronomy discoveries to genuine understanding.
         </p>
         <p className="mt-5 max-w-xl text-base text-star-200/70 md:text-lg">
-          Read what happened in astronomy, see the evidence, and follow the
-          concepts that make the headline make sense.
+          Read about the latest discoveries in astronomy, see the evidence, and
+          follow the concepts that make the headline make sense.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link

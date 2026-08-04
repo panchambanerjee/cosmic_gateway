@@ -16,6 +16,8 @@ Original product/engineering plan: [docs/product/product-engineering-plan.md](./
 
 Architecture: [docs/architecture.md](./architecture.md)
 
+Article ↔ concept / lesson links: [docs/content/article-concept-links.md](./content/article-concept-links.md)
+
 ---
 
 ## What we have built
@@ -54,26 +56,44 @@ Architecture: [docs/architecture.md](./architecture.md)
 - Tip import API + status updates (`new` / `triaged` / `used` / `rejected`)
 
 ### Seeded / published content (local seed)
-**14 discoveries** (Quick / Learn / Deep), spanning JWST, stars, exoplanets, black holes / GW, cosmology, and solar system:
+**25 discoveries** (Quick / Learn / Deep), each with a **unique** hero image URL — no shared heroes across articles.
 
-1. Early galaxies (JWST / SMACS) — redshift & spectroscopy
-2. Betelgeuse companion (ESO + A&A; Space.com tip secondary)
-3. Pillars of Creation (Webb)
-4. Cosmic Cliffs / Carina (Webb)
-5. Cassiopeia A supernova remnant (Webb)
-6. Crab Nebula (Webb)
-7. WASP-39b atmosphere / photochemistry (Webb)
-8. K2-18b atmosphere signals (preliminary — uncertainty emphasized)
-9. Sagittarius A* first image (EHT)
-10. M87* first black hole image (EHT)
-11. Neutron-star merger GW170817 (multi-messenger)
-12. Neptune close-up (Webb)
-13. Enceladus water plume (Webb)
-14. Euclid Perseus cluster / dark universe
+Varied across JWST, stars/stellar death, exoplanets/debris disks, black holes/quasars, cosmology/lensing, solar system, and multi-messenger:
 
-Also: **6 topics**, **20 concepts**, **3 lessons**, tip queue samples.
+**Original + launch batch (14)**  
+1. Early galaxies (JWST / SMACS)  
+2. Betelgeuse companion (ESO)  
+3. Pillars of Creation  
+4. Cosmic Cliffs / Carina  
+5. Cassiopeia A  
+6. Crab Nebula  
+7. WASP-39b atmosphere  
+8. K2-18b atmosphere signals (preliminary)  
+9. Sagittarius A* (EHT)  
+10. M87* (EHT)  
+11. GW170817 neutron-star merger  
+12. Neptune close-up  
+13. Enceladus plume  
+14. Euclid Perseus cluster  
 
-Launch seed lives in `packages/database/prisma/seed-launch-batch.ts` (plus original two in `seed.ts`).
+**Expansion batch (11)** — `seed-expansion-batch.ts`  
+15. Beta Pictoris debris disk  
+16. HH 46/47 protostellar jets  
+17. Stephan’s Quintet interactions  
+18. Wolf–Rayet 124 winds  
+19. M82 starburst galaxy  
+20. Extremely red quasar + companions  
+21. Cartwheel Galaxy collision  
+22. Pandora’s Cluster lensed galaxies  
+23. Ring Nebula  
+24. DART asteroid impact  
+25. Sagittarius C (galactic center)  
+
+Also: **6 topics**, **~29 concepts**, **3 lessons**, tip queue samples.
+
+**Editorial depth (all 25):** Quick ~110–150 words · Learn ~580–700 · Deep ~1000–1200, with the same section structure across articles.
+
+Seed entry: `packages/database/prisma/seed.ts` → launch + expansion batches.
 
 ### APIs (same Next.js app)
 - `GET /api/v1/discoveries`
