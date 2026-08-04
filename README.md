@@ -74,7 +74,7 @@ Prefer `ADMIN_PASSWORD_HASH` over plaintext `ADMIN_PASSWORD`.
 |---------|--------|
 | Root Directory | `apps/web` |
 | Framework Preset | Next.js |
-| Install / Build | Prefer defaults — `apps/web/vercel.json` already sets `cd ../.. && …` |
+| Install / Build | Prefer defaults — `apps/web/vercel.json` runs `db:generate`, `db:migrate:deploy`, then the web build |
 
 If you override Install/Build in the Vercel UI, they **must** start with `cd ../.. &&`. Without that, cwd is `apps/web` and you get `db:migrate:deploy` not found.
 

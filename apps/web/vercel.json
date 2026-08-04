@@ -1,5 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "installCommand": "cd ../.. && pnpm install",
-  "buildCommand": "cd ../.. && pnpm db:migrate:deploy && pnpm --filter @cosmic-gateway/web build"
+  "buildCommand": "cd ../.. && pnpm db:generate && pnpm db:migrate:deploy && pnpm --filter @cosmic-gateway/web build"
 }
