@@ -160,7 +160,8 @@ export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
         <CreditedImage
           image={discovery.heroImage}
           priority
-          className="mt-8 max-h-[28rem] rounded-sm border border-white/10"
+          size="hero"
+          className="mt-8 rounded-sm border border-white/10"
         />
       ) : discovery.noImageException ? (
         <p className="mt-6 text-sm text-star-200/60">

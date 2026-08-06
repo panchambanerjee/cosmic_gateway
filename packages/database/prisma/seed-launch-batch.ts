@@ -1481,14 +1481,14 @@ Readers may find it useful to compare GW170817 with the black hole merger detect
       topicId: ctx.topics.solarSystem,
       image: {
         sourceUrl:
-          "https://cdn.esawebb.org/archives/images/screen/weic2214a.jpg",
+          "https://cdn.esawebb.org/archives/images/screen/weic2214d.jpg",
         altText:
-          "James Webb Space Telescope near-infrared image of Neptune showing rings and atmospheric features",
+          "James Webb Space Telescope wide-field near-infrared image of Neptune, its rings, and nearby moons including bright Triton",
         caption:
-          "Neptune and its rings in near-infrared light from Webb, with several moons visible.",
+          "Wide-field NIRCam view of Neptune and its rings; Triton appears as the bright spiked point of light.",
         ...webbImageRights,
         verificationNotes:
-          "Seed asset: ESA Webb screen-resolution Neptune (weic2214a).",
+          "Seed asset: ESA Webb screen-resolution Neptune wide-field (weic2214d), matching the weic2214 release lead framing.",
       },
       sources: [
         {

@@ -38,7 +38,8 @@ export function DiscoveryCard({ discovery }: { discovery: DiscoveryListItem }) {
         {discovery.heroImage ? (
           <CreditedImage
             image={discovery.heroImage}
-            className="max-h-64 rounded-sm border border-white/10"
+            size="card"
+            className="rounded-sm border border-white/10"
           />
         ) : null}
       </div>
