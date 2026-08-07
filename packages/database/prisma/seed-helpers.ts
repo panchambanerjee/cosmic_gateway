@@ -38,9 +38,8 @@ export type SeedDiscoveryInput = {
   sources: SeedSourceInput[];
   conceptIds: string[];
   lessonIds?: string[];
-  quickMarkdown: string;
-  learnMarkdown: string;
-  deepMarkdown: string;
+  summaryMarkdown: string;
+  articleMarkdown: string;
   whatHappenedMarkdown: string;
   whyItMattersMarkdown: string;
   howMeasuredMarkdown: string;
@@ -115,9 +114,8 @@ export async function publishSeedDiscovery(
         create: [
           {
             versionNumber: 1,
-            quickMarkdown: input.quickMarkdown,
-            learnMarkdown: input.learnMarkdown,
-            deepMarkdown: input.deepMarkdown,
+            summaryMarkdown: input.summaryMarkdown,
+            articleMarkdown: input.articleMarkdown,
             whatHappenedMarkdown: input.whatHappenedMarkdown,
             whyItMattersMarkdown: input.whyItMattersMarkdown,
             howMeasuredMarkdown: input.howMeasuredMarkdown,

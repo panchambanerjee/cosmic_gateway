@@ -24,7 +24,7 @@ export const DifficultySchema = z.enum([
   "advanced",
 ]);
 
-export const ReadingDepthSchema = z.enum(["quick", "learn", "deep"]);
+export const ReadingDepthSchema = z.enum(["summary", "article"]);
 
 export const SourceTypeSchema = z.enum([
   "official_release",
@@ -104,9 +104,8 @@ export const DiscoveryListItemSchema = z.object({
   primaryTopic: TopicSummarySchema.nullable(),
   heroImage: ImageAssetSchema.nullable(),
   readingTimes: z.object({
-    quick: z.number().int(),
-    learn: z.number().int(),
-    deep: z.number().int(),
+    summary: z.number().int(),
+    article: z.number().int(),
   }),
 });
 
@@ -120,9 +119,8 @@ export const RelatedDiscoverySummarySchema = z.object({
 
 export const DiscoveryDetailSchema = DiscoveryListItemSchema.extend({
   content: z.object({
-    quick: z.string(),
-    learn: z.string(),
-    deep: z.string(),
+    summary: z.string(),
+    article: z.string(),
   }),
   sections: z.object({
     whatHappened: z.string(),
@@ -206,9 +204,8 @@ export const CreateDiscoveryDraftSchema = z.object({
   primaryTopicId: z.string().uuid(),
   heroImageId: z.string().uuid().optional().nullable(),
   noImageException: z.boolean().default(false),
-  quickMarkdown: z.string().min(1),
-  learnMarkdown: z.string().min(1),
-  deepMarkdown: z.string().min(1),
+  summaryMarkdown: z.string().min(1),
+  articleMarkdown: z.string().min(1),
   whatHappenedMarkdown: z.string().min(1),
   whyItMattersMarkdown: z.string().min(1),
   howMeasuredMarkdown: z.string().min(1),

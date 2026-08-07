@@ -6,9 +6,8 @@ import { useState } from "react";
 type Option = { id: string; name?: string; title?: string; creditLine?: string; publicationAllowed?: boolean };
 
 const emptyContent = {
-  quickMarkdown: "",
-  learnMarkdown: "",
-  deepMarkdown: "",
+  summaryMarkdown: "",
+  articleMarkdown: "",
   whatHappenedMarkdown: "",
   whyItMattersMarkdown: "",
   howMeasuredMarkdown: "",
@@ -228,9 +227,8 @@ export function NewDiscoveryForm({
 
       {(
         [
-          ["quickMarkdown", "Quick"],
-          ["learnMarkdown", "Learn"],
-          ["deepMarkdown", "Deep"],
+          ["summaryMarkdown", "Summary"],
+          ["articleMarkdown", "Article"],
           ["whatHappenedMarkdown", "What happened"],
           ["whyItMattersMarkdown", "Why it matters"],
           ["howMeasuredMarkdown", "How measured"],

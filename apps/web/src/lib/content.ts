@@ -200,9 +200,8 @@ export function toDiscoveryListItem(
       : null,
     heroImage: discovery.heroImage ? toImageDto(discovery.heroImage) : null,
     readingTimes: {
-      quick: estimateReadingMinutes(version.quickMarkdown),
-      learn: estimateReadingMinutes(version.learnMarkdown),
-      deep: estimateReadingMinutes(version.deepMarkdown),
+      summary: estimateReadingMinutes(version.summaryMarkdown),
+      article: estimateReadingMinutes(version.articleMarkdown),
     },
   };
 }
@@ -217,9 +216,8 @@ export function toDiscoveryDetail(
   return {
     ...list,
     content: {
-      quick: version.quickMarkdown,
-      learn: version.learnMarkdown,
-      deep: version.deepMarkdown,
+      summary: version.summaryMarkdown,
+      article: version.articleMarkdown,
     },
     sections: {
       whatHappened: version.whatHappenedMarkdown,

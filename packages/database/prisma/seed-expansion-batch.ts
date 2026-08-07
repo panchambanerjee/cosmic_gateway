@@ -93,48 +93,15 @@ function buildDiscoveries(ctx: ExpansionBatchContext): SeedDiscoveryInput[] {
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Beta Pictoris is a young planetary system only about 63 light-years away, long famous for hosting the first debris disk imaged around another star. Debris disks are collisional leftovers — dust from asteroids, comets, and planetesimals grinding against one another after planets have begun to form.
+      summaryMarkdown: `Beta Pictoris is a young planetary system only about 63 light-years away, long famous for hosting the first debris disk imaged around another star. Debris disks are collisional leftovers — dust from asteroids, comets, and planetesimals grinding against one another after planets have begun to form.
 
 Webb observed the system with NIRCam and MIRI. Mid-infrared light revealed a previously unseen, sharply inclined branch of dust extending from the known secondary disk, shaped like a cat's tail. Temperature differences between disk components also point to differences in grain composition.
 
 **Takeaway:** debris disks are dynamic, and mid-infrared astronomy can uncover recent collisional structures invisible at other wavelengths.
 
 **Uncertainty:** the exact age and dynamical origin of the cat's tail remain model-dependent hypotheses.`,
-      learnMarkdown: `## What happened
 
-In January 2024, ESA/Webb reported that Webb had imaged new structure in the Beta Pictoris system. Beta Pic already had a well-studied main debris disk and a secondary disk inclined relative to it, first revealed by Hubble. Using NIRCam and MIRI, astronomers found a sharply inclined dusty branch — the "cat's tail" — extending from the southwest portion of the secondary disk. The feature appeared in MIRI mid-infrared data, underscoring that wavelength choice, not only resolution, mattered.
-
-Webb's mid-infrared measurements also indicated temperature differences between the disks, consistent with compositional differences in the dust.
-
-The weic2401 release in January 2024 made the cat's tail morphology publicly accessible alongside MIRI temperature contrasts between debris disk components.
-
-## Why it matters
-
-Debris disks are the wreckage and recycling yards of planet formation. Mapping their geometry and grain properties constrains recent collisions and the dynamical influence of planets. Beta Pictoris is close enough and bright enough to serve as a laboratory: structures that would be invisible around more distant stars become readable here.
-
-For learners, the result is a concrete infrared lesson. Optical and near-infrared views can miss cool dust features that mid-infrared instruments catch. The same system can look nearly complete until a new bandpass opens a new chapter.
-
-Infrared astronomy reveals collisional structure in debris disks that optical and near-infrared views can miss entirely in nearby systems like Beta Pictoris.
-
-## How it was measured
-
-NIRCam and MIRI imaged the system at near- and mid-infrared wavelengths. Debris-disk dust emits thermally in the mid-infrared, so MIRI was essential for detecting the cat's tail. Comparing brightness and inferred temperature across components separates geometry from composition. Prior Hubble imaging provided the secondary-disk context that makes the new branch interpretable as an addition rather than a first detection of the whole disk.
-
-MIRI mid-infrared thermal maps were essential because debris-disk dust emits most strongly at wavelengths NIRCam scatters rather than thermally peaks.
-
-## What scientists thought before
-
-Before Webb, Beta Pictoris was already a benchmark for giant-planet influence, disk warps, and collisional cascades. Its debris disk was the first imaged around another star, and Hubble's inclined secondary disk already showed that the system is not a flat, settled leftover. Composition and fine structure, however, were incompletely mapped. Researchers expected refinement of a famous laboratory — not invention of an entirely new class of object — and that continuity is part of why the cat's-tail result teaches wavelength literacy rather than a false reset of the field.
-
-## What remains uncertain
-
-Whether the cat's tail traces a recent catastrophic collision, a dust-scattering event, or another dynamical process is still debated. Grain size distributions, viewing geometry, and radiation pressure all reshape how a dust stream appears on the sky. Official releases explain the morphology clearly; peer-reviewed modeling refines ages and masses of the dust. Cosmic Gateway treats the ESA/Webb release as the primary public door, then keeps the dynamical menu open rather than locking onto a single viral explanation.
-Debris disks are not static leftovers. Collisions grind planetesimals into dust; radiation pressure and stellar winds then sort grains by size. A newly visible mid-infrared feature can therefore mark a recent dynamical event even in a system observed for decades. That is why Beta Pictoris remains scientifically alive: proximity turns small changes into measurable morphology.
-
-Cosmic Gateway pairs this discovery with debris-disk and infrared-astronomy concepts so readers do not stop at the nickname. The cat's tail is a hypothesis generator. Ask what collision mass could supply the dust, how quickly grains spiral or blow out, and whether the secondary disk's inclination helped loft material into the observed branch. Those questions transfer to other young systems where Webb will never have this much angular resolution.
-
-Official releases prioritize clarity. Research papers quantify grain temperatures, optical depths, and dynamical timescales. Both layers belong in a learning product. The ESA/Webb weic2401 narrative is the door; modeling is the workshop. Keeping that ladder visible is the point of an intermediate exoplanet discovery that is also an infrared methods lesson.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Beta Pictoris helped invent modern debris-disk science. Its disk was the first imaged around another star, and decades of optical, infrared, and submillimeter work established that planetesimal collisions continue long after planets begin to assemble. A second, inclined disk from Hubble already signaled that the system is not a flat, settled leftover. Webb's contribution is not "a disk exists," but that mid-infrared sensitivity can reveal a recent-looking branch of dust and compositional temperature contrasts within known structures.
 
@@ -262,52 +229,15 @@ Hold the ESA/Webb weic2401 image as the public door, then treat every collision 
         "herbig-haro",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Herbig-Haro 46/47 is a pair of actively forming young stars about 1,470 light-years away in Vela. For thousands of years the protostars have launched jets in opposite directions, slamming into surrounding gas and lighting up shock fronts known as Herbig-Haro objects.
+      summaryMarkdown: `Herbig-Haro 46/47 is a pair of actively forming young stars about 1,470 light-years away in Vela. For thousands of years the protostars have launched jets in opposite directions, slamming into surrounding gas and lighting up shock fronts known as Herbig-Haro objects.
 
 Webb's near-infrared image is the most detailed portrait of this system to date. Infrared light pierces the dusty blue nebula that looks black in visible light, exposing jet knots that record past eruptions as well as present activity.
 
 **Takeaway:** forming stars announce themselves with jets, and infrared astronomy turns those jets into readable histories.
 
 **Uncertainty:** precise mass-loss rates and the three-dimensional orientation of every knot still need spectroscopy and careful modeling.`,
-      learnMarkdown: `## What happened
 
-In July 2023, ESA/Webb released a high-resolution near-infrared image of Herbig-Haro 46/47. Although the system has been studied since the 1950s from the ground and space, Webb is the first to capture it at this combination of near-infrared resolution and sensitivity. The image shows bipolar jets punching through a dusty envelope that optical telescopes largely see as a dark cloud.
-
-Knots along the jets mark episodes of variable ejection. Brighter bow shocks form where outflowing material collides with ambient gas. The dusty natal cloud, blue in the Webb composite, becomes translucent rather than opaque.
-
-Each Herbig-Haro object along the jet marks a shock front where outflow slams into cloud material, readable in weic2319 because infrared astronomy pierces the dusty envelope.
-
-Bow shocks in Herbig-Haro 46/47 mark where jets collide with the natal cloud at supersonic speeds.
-
-## Why it matters
-
-Protostellar jets are a core chapter of star formation. Accretion onto a young star is accompanied by outflow; seeing both the engine region and the extended shock history connects disk physics to cloud feedback. HH 46/47 is close enough to resolve those layers, making it a teaching system rather than only a pretty outflow.
-
-Infrared astronomy is the enabling method. Visible light stops at the dust. Near-infrared light reveals the activity that optical images only outline.
-
-Star formation models require seeing both accretion and outflow; HH 46/47 makes that coupling visible for learners at ~1,470 light-years.
-
-## How it was measured
-
-Webb's NIRCam mapped the field in multiple near-infrared filters. Shock-excited lines and continuum structures appear differently across bands, helping separate jets, cavity walls, and illuminated cloud edges. Prior multiwavelength campaigns provide distance and context; Webb adds spatial clarity in the infrared.
-
-NIRCam filter composites in weic2319 separate shock-heated gas, scattered light, and dust in the protostellar environment.
-
-## What scientists thought before
-
-HH 46/47 has been observed for decades from the ground and space as a reference Herbig-Haro object: bipolar, relatively nearby, and rich in archival shock and cavity data. Astronomers already knew that accretion onto young stars launches jets and that dust hides the engine room optically. What was incomplete was the combination of near-infrared resolution and sensitivity needed to turn the dusty envelope translucent while resolving nested jet knots as a readable history. Webb was expected to sharpen a known classroom system, not to invent protostellar outflows.
-
-## What remains uncertain
-
-Individual knot ages and velocities require spectra and proper-motion studies. Inclination effects can stretch or foreshorten apparent jet lengths. Dust geometry still hides some of the innermost accretion engine. Cosmic Gateway treats weic2319 as an authoritative public entry, then points readers toward kinematics before accepting any single timeline for the outflow.
-Protostellar jets are momentum valves. When gas accretes through a disk onto a young star, magnetic fields and rotation can fling a fraction of that material outward along bipolar axes. Shock fronts light up where the outflow rams the cloud, producing the Herbig-Haro emission that gives objects like HH 46/47 their name. Seeing nested knots is therefore like reading a strobe history of accretion rate changes — if you can measure speeds.
-
-Webb's near-infrared clarity matters because dust still hides the launching region at shorter wavelengths. Learners should notice the pedagogical sequence: optical silhouette of a dark cloud, infrared translucency, then spectroscopic clocks. Cosmic Gateway publishes the image not as a finished biography of two stars, but as a durable template for reading other outflows.
-
-Distance helps. At about 1,470 light-years, HH 46/47 is near enough that jet widths and cavity walls become spatially meaningful. Farther systems blur those layers together. That selection effect is worth stating explicitly: famous teaching targets are often chosen for resolvability, not because they are cosmically typical. Keep that honesty beside the beauty of weic2319.
-
-Without spectra and proper motions, knot spacing along the Herbig-Haro jet cannot securely date individual accretion episodes.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Herbig-Haro objects are the glowing shock fronts of jets from young stars. They matter because they convert invisible accretion physics into observable shock chemistry and morphology. HH 46/47 has long been a reference system: bipolar, relatively nearby, and rich in archival data. Webb does not invent the jets; it clarifies their infrared anatomy and the dusty cloud that still cradles the protostars.
 
@@ -437,54 +367,15 @@ Herbig-Haro brightness alone does not measure shock speed; line widths and prope
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Stephan's Quintet is a compact group of galaxies whose members are close enough on the sky — and mostly close enough in space — to interact violently. One galaxy is a foreground interloper; the others form a dynamical dance of tidal tails, shocks, and shared gas.
+      summaryMarkdown: `Stephan's Quintet is a compact group of galaxies whose members are close enough on the sky — and mostly close enough in space — to interact violently. One galaxy is a foreground interloper; the others form a dynamical dance of tidal tails, shocks, and shared gas.
 
 Among Webb's early public images was a vast infrared mosaic of the group. It shows how interactions trigger star formation, how gas is disturbed, and how a black hole in one member drives outflows — details previously hard to untangle at this resolution in the infrared.
 
 **Takeaway:** galaxy groups are not quiet neighborhoods; mergers and feedback rewrite gas and stars together.
 
 **Uncertainty:** separating projection effects from true physical association still requires redshifts and careful dynamical modeling for every feature.`,
-      learnMarkdown: `## What happened
 
-On 12 July 2022, as part of Webb's first image package, ESA/Webb released a large mosaic of Stephan's Quintet. Close proximity gives astronomers a ringside seat to galactic mergers and interactions. Webb's infrared view resolves dusty star-forming regions, shocked interfaces between colliding gas streams, and structures linked to an active galactic nucleus.
-
-Compact groups like this may have been more common in the early Universe, when dense environments and gas-rich encounters fueled luminous black holes and rapid morphological change.
-
-Webb's July 2022 first-light mosaic weic2208 resolved dusty star-forming regions and shocked gas among interacting galaxies, with one foreground interloper still mixed on the sky.
-
-Shocked interfaces between colliding gas streams appear in the weic2208 mosaic alongside tidal debris.
-
-## Why it matters
-
-Galaxy evolution is not only about isolated spirals fading into ellipticals. Groups and clusters force galaxies to share gas, strip disks, and ignite bursts of star formation. Stephan's Quintet compresses those processes into a single field that learners can study without traveling to high redshift. Infrared astronomy is crucial because dust hides much of the star formation and because warm molecular gas lights up where shocks heat the interstellar medium.
-
-Galaxy merger processes that were common in early epochs appear locally in Stephan's Quintet, teachable without high-redshift confusion.
-
-Compact groups like this may resemble environments where early-Universe mergers were more frequent.
-
-## How it was measured
-
-Webb combined imaging and spectroscopy across near- and mid-infrared bands. Imaging maps morphology; spectra separate shock excitation, star formation, and AGN-powered emission. Multiwavelength context from Hubble, Spitzer, and radio maps remains essential: Webb adds infrared resolution and sensitivity rather than replacing the entire archive.
-
-Near- and mid-infrared imaging plus spectroscopy in weic2208 separate shock excitation, star formation, and active galactic nucleus emission across the group.
-
-Mid-infrared bands in weic2208 highlight polycyclic aromatic hydrocarbons in star-forming complexes.
-
-## What scientists thought before
-
-Stephan's Quintet was already famous optically and in radio and X-ray data for tidal tails, a giant shock, and the pedagogical trap of a bright foreground interloper. Compact-group researchers already treated interactions and AGN feedback as co-present engines. What remained hard was resolving dust-obscured star formation and warm molecular responses at the clarity Webb's infrared mosaic provides. The prior picture was dynamical and multiwavelength; Webb was expected to update the infrared chapter of an established laboratory.
-
-## What remains uncertain
-
-Which gas parcels will form stars, which will be heated into a multiphase halo, and how long AGN feedback can quench or redistribute fuel are open modeling questions. The interloper galaxy reminds readers that sky proximity is not always physical proximity. Cosmic Gateway keeps weic2208 as the public anchor while insisting on redshift-aware reading of every dramatic feature.
-Galaxy groups occupy a middle ground between isolated field galaxies and rich clusters. Encounters are frequent enough to matter, yet the systems are still individually resolvable. Stephan's Quintet compresses tidal tails, shocks, and AGN feedback into one mosaic that can be taught without requiring a deep-field statistical sample first.
-
-Infrared astronomy changes which chapters are legible. Dust-obscured star formation becomes countable; warm molecular gas heated by shocks becomes visible; buried AGN structures become less cryptic. Optical morphology alone understates the energy budget. Cosmic Gateway therefore treats weic2208 as a methods image as much as a celebrity field.
-
-Readers should also practice projection hygiene. One bright member is a foreground spiral; treating every overlapping silhouette as a merger is a classic error. Redshifts and velocity maps are the antidote. The learning habit — check distance before narrative — matters more than memorizing the quintet's nickname.
-
-Projection of the foreground spiral can mimic interaction features unless redshifts anchor which galaxies truly participate in each galaxy merger episode.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Stephan's Quintet has been a favorite of observers for decades precisely because several members are interacting while one bright spiral is a chance projection. That mix is pedagogically useful: it forces careful thinking about distance before storytelling. Webb's early-release mosaic made the interacting core spectacular in the infrared, revealing dust-obscured star formation and disturbed gas at scales that connect to black-hole fueling.
 
@@ -613,54 +504,15 @@ Keep redshift hygiene beside the spectacle: one interloper already warns that sk
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Wolf-Rayet stars are rare, hot, massive stars that have shed their outer hydrogen envelopes through powerful winds. They are a brief evolutionary prelude to supernova for some of the Galaxy's most massive stars. WR 124, imaged by Webb, is surrounded by a distinctive halo of gas and dust from episodic ejections.
+      summaryMarkdown: `Wolf-Rayet stars are rare, hot, massive stars that have shed their outer hydrogen envelopes through powerful winds. They are a brief evolutionary prelude to supernova for some of the Galaxy's most massive stars. WR 124, imaged by Webb, is surrounded by a distinctive halo of gas and dust from episodic ejections.
 
 The infrared glow reveals knotty structure — a history of mass loss written in dust that optical light alone does not fully inventory. Even at a scene of impending stellar death, new dust is forming, seeding the interstellar medium with heavy-element building blocks.
 
 **Takeaway:** massive-star winds both destroy and create; infrared astronomy shows the dust they leave behind.
 
 **Uncertainty:** exact ejection timing, dust-mass budgets, and the star's final evolutionary path remain active research topics.`,
-      learnMarkdown: `## What happened
 
-In March 2023, ESA/Webb highlighted Webb observations of Wolf-Rayet star WR 124. As one of Webb's early science targets, the telescope captured the star's surrounding nebula in unprecedented infrared detail. A halo of gas and dust frames the star, displaying knotty structure from episodic winds.
-
-Wolf-Rayet stars have lost their outer layers; their spectra are dominated by helium and heavier elements exposed at the surface. The surrounding nebulas are laboratories for how massive stars enrich their surroundings before exploding.
-
-ESA/Webb highlighted WR 124 in March 2023 (weic2307), resolving knotty shells of gas and dust from episodic Wolf-Rayet winds in the infrared.
-
-Knotty infrared structure around WR 124 hints at clumpy rather than smooth mass loss.
-
-## Why it matters
-
-Massive stars drive galactic chemical evolution. Their winds inject momentum and newly forged elements; their supernovae finish the job. Dust formed in Wolf-Rayet environments may contribute to the solid material available for later star and planet formation — a link between stellar death and new beginnings that Cosmic Gateway treats as pedagogy, not poetry alone.
-
-Infrared wavelengths reveal cool dust that optical images underplay. That is why WR 124 belongs beside star-formation and infrared-astronomy concepts even though the star itself is dying rather than being born.
-
-Massive-star winds enrich later star formation environments even as the star approaches core collapse; infrared astronomy inventories the cool dust those winds leave behind.
-
-Dust formed in Wolf-Rayet winds may seed later molecular clouds after processing by supernova shocks.
-
-## How it was measured
-
-Webb's infrared cameras map thermal dust emission and fine structure in the ejected shells. Multi-filter composites separate warmer and cooler components. Distance and luminosity estimates from prior studies convert angular structure into physical scales. Spectroscopy of Wolf-Rayet winds constrains terminal velocities and composition; imaging constrains geometry and dust distribution.
-
-Webb infrared cameras mapped thermal dust emission and shell geometry; prior spectroscopy constrains wind speeds and composition around WR 124.
-
-## What scientists thought before
-
-WR 124 was already known as an ejecta-rich Wolf-Rayet star with surrounding shells mapped at lower infrared resolution. The Wolf-Rayet phase itself was understood as a brief, stripped, wind-dominated prelude for many massive stars on paths toward core collapse. Dust formation in such hostile winds was discussed but incompletely imaged. Webb was expected to clarify knotty wind geometry and cool dust glow — refinement of mass-loss morphology, not discovery of the Wolf-Rayet class.
-
-## What remains uncertain
-
-Dust-mass estimates depend on grain models. Not every knot is a single ejection dated like tree rings without kinematic data. Whether WR 124's dust survives the eventual supernova shock is a separate question from whether dust forms now. Official release weic2307 is the public entry; papers refine wind history and grain physics.
-Massive-star evolution is a race between nuclear timescales and mass-loss timescales. Wolf-Rayet spectra announce that the race has already removed the hydrogen envelope, exposing helium-burning products at the surface. Surrounding nebulae record how that mass left — smoothly or in clumps, steadily or in eruptions. WR 124's knotty infrared halo is valuable because it preserves that geological record of winds.
-
-Dust formation in such environments surprises intuition shaped by calm molecular clouds. Yet cooling in dense clumps can allow grains to condense even near a hot star. Those grains may later be processed by a supernova. Cosmic Gateway keeps creation and destruction co-present so "prelude to a supernova" does not flatten into a single emotional beat.
-
-Linking star-formation here is about enrichment pathways into future clouds, not a claim that WR 124 is a protostar. Precision in concept linking is part of evidence-aware teaching. Infrared astronomy remains the reason the dust chapter is readable at all in weic2307.
-
-Dust masses around WR 124 depend on grain models, and survival through the eventual supernova remains a separate open question.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 A Wolf-Rayet phase is brief on stellar timescales — a stripped, hot star driving dense winds before core collapse for many progenitors. WR 124's nebula makes that phase visible. The object is scientifically valuable because mass-loss history is written into surrounding shells, and because dust formation in such hostile winds challenges simple expectations.
 
@@ -791,56 +643,15 @@ Treat 'prelude to a supernova' as evolutionary context, not a countdown clock st
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Messier 82 is a nearby starburst galaxy — a system forming stars at a rate far above a quiet spiral like the Milky Way. Seen nearly edge-on, its dusty disk and bipolar galactic wind have made it a classic laboratory for how intense star formation drives gas out of galaxies.
+      summaryMarkdown: `Messier 82 is a nearby starburst galaxy — a system forming stars at a rate far above a quiet spiral like the Milky Way. Seen nearly edge-on, its dusty disk and bipolar galactic wind have made it a classic laboratory for how intense star formation drives gas out of galaxies.
 
 Webb's infrared observations resolve clusters, dust lanes, and structures connected to that wind with new clarity. Dust that blocks optical light becomes a tracer rather than only an obstacle.
 
 **Takeaway:** starbursts power galactic winds, and infrared astronomy lets us see the engines inside the dust.
 
 **Uncertainty:** converting infrared brightness into exact star-formation rates still depends on models of dust and stellar populations.`,
-      learnMarkdown: `## What happened
 
-In March 2024, ESA/Webb reported new Webb imaging of Messier 82. M82's starburst is thought to have been triggered by interaction with neighboring galaxy M81. Supernovae and winds from massive stars inflate a bipolar outflow of gas and dust above and below the disk — a galactic wind visible across X-ray, optical, and infrared wavelengths.
-
-Webb's contribution is resolving the dusty interior where the starburst burns, connecting compact star-forming regions to the larger wind morphology.
-
-In March 2024, ESA/Webb reported new imaging of Messier 82 (weic2410), resolving dusty star-forming regions linked to a bipolar galactic wind seen nearly edge-on.
-
-weic2410 resolves compact star-forming regions embedded in the dusty disk of this starburst galaxy.
-
-## Why it matters
-
-Galactic winds regulate how galaxies grow. If star formation drives gas out, it can quench later generations of stars and enrich the circumgalactic medium. M82 is close enough that those processes can be mapped in detail rather than inferred from unresolved high-redshift cousins. Infrared light is essential because the starburst is heavily obscured.
-
-M82 is a classic starburst galaxy likely triggered by interaction with M81, making it a nearby laboratory for feedback and infrared-obscured star formation.
-
-Galactic winds regulate how much gas remains available for future generations of stars.
-
-## How it was measured
-
-Near- and mid-infrared imaging penetrate dust and highlight young clusters, polycyclic aromatic hydrocarbon emission, and warm dust. Multiwavelength archives (Spitzer, Hubble, Chandra, ground-based H-alpha) provide the wind and X-ray context. Webb sharpens the infrared layer of that stack.
-
-Near- and mid-infrared imaging in weic2410 penetrates dust lanes and maps young clusters and warm dust tied to the starburst-driven wind.
-
-Infrared surface brightness in weic2410 traces dust-heated emission from young clusters.
-
-## What scientists thought before
-
-M82 was already the local starburst archetype: an edge-on disk with a bipolar galactic wind, likely triggered by interaction with M81, and studied across X-ray, optical, and earlier infrared bands. The scientific question was not whether a wind exists, but how star-formation energy couples into multiphase gas, including cold dust. Webb was expected to sharpen the infrared census of the dusty engine room rather than overturn the interaction-triggered burst narrative.
-
-## What remains uncertain
-
-Star-formation rate calibrations, the mass-loading of the wind, and how much gas escapes versus falls back remain active topics. Edge-on geometry helps some measurements and complicates others through projection. Treat weic2410 as the official public guide, then follow papers for quantitative wind budgets.
-Starburst galaxies compress into a short time what quieter disks spread over gigayears. The resulting supernova rate and collective stellar winds can drive multiphase outflows that redistribute metals and regulate future star formation. M82 is the local exemplar: close, edge-on, and bright across the spectrum.
-
-Webb's infrared layer matters because the burst is dusty. Optical light sees the wind's ionized skin and scattered filaments; infrared light sees where ultraviolet energy was absorbed and re-emitted. Without that layer, engines stay partly hidden. Cosmic Gateway uses M82 to teach feedback as an energy-coupling problem, not only as a pretty bipolar shape.
-
-Interaction with M81 reminds readers that starbursts often have triggers. Isolated secular bursts exist, but tidal encounters are a common path. Keeping the neighbor in the story prevents treating M82 as a spontaneous fireworks show. Official release weic2410 opens the infrared chapter; multiwavelength wind papers finish the mass budget.
-
-Dust lanes in an edge-on starburst can hide whole clusters optically while leaving mid-infrared signatures. That is why infrared astronomy is not a luxury add-on for M82 — it is how the engine census becomes possible.
-
-Star-formation rate calibrations and wind mass-loading from a single epoch image remain model-dependent for this starburst galaxy.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Few galaxies are as thoroughly studied for feedback as M82. Its proximity, edge-on disk, and luminous wind made it a textbook starburst long before Webb. The scientific question is not whether a wind exists, but how energy and momentum from star formation couple to multiphase gas — cold dust and molecules included.
 
@@ -966,58 +777,15 @@ Distinguish fountain from wind with velocities relative to escape speed, and dis
         },
       ],
       conceptIds: conceptIds(ctx.concepts, ["quasar", "black-hole"]),
-      quickMarkdown: `Quasars are luminous galactic nuclei powered by accreting supermassive black holes. An "extremely red" quasar is heavily dust-reddened, so much of its ultraviolet light is absorbed and reprocessed — a sign of a buried, rapidly growing engine.
+      summaryMarkdown: `Quasars are luminous galactic nuclei powered by accreting supermassive black holes. An "extremely red" quasar is heavily dust-reddened, so much of its ultraviolet light is absorbed and reprocessed — a sign of a buried, rapidly growing engine.
 
 Using Webb's infrared sensitivity and spectroscopy, astronomers found a dense knot of massive galaxies assembling around such a quasar in the early Universe. The result links black-hole growth to the formation of cosmic-web nodes that will become clusters.
 
 **Takeaway:** early black holes and early galaxy overdensities grow together, and infrared spectroscopy is what makes both measurable through dust and distance.
 
 **Uncertainty:** membership completeness and exact halo masses still depend on redshift confirmation and modeling.`,
-      learnMarkdown: `## What happened
 
-In October 2022, ESA/Webb reported that Webb had uncovered a concentration of massive galaxies in the process of formation around an extremely red quasar. Infrared spectroscopy was essential: at high redshift, key rest-frame optical features shift into Webb's bands, and dust that reddens the quasar is less fatal to infrared diagnostics than to optical ones.
-
-The dense knot is interpreted as a nascent node of the cosmic web — a place where galaxies and a luminous black-hole engine co-evolve.
-
-In October 2022, ESA/Webb (weic2217) reported a dense knot of massive galaxies assembling around an extremely red quasar in the early Universe.
-
-Dust reddening buries ultraviolet quasar light, shifting discovery space into the infrared in weic2217.
-
-## Why it matters
-
-How supermassive black holes grew so large so early remains a central problem. Finding them inside overdense environments constrains whether mergers, cold gas inflows, or both dominate fueling. For learners, the discovery connects quasar and black-hole concepts to large-scale structure rather than treating quasars as isolated fireworks.
-
-The result links supermassive black hole growth to forming cosmic-web nodes, showing why quasar and black hole science must include environment.
-
-Black hole growth in overdense regions constrains how early cosmic nodes assembled.
-
-## How it was measured
-
-Webb spectra measure redshifts and emission-line properties of the quasar and neighboring galaxies. Photometry selects candidates; spectroscopy confirms physical association. Dust reddening is inferred from the spectral energy distribution. Together these steps convert an "extremely red" curiosity into a mapped proto-cluster core candidate.
-
-Infrared spectroscopy in weic2217 measured redshifts and line properties through dust that reddens the quasar and hides optical diagnostics.
-
-Spectroscopic redshifts in weic2217 anchor neighbor galaxies to the quasar physically.
-
-## What scientists thought before
-
-Dusty, reddened quasars and high-redshift overdensities were already known as classes. Extremely red colors were interpreted as extinction physics around rapidly accreting black holes, and theorists already linked luminous accretion to gas-rich environments. What was harder before Webb was confirming physical association of neighboring massive galaxies with spectroscopy at the redshifts and dust columns involved. The prior expectation was that infrared spectra could turn a red spotlight into a mapped proto-cluster-core candidate.
-
-## What remains uncertain
-
-Not every photometric neighbor is a confirmed member. Halo mass estimates are model-dependent. The quasar's duty cycle — how long it stays this luminous — is not given by a single epoch. Official release weic2217 frames the result; peer-reviewed analyses carry membership statistics and dynamical claims.
-High-redshift quasars are lighthouses and laboratories. Their accretion disks outshine host galaxies in the ultraviolet, yet dust can bury that light and shift the observed color extremely red. Infrared spectroscopy recovers the physics that optical dropouts lose: redshifts, line ratios, and neighbor confirmation.
-
-Finding a dense galaxy knot around such a quasar pushes the conversation from single-object black-hole growth to environmental assembly. Proto-cluster cores are where the cosmic web's nodes thicken. Whether the quasar is a symptom of shared cold inflows, a product of mergers, or both is exactly the menu Cosmic Gateway wants visible.
-
-Advanced difficulty is appropriate because selection effects and magnification of claims are easy to misuse. An extremely red quasar sample is not the whole black-hole population. Membership incompleteness can invent or erase overdensities. Start with weic2217, then treat every halo-mass number as provisional until the spectroscopic census is explicit.
-
-Cosmic web nodes are not optional scenery for black-hole growth stories. Gas supply on large scales can determine whether a buried engine stays fed. Pairing quasar physics with overdensity context is therefore scientific, not decorative.
-
-Not every photometric neighbor is a confirmed proto-cluster member; halo mass and black hole duty cycle need deeper follow-up than weic2217 alone.
-
-Incomplete membership can artificially inflate or deflate apparent overdensities.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Extremely red quasars occupy a transitional or dust-obscured mode of black-hole growth. Their redness is not a party trick; it is extinction physics. In the early Universe, such objects may mark galaxies still rich in gas and dust while their central engines shine. Finding a dense galaxy knot around one suggests that luminous accretion and environmental assembly can coincide.
 
@@ -1152,56 +920,15 @@ An extremely red quasar is a selection-dependent spotlight on buried black hole 
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `The Cartwheel galaxy is a collisional ring galaxy: a smaller companion punched nearly head-on through a larger spiral, sending a expanding density wave outward. That wave compresses gas into a bright star-forming ring, while spokes and an inner ring preserve a more complicated dynamical aftermath.
+      summaryMarkdown: `The Cartwheel galaxy is a collisional ring galaxy: a smaller companion punched nearly head-on through a larger spiral, sending a expanding density wave outward. That wave compresses gas into a bright star-forming ring, while spokes and an inner ring preserve a more complicated dynamical aftermath.
 
 Webb's infrared image resolves dust and young stellar populations across those structures with new clarity. Regions that look like quiet gaps in optical light can still hold warm dust and embedded star formation.
 
 **Takeaway:** galaxy collisions can remake disks into rings, and infrared light shows where dust and newborn stars follow the wave.
 
 **Uncertainty:** exact timing of the impact and the companion's present trajectory continue to be refined with kinematics.`,
-      learnMarkdown: `## What happened
 
-In August 2022, ESA/Webb released Webb imaging of the Cartwheel galaxy. The system has long been a textbook collisional ring. Hubble made its spokes famous; Webb adds mid- and near-infrared detail that traces dust and star formation throughout the rings and spokes.
-
-The outer ring is rich in young stars and dust where the expanding wave compressed gas. The inner regions show a different mix of older populations and dust lanes shaped by the same encounter.
-
-In August 2022, ESA/Webb released infrared imaging of the Cartwheel galaxy (weic2211), a collisional ring with dusty spokes and star-forming rings.
-
-The outer star-forming ring in weic2211 marks where the merger-driven wave compressed gas.
-
-## Why it matters
-
-Not all mergers end as smooth ellipticals. Geometry matters: a central collision can produce rings rather than a single pileup. The Cartwheel makes that orbital lesson visible. Infrared astronomy then shows that star formation follows compressed gas even when optical images understate the dust reservoir.
-
-A head-on galaxy merger can reshape a disk into rings; infrared astronomy traces dusty star formation along the expanding density wave in weic2211.
-
-Head-on galaxy merger geometry can produce rings rather than only smooth elliptical remnants.
-
-## How it was measured
-
-Webb's infrared cameras map polycyclic aromatic hydrocarbons, warm dust, and stellar continuum across the ring system. Comparing infrared and optical morphologies separates unobscured starlight from dust-reprocessed light. Prior HI and optical studies constrain the collision scenario; Webb inventories the dusty star-forming response.
-
-Near- and mid-infrared cameras mapped PAH emission, warm dust, and stellar continuum across the Cartwheel's ring system for weic2211.
-
-Infrared colors in weic2211 separate unobscured starlight from dust-reprocessed emission in the ring.
-
-## What scientists thought before
-
-The Cartwheel was already a textbook collisional ring galaxy in optical and ultraviolet studies, with spokes made famous by Hubble and earlier Spitzer infrared context for dust. The head-on impact scenario — an expanding density wave compressing gas into a star-forming ring — was the standard dynamical cartoon. What remained incomplete was a high-resolution infrared inventory of how dust and embedded star formation follow the rings and spokes. Webb was expected to update the dusty response map, not invent ring galaxies.
-
-## What remains uncertain
-
-Companion identification and impact parameters are modeled, not filmed. Spoke longevity and whether secondary waves will form additional rings depend on gas physics. Use weic2211 as the official visual entry, then treat dynamical clocks as provisional without full kinematic maps.
-Collisional ring galaxies are orbital geometry made visible. A roughly central impact launches an expanding density wave through a disk; gas piles up in a ring and forms stars; stellar populations and dust respond on their own timescales. The Cartwheel's spokes add a second morphological puzzle — transient features that may connect inner and outer structures through streaming or magnetic/dust physics still debated.
-
-Infrared imaging is the right tool for dusty rings because star formation is often embedded. Optical light can miss the fuel; mid-infrared light finds it. That is why weic2211 belongs beside galaxy-merger and infrared-astronomy concepts rather than only in an "odd galaxies" scrapbook.
-
-Learners should transfer the lesson: merger outcome depends on mass ratio, gas fraction, and impact parameter. The Cartwheel is one successful cartoon, not a universal end state. Cosmic Gateway keeps that diversity explicit so a single spectacular ring does not overwrite ellipticals, tidal tails, and quiet remnants in the mental model.
-
-Star-formation rings can migrate as waves expand, leaving older stellar populations inside. Multi-band ages — including infrared tracers of the youngest embedded stars — help separate where stars are forming now from where they formed earlier in the wave's passage.
-
-Impact timing and companion trajectory for this galaxy merger remain model-dependent without full kinematic maps beyond weic2211.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Ring galaxies are rare and pedagogically precious. They demonstrate that encounter geometry — head-on versus glancing — controls morphology. The Cartwheel's expanding ring is a density wave, not a rigid hoop. Stars and gas respond differently; dust and H-alpha often light up where gas was compressed most recently.
 
@@ -1335,7 +1062,7 @@ Remember that collisional rings are rare successful geometries among many galaxy
         "dark-matter",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Pandora's Cluster (Abell 2744) is a massive galaxy cluster assembled from multiple colliding subclusters. Its gravity warps spacetime enough to magnify and distort galaxies far behind it — a natural telescope called gravitational lensing.
+      summaryMarkdown: `Pandora's Cluster (Abell 2744) is a massive galaxy cluster assembled from multiple colliding subclusters. Its gravity warps spacetime enough to magnify and distort galaxies far behind it — a natural telescope called gravitational lensing.
 
 Webb's infrared imaging resolves faint lensed backgrounds and cluster members with new depth. Because most of a cluster's mass is dark matter, lensing maps are also maps of mass that does not shine.
 
@@ -1344,51 +1071,8 @@ Webb's infrared imaging resolves faint lensed backgrounds and cluster members wi
 **Uncertainty:** precise mass models and source redshifts require extensive spectroscopy and careful lens modeling.
 
 Lensing magnification is a model output with uncertainties, not a free brightness upgrade for every arc.`,
-      learnMarkdown: `## What happened
 
-ESA/Webb published deep infrared imaging of Pandora's Cluster, highlighting both the cluster's complex assembly and the multitude of background galaxies stretched into arcs and magnified images. Abell 2744 earned its nickname because multiple mass clumps and hot-gas structures make it a messy, informative merger of clusters.
-
-Webb's sensitivity at infrared wavelengths helps detect distant, red, dust-obscured, or highly redshifted sources that optical surveys undercount.
-
-ESA/Webb published deep infrared imaging of Pandora's Cluster Abell 2744 (weic2220), revealing lensed background galaxies in a merging cluster.
-
-Multiple images of background galaxies appear when Abell 2744 lenses distant sources in weic2220.
-
-## Why it matters
-
-Gravitational lensing is both a tool and a measurement. As a tool, it brightens galaxies too faint to study otherwise. As a measurement, the pattern of distortions constrains the total mass distribution — dominated by dark matter. Pandora's Cluster is a classroom for both uses at once.
-
-Gravitational lensing magnifies distant galaxies while mapping dark matter that does not shine but dominates the cluster mass budget.
-
-Strong lensing magnifies galaxies too faint for spectroscopy without cluster assistance.
-
-## How it was measured
-
-Imaging identifies multiple images and arcs; photometric redshifts prioritize follow-up; spectroscopy confirms source distances. Lens models fit mass distributions to reproduce image positions and magnifications. X-ray maps of hot gas add baryonic context, but the lensing mass includes dark matter that X-rays do not see directly.
-
-Deep infrared imaging finds arcs and multiple images; lens models plus redshifts convert distortions into mass maps in the weic2220 field.
-
-Deep stacking and infrared sensitivity in weic2220 reveal arcs missed by shallower optical surveys.
-
-## What scientists thought before
-
-Abell 2744 was already a Frontier Fields lensing workhorse with rich X-ray and optical data, nicknamed Pandora's Cluster because multiple colliding subclusters make its mass distribution messy and informative. Gravitational lensing was already used both as a telescope for faint backgrounds and as a mass map dominated by dark matter. Webb was expected to deepen the infrared source catalog that feeds lens models — more arcs and candidates — rather than to introduce lensing as a new idea.
-
-## What remains uncertain
-
-Complex merging clusters have multiple mass peaks; simple spherical models fail. Magnification estimates for individual galaxies carry systematic errors. Cosmic Gateway treats weic2220 as the public visual entry, then insists on lens-model caveats before any extreme claim about a single background galaxy's intrinsic brightness.
-Strong lensing turns clusters into telescopes with messy optics. Magnification is not uniform; it varies across the source plane and can produce multiple images of one galaxy. Pandora's Cluster is an especially instructive lens because it is mid-merger: multiple mass clumps complicate the optics and enrich the dark-matter test.
-
-Webb's infrared depth expands the source catalog that lens modelers use. More arcs and candidates improve constraints — and also raise the burden of redshift confirmation. Cosmic Gateway emphasizes that chain: image beauty, then lens model, then intrinsic luminosity. Skipping the middle step turns astronomy into astrology of brightness.
-
-Dark matter enters as the dominant lensing mass, not as a glowing substance in the frame. X-ray gas traces baryons that can separate from collisionless mass during mergers. When those tracers disagree, the disagreement is data. Official release weic2220 is the public start; mass-model papers are the workplace.
-
-Cluster member galaxies themselves evolve through mergers and ram-pressure effects while lensing background sources. Pandora's Cluster therefore teaches foreground assembly and background magnification in one field — two stories that must not be conflated.
-
-Infrared selection helps recover dusty or high-redshift sources whose optical light is suppressed. That selection gain is a major reason Webb cluster fields matter beyond prettier versions of Hubble arcs.
-
-Multi-peak merging-cluster mass models make magnifications for individual lensed galaxies systematically uncertain without spectroscopic anchors.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Abell 2744 is not a relaxed, textbook sphere of galaxies. It is a multi-component merger — hence "Pandora's." That complexity is scientifically fertile: it tests whether lensing, X-ray gas, and galaxy kinematics tell a consistent mass story during assembly. Dark matter does not collide electromagnetically like gas, so merging clusters can separate collisionless mass from baryonic plasma — a classic dark-matter argument when data quality allows.
 
@@ -1523,60 +1207,15 @@ Quote intrinsic luminosities for lensed galaxies only with magnification and its
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `The Ring Nebula (M57, NGC 6720) is a nearby planetary nebula — the glowing shed envelope of a sun-like star that has exhausted the fuel for stable hydrogen burning in its core and cast off outer layers. Despite the name, planetary nebulae have nothing to do with planets; the historical term stuck.
+      summaryMarkdown: `The Ring Nebula (M57, NGC 6720) is a nearby planetary nebula — the glowing shed envelope of a sun-like star that has exhausted the fuel for stable hydrogen burning in its core and cast off outer layers. Despite the name, planetary nebulae have nothing to do with planets; the historical term stuck.
 
 Webb's infrared images show nested shells, filaments, and molecular material with unprecedented clarity for this classic object, roughly 2,500 light-years away. The familiar optical ring becomes a richer, multi-layered structure.
 
 **Takeaway:** dying sun-like stars sculpt intricate nebulae, and infrared light reveals molecules and dust optical views underplay.
 
 **Uncertainty:** exact three-dimensional geometry and the role of a possible binary companion remain active topics.`,
-      learnMarkdown: `## What happened
 
-In August 2023, ESA/Webb released Webb observations of the Ring Nebula. As an archetypal planetary nebula, M57 has been drawn and photographed for centuries. Webb's contribution is infrared structural detail: concentric features, filaments, and cooler molecular zones that help reconstruct how the star ejected mass over time.
-
-The central star's ultraviolet radiation ionizes the inner nebula, producing the bright optical ring. Infrared wavelengths add the cooler periphery and dust/molecular content.
-
-In August 2023, ESA/Webb released observations of the Ring Nebula M57 (weic2320), an archetypal planetary nebula about 2,500 light-years away.
-
-Nested shells in weic2320 suggest episodic mass loss from the dying central star of M57.
-
-## Why it matters
-
-Planetary nebulae are a preview of the Sun's distant future and a source of recycled material for the interstellar medium. Their shapes encode mass-loss history — and sometimes binary interactions. Teaching with the Ring Nebula works because the public already recognizes the silhouette; Webb updates the silhouette with physics.
-
-Planetary nebulae show how sun-like stars recycle material; infrared astronomy in weic2320 reveals molecular and dusty layers optical rings understate.
-
-Planetary nebulae recycle processed material into the interstellar medium for future star formation.
-
-## How it was measured
-
-Infrared cameras map ionized gas, dust continuum, and molecular features across filters. Comparing infrared and optical/Hubble structures separates ionization fronts from molecular shells. Distance estimates convert angular rings into physical radii and expansion ages when combined with measured expansion velocities from spectra.
-
-Multi-filter infrared imaging mapped ionized, dusty, and molecular structures; optical Hubble frames provide comparison context for weic2320.
-
-Infrared and optical comparisons for weic2320 separate ionization fronts from cooler outer zones.
-
-## What scientists thought before
-
-The Ring Nebula (M57) has been drawn and photographed for centuries as an archetypal planetary nebula, and modern Hubble imaging already made its optical ring iconic. Ground-based infrared and millimeter work had found molecules and cooler material beyond the bright ionized rim. The open questions were three-dimensional geometry, possible binary shaping, and how nested shells encode pulsed mass loss. Webb was expected to sharpen infrared morphology in a heritage object, not to redefine planetary nebulae.
-
-## What remains uncertain
-
-Is the true shape a barrel or bipolar shell seen end-on? Does a companion help shape the outflow? Molecular survival in ionized environments depends on shielding in clumps. Official release weic2320 is the public door; kinematic studies finish the 3D model.
-Planetary nebulae are short-lived relative to stellar lifetimes, which makes nearby exemplars precious. The Ring Nebula's familiarity is an asset if it is updated with modern physics: ionization stratification, molecular zones, and possible binary shaping. Webb's infrared detail supports that update without demanding that every reader master nebular photoionization codes first.
-
-Infrared light finds what optical rings hide — cooler shells and molecular material shielded in clumps. That layered view matches how stars actually lose mass: not as a single soap bubble, but as a time sequence of winds and thermal pulses. Teaching M57 as a timeline rather than a logo is the pedagogical goal.
-
-Distance helps again. At roughly 2,500 light-years, physical scales are meaningful when expansion velocities are known. Without kinematics, nested rings are still only nested ellipses on the sky. Keep weic2320 as the image door and spectra as the clock.
-
-Central-star temperature and luminosity set the ionization budget. As the star fades toward a white dwarf, the nebula's ionization structure evolves. A single epoch image is a freeze-frame of that evolution, which is why multi-epoch and multiwavelength studies still matter for M57.
-
-True three-dimensional geometry of this planetary nebula and possible binary shaping remain debated without complete kinematic models.
-
-Central star temperature evolution continues after the weic2320 freeze-frame epoch.
-
-Expansion ages from spectra remain preferable to morphology-only timelines for M57.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 The word "planetary" is a historical accident from telescopic appearance. Physically, these are ionized ejecta around hot post-AGB stars on their way to becoming white dwarfs. The Ring Nebula is close and bright enough to resolve fine structure, making it a calibration object for nebular physics and a teaching object for stellar evolution endpoints.
 
@@ -1709,62 +1348,15 @@ Correct the historical name gently: a planetary nebula is not a planet. Webb's i
         "asteroid",
         "infrared-astronomy",
       ]),
-      quickMarkdown: `On 26 September 2022, NASA's Double Asteroid Redirection Test (DART) spacecraft intentionally collided with Dimorphos, the small moon of asteroid Didymos. It was the first kinetic-impact planetary-defense test: change an asteroid's orbit by hitting it, then measure the result.
+      summaryMarkdown: `On 26 September 2022, NASA's Double Asteroid Redirection Test (DART) spacecraft intentionally collided with Dimorphos, the small moon of asteroid Didymos. It was the first kinetic-impact planetary-defense test: change an asteroid's orbit by hitting it, then measure the result.
 
 Webb and Hubble observed the aftermath, capturing ejecta and plume evolution. It was also an early joint use of both great observatories on the same celestial target. Infrared data help characterize dust and debris that optical images alone may undercount.
 
 **Takeaway:** asteroid deflection is now an experimentally tested technique, and multiwavelength astronomy measured the debris in real time.
 
 **Uncertainty:** detailed ejecta mass and momentum enhancement (the "beta" factor) require careful modeling beyond a single image.`,
-      learnMarkdown: `## What happened
 
-ESA/Webb reported that Webb and Hubble captured detailed views of the DART impact. DART hit Dimorphos at high speed, excavating a plume of debris and altering the moonlet's orbital period around Didymos — the key success metric for planetary defense.
-
-Webb's infrared observations complemented Hubble's optical imaging by tracing dust thermal emission and debris evolution in bands sensitive to particle properties.
-
-On 26 September 2022, NASA's DART spacecraft collided with asteroid moon Dimorphos; Webb and Hubble captured ejecta (weic2215) from the first kinetic deflection test.
-
-Ejecta streams from Dimorphos were tracked in the hours and days after the 26 September 2022 impact.
-
-## Why it matters
-
-Near-Earth asteroids are a measurable hazard class. Kinetic impactors are one mitigation concept. DART moved the problem from simulation-only into empirical engineering astrophysics. For Cosmic Gateway, the story is also methodological: solar-system astronomy, spacecraft operations, and infrared debris physics meet in one event.
-
-The experiment moved planetary defense from simulation to measurement: orbital period change plus debris documented across wavelengths including infrared astronomy.
-
-Binary orbit timing provided a clear dynamical metric for this asteroid deflection experiment.
-
-## How it was measured
-
-Ground-based telescopes timed Dimorphos's mutual orbit eclipses/brightness variations to measure the period change. Webb and Hubble imaged ejecta morphology and brightness over time. Infrared photometry constrains dust; optical imaging constrains scattered-light morphology. LICIACube (ASI) provided close flyby context separately from Webb/Hubble.
-
-Webb infrared and Hubble optical imaging tracked ejecta evolution; ground-based timing measured the Didymos–Dimorphos orbital period change after impact.
-
-Webb thermal infrared sensitivity complemented Hubble optical scattering in weic2215 plume studies.
-
-## What scientists thought before
-
-Kinetic-impact asteroid deflection had been modeled extensively and tested in laboratory analogs, but never demonstrated end-to-end on a real binary asteroid with a measurable orbital-period change. Didymos–Dimorphos was chosen because the secondary's orbit provides a dynamical clock visible from Earth. Great observatories were expected to document ejecta, while mission teams measured the period shift. The prior state was strong theory and engineering design; DART converted that into a confirmed space experiment.
-
-## What remains uncertain
-
-The momentum enhancement factor depends on ejecta launched backward from the impact. Subsurface structure of Dimorphos was unknown a priori. Treat weic2215 as an official multi-observatory release documenting the astronomical imaging, while mission papers carry the orbital-period and beta results.
-Planetary defense sits at the boundary of astronomy and engineering. DART's success metric was dynamical: change Dimorphos's orbital period by a measurable amount. Plume images are scientifically rich and publicly compelling, but they are not themselves the deflection proof. Cosmic Gateway keeps that hierarchy clear so aesthetics do not outrank the clock.
-
-Infrared observations constrain dust properties in the ejecta, complementing Hubble's optical scattered-light views. Together they document how impact energy couples into debris. The momentum enhancement factor beta then folds ejecta physics into deflection efficiency — a number future missions will need for other targets.
-
-Confirmed status here means the impact happened and the orbit changed as mission analyses reported. It does not mean every asteroid will respond like Dimorphos. Material strength, porosity, and shape are variables. Official ESA/Webb release weic2215 anchors the great-observatory imaging chapter of that larger experimental story.
-
-Binary asteroids offer a built-in clock: the secondary's orbital period can be timed with light curves from Earth. That is why Didymos–Dimorphos was chosen. Mission design and astronomy measurement strategy were inseparable.
-
-Public communication should state both results: ejecta were observed, and the orbit changed. Omitting either half mis-teaches planetary defense.
-
-Momentum enhancement depends on ejecta physics; Dimorphos response does not automatically generalize to all asteroid types and rubble piles.
-
-Long-term orbital evolution of the Didymos system after ejecta recoil remains monitored.
-
-Follow-up monitoring continues to constrain how ejecta evolution affects the binary system long-term.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 DART was not a movie premise; it was a controlled experiment on a binary asteroid chosen so that a period change could be measured from Earth. Didymos–Dimorphos offered a clear dynamical clock. Success meant a statistically robust change in orbital period, not merely a pretty plume.
 
@@ -1900,58 +1492,15 @@ Celebrate the confirmed orbital change without generalizing Dimorphos to every n
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Sagittarius C sits in the Milky Way's Central Molecular Zone, near the Galactic Center — one of the most extreme star-forming environments in the Galaxy. Densities, temperatures, turbulence, and tidal forces differ from quiet disk clouds like Taurus.
+      summaryMarkdown: `Sagittarius C sits in the Milky Way's Central Molecular Zone, near the Galactic Center — one of the most extreme star-forming environments in the Galaxy. Densities, temperatures, turbulence, and tidal forces differ from quiet disk clouds like Taurus.
 
 Webb's infrared image pierces much of the intervening dust that blocks optical views toward the center, revealing young stars, luminous gas features, and intricate structure in Sagittarius C. The Galactic Center stops being an X-ray/radio-only story and becomes an infrared landscape of ongoing birth.
 
 **Takeaway:** stars form even in extreme galactic centers, and infrared astronomy is how we see those nurseries through the dust.
 
 **Uncertainty:** membership of individual young stars and the energy sources of every bright filament still need spectroscopic confirmation.`,
-      learnMarkdown: `## What happened
 
-In November 2023, ESA/Webb highlighted Webb observations of Sagittarius C near the Galactic Center. Optical telescopes are largely blind along this line of sight because of extreme extinction. Near-infrared wavelengths open windows through much of that dust, exposing a crowded field of stars and glowing clouds.
-
-Sagittarius C includes dense gas and sites of active star formation amid the central molecular zone's hostile conditions.
-
-In November 2023, ESA/Webb highlighted Sagittarius C near the Galactic Center (weic2328), exposing star formation through heavy dust extinction.
-
-Crowded near-infrared stars and nebulosity fill the weic2328 field toward the Galactic Center.
-
-## Why it matters
-
-If star formation works differently under high turbulence and strong tides, the initial mass function and efficiency near the Galactic Center may differ from the disk. Measuring those differences matters for interpreting unresolved nuclear starbursts in other galaxies. Webb brings resolved infrared diagnostics to our own nucleus.
-
-The Central Molecular Zone tests whether star formation recipes are universal; infrared astronomy is mandatory to see nurseries toward the Galactic Center.
-
-Testing star formation in the Central Molecular Zone calibrates distant nuclear starburst interpretations.
-
-## How it was measured
-
-NIRCam imaging in multiple near-infrared filters maps stellar populations and nebulosity. Comparing colors helps estimate extinction and identify candidate young stellar objects. Radio and submillimeter maps of dense gas provide complementary context for where the cold fuel sits. Spectroscopy separates emission mechanisms along bright filaments.
-
-NIRCam multi-filter imaging mapped stars and nebulosity in weic2328; radio and submillimeter maps contextualize dense gas fuel nearby.
-
-Color-color diagrams from weic2328 NIRCam filters help flag heavily reddened candidate young stars.
-
-## What scientists thought before
-
-Sagittarius C was already mapped in radio and earlier infrared surveys as a star-forming complex in the Central Molecular Zone, where densities, turbulence, and tides differ from quiet disk clouds. Optical light is largely blocked by extreme extinction toward the Galactic Center, so infrared strategies were already mandatory. What was incomplete was JWST-class near-infrared resolution for teaching and for designing spectroscopic membership cuts in a severely crowded field. Webb was expected to open the landscape, not invent central-zone star formation.
-
-## What remains uncertain
-
-Line-of-sight confusion is severe toward the Galactic Center: not every star in the frame is at the same distance. Energetics of large-scale features may involve massive stars, magnetic fields, or shocks. Official release weic2328 guides the public view; catalogs and spectra refine which objects are truly Sagittarius C members.
-Lines of sight to the Galactic Center are among the most extinguished in the sky. That is why infrared astronomy is not optional there — it is the observing strategy. Sagittarius C becomes teachable when dust stops being a wall and becomes a map of where ultraviolet light is absorbed and reprocessed.
-
-Extreme environments test whether star-formation recipes are universal. Higher turbulence and tidal shear may change efficiency and the mass spectrum of newborns. Measuring those differences in our own nucleus calibrates interpretations of unresolved nuclear starbursts abroad. Webb's resolved near-infrared view is a step on that path, not the final census.
-
-Confusion is the tax on Galactic Center science. Crowding mixes distances; bright filaments can be surfaces; not every point source is a YSO. Cosmic Gateway therefore pairs wonder at weic2328 with membership humility, and keeps Sagittarius A* adjacent without conflating every central-zone cloud with the black hole's immediate accretion flow.
-
-Extinction maps vary across the field; one average A_V misleads. Color-color selections with multiple near-infrared bands help, but still benefit from longer-wavelength confirmation for the dustiest YSOs.
-
-Comparing Sagittarius C to disk clouds trains transfer: same infrared logic, different environmental parameters. That transfer is why a Galactic Center target belongs in an expansion batch of teaching discoveries.
-
-Severe crowding and line-of-sight confusion mean not every infrared point source is a confirmed Central Molecular Zone cluster member without spectra.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Most public star-formation images come from relatively nearby disk clouds. The Galactic Center is another regime: higher average densities, stronger shear, pervasive turbulence, and a supermassive black hole environment nearby (though Sagittarius C is not the black hole itself). Teaching that distinction prevents readers from assuming all nurseries behave like the Pillars of Creation.
 

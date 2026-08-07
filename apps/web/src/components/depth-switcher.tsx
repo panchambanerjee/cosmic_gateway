@@ -2,10 +2,9 @@
 
 import type { ReadingDepth } from "@cosmic-gateway/contracts";
 
-const OPTIONS: Array<{ id: ReadingDepth; label: string; hint: string }> = [
-  { id: "quick", label: "Quick", hint: "~1 min" },
-  { id: "learn", label: "Learn", hint: "~5 min" },
-  { id: "deep", label: "Deep dive", hint: "~15 min" },
+const OPTIONS: Array<{ id: ReadingDepth; label: string }> = [
+  { id: "summary", label: "Summary" },
+  { id: "article", label: "Article" },
 ];
 
 export function DepthSwitcher({
@@ -15,13 +14,13 @@ export function DepthSwitcher({
 }: {
   value: ReadingDepth;
   onChange: (depth: ReadingDepth) => void;
-  readingTimes: { quick: number; learn: number; deep: number };
+  readingTimes: { summary: number; article: number };
 }) {
   return (
     <div
       className="inline-flex rounded-lg border border-white/15 bg-void-900/80 p-1"
       role="tablist"
-      aria-label="Reading depth"
+      aria-label="Reading length"
     >
       {OPTIONS.map((option) => {
         const selected = value === option.id;

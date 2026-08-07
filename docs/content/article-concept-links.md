@@ -7,7 +7,7 @@ Living tracker of **what each discovery hyperlinks to** in Cosmic Gateway.
 | Link type | Where it appears | Target |
 |-----------|------------------|--------|
 | Learning-term chips | Discovery page | In-app `/concepts/[slug]` |
-| In-body auto-links | Quick / Learn / Deep text when a linked concept **name** appears | Same `/concepts/[slug]` |
+| In-body auto-links | Summary / Article text when a linked concept **name** appears | Same `/concepts/[slug]` |
 | Concept “Go deeper” | Concept page | `wikipediaUrl` and/or `externalUrl` on the concept |
 | Lessons | Discovery page (when attached) | In-app `/lessons/[slug]` |
 | Sources | Discovery page | Primary papers / facility releases (not concepts) |

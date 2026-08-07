@@ -31,7 +31,7 @@ Article ↔ concept / lesson links: [docs/content/article-concept-links.md](./co
 ### Public web experience
 - Home with brand + motto hero
 - Discoveries list and detail pages
-- Quick / Learn / Deep reading depths
+- Summary / Article reading lengths
 - Evidence-status badges
 - Credited hero images (rights metadata required)
 - Source lists (primary sources first; news tips labeled secondary)
@@ -56,7 +56,7 @@ Article ↔ concept / lesson links: [docs/content/article-concept-links.md](./co
 - Tip import API + status updates (`new` / `triaged` / `used` / `rejected`)
 
 ### Seeded / published content (local seed)
-**25 discoveries** (Quick / Learn / Deep), each with a **unique** hero image URL — no shared heroes across articles.
+**25 discoveries** (Summary / Article), each with a **unique** hero image URL — no shared heroes across articles.
 
 Varied across JWST, stars/stellar death, exoplanets/debris disks, black holes/quasars, cosmology/lensing, solar system, and multi-messenger:
 
@@ -91,7 +91,7 @@ Varied across JWST, stars/stellar death, exoplanets/debris disks, black holes/qu
 
 Also: **6 topics**, **~29 concepts**, **3 lessons**, tip queue samples.
 
-**Editorial depth (all 25):** Quick ~110–150 words · Learn ~580–700 · Deep ~1000–1200, with the same section structure across articles.
+**Editorial depth (all 25):** Summary ~110–150 words · Article ~1000–1200 (former Deep), with the same section structure across articles.
 
 **Evidence badges:** `peer_reviewed` only when a paper source is linked (currently: Early galaxies, Betelgeuse, WASP-39b). Most others are `official_release`; K2-18b is `preliminary`; DART is `confirmed`. See [article-concept-links.md](./content/article-concept-links.md).
 

@@ -111,7 +111,7 @@ function sourceLabel(sourceType: string) {
 }
 
 export function DiscoveryReader({ discovery }: { discovery: DiscoveryDetail }) {
-  const [depth, setDepth] = useState<ReadingDepth>("learn");
+  const [depth, setDepth] = useState<ReadingDepth>("summary");
   const body = useMemo(() => discovery.content[depth], [discovery.content, depth]);
 
   return (

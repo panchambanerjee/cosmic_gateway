@@ -119,7 +119,7 @@ export default async function AdminDiscoveryDetailPage({ params }: Props) {
           </h2>
           <p className="mt-2 text-sm text-star-200/70">{version.changeSummary}</p>
           <pre className="mt-3 max-h-64 overflow-auto rounded-md border border-white/10 bg-void-950 p-3 text-xs text-star-100/80 whitespace-pre-wrap">
-            {version.quickMarkdown}
+            {version.summaryMarkdown}
           </pre>
         </section>
       ) : null}

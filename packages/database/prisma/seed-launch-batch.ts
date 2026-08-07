@@ -114,45 +114,15 @@ function buildDiscoveries(ctx: LaunchBatchContext): SeedDiscoveryInput[] {
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Webb's near-infrared view of the Pillars of Creation shows what optical light cannot: young stars still forming inside dense towers of gas and dust in the Eagle Nebula. The familiar silhouette from Hubble becomes translucent, dotted with red and orange newborn stars.
+      summaryMarkdown: `Webb's near-infrared view of the Pillars of Creation shows what optical light cannot: young stars still forming inside dense towers of gas and dust in the Eagle Nebula. The familiar silhouette from Hubble becomes translucent, dotted with red and orange newborn stars.
 
 Infrared wavelengths pass through much of the dust that blocks visible light, so the pillars look less solid and more like active nurseries. The scene is not a brand-new object — it is a clearer chapter of a story astronomers already knew in outline.
 
 **Takeaway:** star formation continues inside the pillars, and infrared astronomy is what makes those embedded stars visible.
 
 **Uncertainty:** the image is a snapshot; the pillars are still being eroded, and exact ages for individual young stars depend on follow-up modeling.`,
-      learnMarkdown: `## What happened
 
-In October 2022, the James Webb Space Telescope released a near-infrared portrait of the Pillars of Creation, the famous dusty towers in the Eagle Nebula (M16). Hubble's optical image made the pillars iconic as silhouettes against a glowing background. Webb's NIRCam image instead reveals stars forming within and around the columns, because infrared light penetrates much of the obscuring dust.
-
-The pillars are dense ridges of cold gas and dust sculpted by ultraviolet radiation and winds from nearby massive stars. Webb's sharper infrared sensitivity turns those ridges into a map of embedded young stellar objects, jets, and glowing interfaces where energy from hot stars meets cooler material. Official ESA/Webb and NASA releases (weic2216) present the public image and narrative that Cosmic Gateway treats as primary doors into the result.
-
-## Why it matters
-
-Star formation is usually hidden. Dust absorbs optical light, so optical telescopes often see only the outline of a nursery. Infrared astronomy opens the interior. For learners, the Pillars of Creation become a concrete lesson: the same region can look opaque or transparent depending on wavelength, and that difference is not aesthetic — it is physical.
-
-The result also connects public memory to modern methods. A landmark Hubble image becomes a before-and-after for how observatories choose wavelengths to answer different questions. Cosmic Gateway treats that comparison as pedagogy, not nostalgia. Linking the star-formation and infrared-astronomy concepts keeps the postcard from becoming a dead end: birth physics and dust opacity travel together.
-
-The pillars also remind readers that "discovery" in a learning product is not always a brand-new object. Sometimes the advance is a clearer measurement of a known region. That distinction should travel with every future "new look at an old object" headline on Cosmic Gateway.
-
-## How it was measured
-
-Webb's Near-Infrared Camera (NIRCam) collected light at wavelengths longer than the human eye can see. Dust scatters and absorbs shorter wavelengths more effectively, so near-infrared photons escape denser regions more readily. Filters isolate structures at different depths and temperatures; combined color composites highlight young stars, reflection, and emission from heated dust and gas.
-
-Distance and physical scale come from prior Eagle Nebula studies. Webb's contribution is resolution and infrared sensitivity, not a first discovery of the pillars themselves. Catalogs of young stellar objects and spectra still sort which bright knots are newborn stars, which are heated dust, and which are background interlopers. Without that sorting, "star-filled" remains a metaphor rather than a measured census.
-
-## What scientists thought before
-
-Before Webb, Spitzer and ground-based infrared surveys already showed that the pillars contain young stars. Hubble and multiwavelength campaigns mapped erosion and structure in M16. The prior picture was that photoevaporating towers host embedded star formation — expected, not shocking. What was incomplete was the near-infrared spatial census at Webb's resolution, and the public's ability to see the interior as clearly as the silhouette.
-
-The scientific narrative is therefore continuous rather than revolutionary. Embedded star formation was anticipated. The value is a clearer census and a durable teaching image for infrared astronomy: wavelength choice as a scientific instrument, not a filter for prettier colors. Earlier optical culture over-taught the silhouette and under-taught the dusty interior; Webb rebalances that public memory without rewriting the underlying physics.
-
-## What remains uncertain
-
-Individual stellar ages, masses, and accretion rates still require spectroscopy and careful modeling. The pillars are evolving; radiation and winds continue to erode them. An image freezes one moment in a dynamical environment. Photoevaporation timescales and the balance between triggered and spontaneous collapse remain active research threads.
-
-If you leave this Learn layer with one habit, make it this: when an image looks transformed, ask whether the telescope changed the object — or only the wavelengths you can see. From here, open the star-formation and infrared-astronomy concept pages, then try the linked lesson on why infrared light reveals what dust hides.`,
-      deepMarkdown: `## Context: why the Pillars of Creation keep teaching astronomy
+      articleMarkdown: `## Context: why the Pillars of Creation keep teaching astronomy
 
 The Pillars of Creation entered popular culture through Hubble imaging in the mid-1990s. Those optical frames showed cold towers silhouetted against a glowing background — a visual metaphor for birth and destruction in star-forming regions. Scientifically, the pillars are photoevaporating structures in M16, shaped by massive stars whose ultraviolet radiation eats into molecular clouds.
 
@@ -279,47 +249,15 @@ Photoevaporation timescales, the initial mass function of embedded stars, and th
         "infrared-astronomy",
       ]),
       lessonIds: infraredLesson,
-      quickMarkdown: `Webb's NIRCam image of the Cosmic Cliffs reveals the dust-and-gas edge of NGC 3324, a star-forming region in the Carina Nebula, glinting like a mountainous coastline lit from within. Steam-like plumes rise where ultraviolet radiation and stellar winds from young, massive stars boil away the cloud's surface, exposing pockets of star formation that were previously hidden.
+      summaryMarkdown: `Webb's NIRCam image of the Cosmic Cliffs reveals the dust-and-gas edge of NGC 3324, a star-forming region in the Carina Nebula, glinting like a mountainous coastline lit from within. Steam-like plumes rise where ultraviolet radiation and stellar winds from young, massive stars boil away the cloud's surface, exposing pockets of star formation that were previously hidden.
 
 Infrared astronomy lets Webb see dozens of newly forming stars and protostellar jets embedded in the ridge, structures too faint or dust-shrouded for optical telescopes to resolve clearly. The scene captures a single frozen moment in an ongoing tug-of-war between birth and erosion.
 
 **Takeaway:** massive-star feedback — radiation and winds — is actively carving the cloud even as star formation continues inside it.
 
 **Uncertainty:** ages, masses, and outflow rates for individual embedded protostars still require spectroscopic follow-up beyond this single image.`,
-      learnMarkdown: `## What happened
 
-In July 2022, NASA, ESA, and the Canadian Space Agency released Webb's NIRCam portrait of the Cosmic Cliffs, the dusty rim of NGC 3324 at the edge of the Carina Nebula, roughly 7,600 light-years away. The image shows a wall of cold gas and dust being sculpted by ultraviolet radiation and stellar winds pouring off young, massive stars just out of frame above the ridge.
-
-Where earlier optical and even some infrared images showed a soft, hazy boundary, Webb's near-infrared sensitivity resolves dozens of previously hidden protostars, bubbles carved by outflows, and thin jets of material launched from stars still gathering mass. The official ESA/Webb and NASA release (weic2205) frames the image as a portrait of star formation caught in the act, not a finished census.
-
-## Why it matters
-
-The Cosmic Cliffs image matters because it turns an abstract idea — feedback from massive stars — into something visible. Massive stars are so luminous and energetic that their radiation and winds both trigger and destroy star formation nearby, and Carina's edge shows both processes happening within the same frame.
-
-For learners, the picture is a case study in how infrared astronomy changes what counts as "empty" space. Regions that looked like dark, featureless dust in visible light turn out to be dense with activity once observed at longer wavelengths. That shift in what is visible is itself a lesson about the limits of any single instrument.
-
-The image also reinforces that star formation is rarely a tidy, one-directional process. Cavities blown by winds can compress nearby gas and trigger new collapse, while the same winds erode material that might otherwise have formed more stars later. Cosmic Gateway keeps that tension visible rather than flattening it into a simple origin story.
-
-## How it was measured
-
-Webb's NIRCam captured the scene in near-infrared light across several filters, each tuned to particular temperatures and molecular signatures. Longer infrared wavelengths pass through dust more easily than optical light, letting the camera see embedded protostars and the ionization fronts where hot stellar radiation meets the cooler cloud surface.
-
-Physical scale and distance for NGC 3324 come from earlier studies of the broader Carina Nebula complex; Webb's contribution is spatial resolution and sensitivity, not the underlying distance measurement. Confirming which bright points are genuine protostars, versus reflected light or background stars, still requires spectroscopy and follow-up catalogs rather than the image alone.
-
-## What scientists thought before
-
-Ground- and space-based infrared surveys, including Spitzer, had already mapped some star formation and outflow activity around NGC 3324 before Webb. Optical images from Hubble and ground observatories showed the cliffs as a hazy, glowing edge, hinting at ongoing activity without resolving individual protostars clearly.
-
-The broad picture — massive stars sculpting their birth clouds through feedback — was well established from decades of study of similar regions like the Eagle and Orion nebulae. What Webb added was resolution: a much sharper, more complete inventory of the protostars and structures already predicted by that general feedback picture.
-
-## What remains uncertain
-
-Exact stellar ages, masses, and the balance between triggered and suppressed star formation in this particular ridge remain open questions that require spectroscopic follow-up and modeling, not just imaging.
-
-Next time you see a strikingly detailed nebula image, ask which wavelength made it possible and what physical process — birth, erosion, or both — the picture is actually showing. From here, the star-formation and infrared-astronomy concept pages are the natural next stop.
-
-A useful habit when reading any nebula portrait like this one is to check whether a bright point has been confirmed by spectroscopy or only looks suggestive in a single filtered image; that check is what separates a measured census from an evocative impression.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 NGC 3324 sits at the northwest edge of the Carina Nebula complex, one of the largest and most active star-forming regions in the Milky Way, roughly 7,600 light-years from Earth. Long before Webb, astronomers understood this region as a nursery being shaped by feedback: the intense ultraviolet radiation and fast winds from a handful of massive, young stars carve cavities, evaporate the surfaces of dense clumps, and occasionally squeeze nearby gas into forming yet more stars.
 
@@ -430,47 +368,15 @@ A useful comparison for readers is the Pillars of Creation, another Webb debut i
         },
       ],
       conceptIds: conceptIds(ctx.concepts, ["supernova", "neutron-star"]),
-      quickMarkdown: `Webb's mid-infrared image of Cassiopeia A, the debris of a massive star that exploded roughly 340 years ago, maps warm dust and gas in unprecedented detail across the remnant's tangled shell. Bright clumps trace freshly formed dust; wispy features informally nicknamed by the science team hint at structures not yet fully explained.
+      summaryMarkdown: `Webb's mid-infrared image of Cassiopeia A, the debris of a massive star that exploded roughly 340 years ago, maps warm dust and gas in unprecedented detail across the remnant's tangled shell. Bright clumps trace freshly formed dust; wispy features informally nicknamed by the science team hint at structures not yet fully explained.
 
 Comparing Webb's infrared view with Chandra's X-ray images of the same remnant separates cooler dust from the blistering shock-heated gas, showing how one explosion produces very different signatures depending on wavelength. Buried at the remnant's center, a neutron star — the collapsed core left behind — is a reminder of what triggered all this structure.
 
 **Takeaway:** Webb's infrared data reveal how much dust a supernova remnant can produce and preserve, refining a decades-old picture rather than replacing it.
 
 **Uncertainty:** the origin of specific unusual features, including the irregular structure nicknamed the "Green Monster," is still being worked out.`,
-      learnMarkdown: `## What happened
 
-In December 2023, NASA and ESA released a mid-infrared portrait of Cassiopeia A (Cas A) captured with Webb's MIRI instrument. Cas A is the remnant of a massive star whose supernova light likely reached Earth around the 1670s, and it sits roughly 11,000 light-years away in the constellation Cassiopeia.
-
-The image resolves filaments of warm dust and gas in the remnant's inner cavity and outer shell in far more detail than earlier infrared observations. Among the features that caught researchers' attention was an unexplained, loop-like structure that team members informally nicknamed the "Green Monster," visible in the false-color composite. The official ESA/Webb release (weic2330) presents the image alongside the caveat that some structures remain under investigation.
-
-## Why it matters
-
-Supernova remnants like Cas A are where the universe manufactures and disperses dust, some of which later becomes part of new stars and planets. Seeing exactly how much dust a single remnant contains, and where it sits relative to shocked gas, helps astronomers understand how efficiently supernovae contribute to the galaxy's dust budget — a long-standing open question.
-
-The remnant also hosts a neutron star, the crushed core left behind after the explosion, connecting this image to a broader story about stellar death. Linking the supernova and neutron-star concepts here keeps the connection visible: an image of glowing dust is also a portrait of the aftermath of core collapse.
-
-Multiwavelength comparison — combining Webb's infrared view with Chandra's X-ray data of the same object — matters pedagogically because it demonstrates that no single wavelength tells the whole story. Shock-heated gas glows brightly in X-rays while cooler dust glows in the infrared; overlaying both reveals structure invisible to either instrument alone.
-
-## How it was measured
-
-MIRI observes in mid-infrared light, wavelengths especially sensitive to warm dust grains recently formed or heated within the remnant. Different filters isolate dust at different temperatures and specific atomic and molecular emission lines, letting researchers map composition as well as structure.
-
-Chandra's X-ray imaging, by contrast, traces gas heated to millions of degrees by the remnant's expanding shock waves. Combining the two datasets lets scientists distinguish freshly synthesized dust from shock fronts, but interpreting unusual features like the Green Monster still requires additional spectroscopy and modeling that a single image cannot provide.
-
-## What scientists thought before
-
-Cas A has been studied for decades across nearly every wavelength, from radio to gamma rays, making it one of the best-characterized supernova remnants in the galaxy. Earlier infrared work, including from the Spitzer Space Telescope, already established that Cas A contains substantial dust, supporting the idea that supernovae are significant dust factories.
-
-What was less clear before Webb was the fine spatial structure of that dust and gas, including features that do not fit cleanly into existing models of remnant evolution. The scientific narrative here is one of refinement and a genuine open puzzle, not a wholesale revision of what Cassiopeia A is.
-
-## What remains uncertain
-
-The physical origin of the Green Monster feature remains actively debated; explanations proposed so far, including interactions between ejecta and surrounding material, have not been confirmed. Precise dust masses and their long-term survival as the remnant expands also remain areas of ongoing research.
-
-When a headline image includes an unexplained feature, treat that admission as a sign of honest science rather than a gap to paper over. From here, the supernova and neutron-star concept pages fill in the physics of what produced Cassiopeia A in the first place.
-
-That combination of confidence and open puzzle is worth remembering the next time a headline image arrives from a well-studied object: familiarity does not guarantee that every structure within it is already explained.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Cassiopeia A is the remnant of a massive star that ended its life in a supernova explosion whose light likely reached Earth in the late seventeenth century, though the event went largely unnoticed at the time. Located roughly 11,000 light-years away, it is one of the youngest known supernova remnants in the Milky Way and has become a reference object for studying how exploded stars disperse dust, heavy elements, and energy into surrounding space.
 
@@ -580,47 +486,15 @@ Readers comparing Cas A with the Crab Nebula, another well-known supernova remna
         },
       ],
       conceptIds: conceptIds(ctx.concepts, ["supernova", "pulsar"]),
-      quickMarkdown: `Webb's combined near- and mid-infrared portrait of the Crab Nebula, the wreckage of a supernova recorded by astronomers in 1054 CE, traces filaments of dust and gas threaded through an inner cage of energetic particles. At the nebula's heart, a rapidly spinning neutron star — a pulsar — powers much of what glows.
+      summaryMarkdown: `Webb's combined near- and mid-infrared portrait of the Crab Nebula, the wreckage of a supernova recorded by astronomers in 1054 CE, traces filaments of dust and gas threaded through an inner cage of energetic particles. At the nebula's heart, a rapidly spinning neutron star — a pulsar — powers much of what glows.
 
 The new data prompted researchers to revisit assumptions about specific filamentary structures, including whether an inner curved network is made mostly of synchrotron-emitting particles or dust grains, a distinction that matters for understanding how supernovae recycle material back into the galaxy.
 
 **Takeaway:** the Crab remains a working pulsar wind nebula laboratory, not a solved textbook diagram, and infrared data are actively revising specific structural interpretations.
 
 **Uncertainty:** the exact composition and origin of some filamentary features are still being reassessed rather than settled by this image alone.`,
-      learnMarkdown: `## What happened
 
-In October 2023, NASA and ESA released a composite Webb image of the Crab Nebula combining NIRCam and MIRI data. The Crab is the remnant of a supernova recorded by astronomers in 1054 CE and lies roughly 6,500 light-years away; at its center spins the Crab Pulsar, a neutron star left behind by the original explosion.
-
-Webb's infrared view resolves dust and gas filaments in far more detail than earlier images, including a curved, cage-like structure near the pulsar that researchers had previously associated mainly with high-energy synchrotron emission. The official ESA/Webb release (weic2326) notes that the new data are prompting scientists to reconsider that assignment for at least part of the structure.
-
-## Why it matters
-
-The Crab Nebula is one of the best-studied objects in the sky, making it a strong test case for how a new instrument can still overturn specific details even in a "known" object. That a landmark image can genuinely change interpretation, not just resolution, is an important lesson about the difference between confirming a picture and testing it.
-
-The nebula also links two of Cosmic Gateway's core concepts directly: it is both a supernova remnant and a pulsar wind nebula, powered by the neutron star's rapid rotation and magnetic field rather than by the original explosion's leftover heat. Understanding that distinction is central to understanding why the Crab still glows brightly, nearly a thousand years after the explosion that made it.
-
-For learners, the lesson is that infrared imaging does not just add pretty detail to old pictures. It supplies genuinely new physical information — here, about the mix of dust and energetic particles — that can shift a specific scientific interpretation that had stood for years.
-
-## How it was measured
-
-Webb combined NIRCam's near-infrared sensitivity with MIRI's mid-infrared coverage to separate different physical components within the nebula: synchrotron radiation from relativistic particles spiraling in the pulsar's magnetic field glows across a broad range of wavelengths, while dust grains emit more specifically in the mid-infrared.
-
-By comparing brightness and color across these bands, researchers can estimate how much of a given filament's glow comes from particles versus dust. That comparison is what prompted the reassessment of the cage-like structure near the pulsar; confirming the new interpretation will likely require additional spectroscopy rather than imaging alone.
-
-## What scientists thought before
-
-Before Webb, decades of radio, optical, X-ray, and gamma-ray observations had built a detailed model of the Crab as a pulsar wind nebula: a fast-spinning neutron star driving a wind of relativistic particles that lights up the surrounding supernova debris through synchrotron emission. That framework remains intact after Webb's image.
-
-What is being revised is a narrower, structural detail — how much of a specific filamentary feature is synchrotron emission versus dust — rather than the overall pulsar wind nebula picture itself. That kind of targeted revision, rather than wholesale replacement, is typical of how well-established objects continue to teach astronomers new things.
-
-## What remains uncertain
-
-Whether the cage-like structure is predominantly dust, synchrotron emission, or some mix of both remains to be confirmed through follow-up spectroscopy; the Webb image raised the question more than it answered it.
-
-When a well-known object generates a genuine reinterpretation from new data, that is exactly the kind of story worth watching closely. From here, the supernova and pulsar concept pages explain the two processes this single filament might represent.
-
-That kind of targeted reassessment is a healthy sign for a field, not a weakness: it shows that even a nearly thousand-year-old, exhaustively studied remnant can still generate a genuine scientific question when observed with a new instrument at new wavelengths.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 The Crab Nebula is the remnant of a supernova whose explosion was recorded by astronomers in China and elsewhere in 1054 CE, making it one of the few supernova remnants with a securely dated origin. At its center lies the Crab Pulsar, a neutron star spinning roughly 30 times per second, whose rotating magnetic field drives a wind of relativistic particles that powers much of the nebula's light through synchrotron emission — making the Crab the archetype of a pulsar wind nebula.
 
@@ -742,45 +616,15 @@ Readers comparing the Crab with Cassiopeia A, another supernova remnant covered 
         "transit-spectroscopy",
       ]),
       lessonIds: transitLesson,
-      quickMarkdown: `Webb's NIRSpec instrument detected carbon dioxide in the atmosphere of WASP-39b, a hot, puffed-up gas giant about the mass of Saturn orbiting a Sun-like star roughly 700 light-years away. It is among the clearest, most detailed detections of carbon dioxide in an exoplanet atmosphere published to date.
+      summaryMarkdown: `Webb's NIRSpec instrument detected carbon dioxide in the atmosphere of WASP-39b, a hot, puffed-up gas giant about the mass of Saturn orbiting a Sun-like star roughly 700 light-years away. It is among the clearest, most detailed detections of carbon dioxide in an exoplanet atmosphere published to date.
 
 WASP-39b orbits its star in about four days and reaches scorching temperatures, making it an exoplanet firmly outside any habitable range. The detection matters for studying how planets form and what materials they carry, using the well-established technique of transit spectroscopy — not for questions about life.
 
 **Takeaway:** transit spectroscopy with Webb can now resolve specific molecules like carbon dioxide clearly enough to test planet-formation models.
 
 **Uncertainty:** WASP-39b's composition constrains formation history for this specific hot giant; it says nothing about habitability, which is not physically relevant here.`,
-      learnMarkdown: `## What happened
 
-In late 2022, a large international team analyzing Webb Early Release Science data announced a clear detection of carbon dioxide in the atmosphere of WASP-39b, a gas giant roughly the mass of Saturn but far more inflated, orbiting a Sun-like star about 700 light-years from Earth. The planet completes an orbit in only about four days, placing it extremely close to its star.
-
-The detection, published alongside the preprint arXiv:2211.10489 and companion NASA materials, used Webb's NIRSpec instrument to capture a detailed transmission spectrum during a transit, when WASP-39b passes in front of its star as seen from Earth. The carbon dioxide signature stood out clearly enough to be considered one of the sharpest such detections in an exoplanet atmosphere at the time.
-
-## Why it matters
-
-WASP-39b is a hot exoplanet, not a habitable one, and this result is valuable precisely because it demonstrates a method rather than a discovery about life. Carbon dioxide abundance, relative to other elements measured in the same atmosphere, offers clues about where and how a planet formed within its system before migrating inward.
-
-For learners, this discovery is a clean example of exoplanet atmospheric science working as intended: a specific molecule detected with enough precision to test formation models, on a planet whose extreme temperature rules out any serious habitability question. Keeping that boundary explicit protects the difference between "atmosphere characterized in detail" and "potentially habitable," a distinction that gets blurred in less careful reporting.
-
-Linking the exoplanet and transit-spectroscopy concepts here keeps the method visible: the same technique used on this scorching gas giant is the technique that, applied elsewhere, eventually extends toward smaller, cooler, more Earth-like targets.
-
-## How it was measured
-
-Transit spectroscopy relies on a planet crossing in front of its star. Starlight filtering through the planet's atmosphere during that transit carries a spectral fingerprint: specific wavelengths absorbed by specific molecules. Webb's NIRSpec instrument recorded that fingerprint with high enough precision to isolate a carbon dioxide feature clearly from the surrounding continuum.
-
-Extracting a robust molecular detection requires careful modeling of the star's own light, instrument systematics, and the planet's temperature structure, not just a raw spectrum. The published analysis went through this full pipeline and peer review before the carbon dioxide detection was reported with confidence, distinguishing it from a tentative or preliminary signal.
-
-## What scientists thought before
-
-Before this Webb result, earlier space telescopes including Hubble and Spitzer had characterized WASP-39b's atmosphere and detected water vapor, sodium, and potassium, establishing it as one of the best-studied hot giant exoplanets. Carbon dioxide had been suspected or weakly hinted at in some prior exoplanet atmospheres but not confirmed with this level of clarity.
-
-The broader framework — that transiting hot giants offer the best current targets for detailed atmospheric characterization — was already well established. What Webb added was the sensitivity to resolve a specific molecule this cleanly, validating predictions about the instrument's capability made well before launch.
-
-## What remains uncertain
-
-Precisely how much this single carbon dioxide measurement constrains WASP-39b's formation history depends on models of chemical mixing and migration that are still being refined; one molecule's abundance is a data point, not a complete formation story.
-
-If you take one lesson from WASP-39b, make it this: a detailed, well-confirmed atmospheric detection on an obviously uninhabitable planet is exactly the kind of result that should build justified confidence in the method, ahead of harder, more ambiguous cases. From here, the exoplanet and transit-spectroscopy concept pages explain how that confidence gets built.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 WASP-39b is a gas giant with roughly the mass of Saturn but a radius large enough to make it one of the puffiest known exoplanets, orbiting a Sun-like star about 700 light-years away on an orbit lasting only around four days. Its short orbital period and resulting high temperature make it what astronomers call a "hot Saturn," a category of planet with no analog in our own solar system and no plausible claim to habitability.
 
@@ -893,47 +737,15 @@ Readers may find it useful to compare WASP-39b with K2-18b, another exoplanet co
         "transit-spectroscopy",
       ]),
       lessonIds: transitLesson,
-      quickMarkdown: `Webb's NIRISS and NIRSpec instruments detected methane and carbon dioxide in the atmosphere of K2-18b, an exoplanet roughly 8.6 times Earth's mass orbiting a small red dwarf star about 120 light-years away, within a zone where liquid water could theoretically exist on a suitable surface. The same study reported a tentative, low-confidence hint of dimethyl sulfide, a molecule that on Earth is produced by living organisms.
+      summaryMarkdown: `Webb's NIRISS and NIRSpec instruments detected methane and carbon dioxide in the atmosphere of K2-18b, an exoplanet roughly 8.6 times Earth's mass orbiting a small red dwarf star about 120 light-years away, within a zone where liquid water could theoretically exist on a suitable surface. The same study reported a tentative, low-confidence hint of dimethyl sulfide, a molecule that on Earth is produced by living organisms.
 
 That tentative signal is explicitly preliminary and statistically weak; several independent researchers have questioned its significance, and dimethyl sulfide has other possible non-biological sources. Cosmic Gateway does not treat this as evidence of life.
 
 **Takeaway:** methane and carbon dioxide detections are solid; the dimethyl sulfide hint is not, and no responsible reading calls this a biosignature.
 
 **Uncertainty:** the dimethyl sulfide signal requires more sensitive follow-up observations, ideally with Webb's MIRI instrument, before it can be considered anything beyond an intriguing possibility.`,
-      learnMarkdown: `## What happened
 
-In September 2023, a research team using Webb's NIRISS and NIRSpec instruments reported detecting methane and carbon dioxide in the atmosphere of K2-18b, an exoplanet about 8.6 times Earth's mass orbiting a red dwarf star roughly 120 light-years away. K2-18b sits within its star's habitable zone, the orbital distance range where a planet could in principle support liquid water on a surface, if it has one.
-
-The same analysis reported a low-confidence, tentative signal consistent with dimethyl sulfide (DMS), a molecule produced on Earth primarily by marine organisms. The official ESA/Webb release (weic2321) and the associated research explicitly described the DMS hint as preliminary, at low statistical significance, and requiring confirmation.
-
-## Why it matters
-
-K2-18b sits at the center of the "hycean world" hypothesis — the idea that some sub-Neptune-sized planets might host deep oceans beneath hydrogen-rich atmospheres, potentially compatible with life as a theoretical possibility. That hypothesis makes any hint of a biologically associated molecule here newsworthy, and also makes careful, cautious language essential.
-
-For learners, K2-18b is one of the clearest cases in this era of exoplanet science where the gap between "detected molecule" and "evidence of life" must be held firmly. Methane and carbon dioxide are well-confirmed and scientifically valuable on their own, telling researchers about atmospheric chemistry; the DMS hint is a separate, much weaker claim that does not currently meet the bar for a biosignature detection.
-
-Linking the exoplanet and transit-spectroscopy concepts here supports that caution: the same method that reliably detects methane can also produce marginal, statistically fragile signals for other molecules, and distinguishing the two requires understanding how transit spectroscopy actually works, not just reading a headline.
-
-## How it was measured
-
-Transit spectroscopy captures starlight passing through K2-18b's atmosphere during transits, with the resulting spectrum revealing absorption features from specific molecules. NIRISS and NIRSpec together provided wavelength coverage sufficient to identify methane and carbon dioxide features with reasonable confidence.
-
-The tentative dimethyl sulfide signal, by contrast, sits near the edge of what the data can currently distinguish from noise or from other molecules with overlapping spectral features. Confirming or ruling it out convincingly will likely require additional observations, potentially using Webb's MIRI instrument to access different wavelengths, along with independent analysis from other research groups.
-
-## What scientists thought before
-
-Before this result, K2-18b was already known as a sub-Neptune in its star's habitable zone, and prior Hubble observations had detected water vapor in its atmosphere, though later reanalyses debated whether that signal might instead be methane. The hycean world concept itself, proposed by researchers studying planets like K2-18b, predates this specific Webb detection.
-
-The scientific community's prior stance was cautious optimism about hycean worlds as a category, paired with skepticism about any specific biosignature claim without strong, independently confirmed evidence. This Webb result updates the atmospheric composition picture for K2-18b specifically while leaving that broader cautious stance intact.
-
-## What remains uncertain
-
-Multiple independent research groups have publicly questioned the statistical robustness of the dimethyl sulfide signal, and follow-up observations to test it more rigorously are an active priority for the field; no consensus interpretation currently supports treating it as confirmed, let alone as evidence of life.
-
-If a headline about K2-18b ever claims "signs of life," treat that as a red flag rather than an update on the actual science. From here, the exoplanet and transit-spectroscopy concept pages explain the method well enough to see exactly why this particular signal needs more data before it means anything definitive.
-
-That distinction is the single most important thing to carry away from any K2-18b headline: a well-supported molecule is not the same thing as a confirmed biosignature, and a confirmed biosignature would still not be the same thing as confirmed life.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 K2-18b is a sub-Neptune-sized exoplanet, roughly 8.6 times Earth's mass, orbiting a red dwarf star about 120 light-years away within the star's habitable zone. It has become a focal point for the "hycean world" hypothesis, which proposes that certain sub-Neptune planets with hydrogen-rich atmospheres might host deep, potentially habitable oceans beneath that envelope — a category with no direct analog among solar system planets.
 
@@ -1047,45 +859,15 @@ Readers may find it useful to compare K2-18b with WASP-39b, another exoplanet co
       ],
       conceptIds: conceptIds(ctx.concepts, ["black-hole", "event-horizon"]),
       lessonIds: blackHoleLesson,
-      quickMarkdown: `In May 2022, the Event Horizon Telescope collaboration released the first image of Sagittarius A*, the roughly four-million-solar-mass black hole at the center of the Milky Way, showing a glowing ring of hot gas surrounding a dark central shadow cast by the black hole's event horizon.
+      summaryMarkdown: `In May 2022, the Event Horizon Telescope collaboration released the first image of Sagittarius A*, the roughly four-million-solar-mass black hole at the center of the Milky Way, showing a glowing ring of hot gas surrounding a dark central shadow cast by the black hole's event horizon.
 
 Because gas orbiting Sgr A* completes a circuit in minutes rather than the days it takes around the much larger black hole in M87, the source changed noticeably during the observation itself, forcing the collaboration to average over thousands of possible images rather than presenting a single simple snapshot.
 
 **Takeaway:** Sgr A*'s image is a statistically averaged reconstruction, built to cope with rapid variability, confirming general relativity's predictions for our own galaxy's central black hole.
 
 **Uncertainty:** fine details of gas dynamics near the event horizon are smoothed out by the averaging process needed to produce a stable image at all.`,
-      learnMarkdown: `## What happened
 
-On May 12, 2022, the Event Horizon Telescope (EHT) collaboration released the first image of Sagittarius A* (Sgr A*), the supermassive black hole at the center of the Milky Way, roughly 27,000 light-years from Earth and about four million times the mass of the Sun. The image shows a bright, asymmetric ring of glowing gas surrounding a dark central region — the shadow cast by the black hole's event horizon.
-
-The official ESO release (eso2208) describes years of data processing needed to produce the image, following the same global radio-telescope-network technique the EHT collaboration used for its earlier image of the black hole in the galaxy M87. Sgr A*'s much smaller apparent size and faster internal variability made this particular reconstruction substantially harder.
-
-## Why it matters
-
-Sgr A* matters because it is the supermassive black hole in our own galaxy, the one whose gravitational influence on nearby stars had already provided strong indirect evidence of its existence and mass for decades. A direct image tests general relativity's predictions for black hole shadows in an entirely different environment and mass range than M87's much larger black hole.
-
-For learners, the comparison between Sgr A* and M87 is itself instructive: despite Sgr A* being about a thousand times less massive than M87's black hole, both produced remarkably similar shadow sizes relative to their event horizons, matching general relativity's predictions across very different physical scales. That consistency is a meaningful test of the theory, not just a striking picture.
-
-Linking the black-hole and event-horizon concepts here keeps that comparison concrete: an event horizon's size scales with mass in a predictable way, and Sgr A*'s image is a real-world confirmation of that scaling using our own galactic center as the laboratory.
-
-## How it was measured
-
-The EHT links radio telescopes across the globe into a single Earth-sized virtual instrument using very long baseline interferometry, achieving the angular resolution needed to resolve a black hole's shadow at galactic-center distances. For Sgr A*, gas orbits the black hole on timescales of minutes to hours, far faster than the days-to-weeks timescale for M87, meaning the source's appearance can change meaningfully during a single night of observing.
-
-To cope with that variability, the collaboration generated thousands of possible images consistent with the data and used statistical and machine-learning techniques to identify common features across them, ultimately averaging toward a representative image rather than a single unprocessed snapshot. That averaging process is central to understanding what the final picture does and does not show.
-
-## What scientists thought before
-
-Before this image, decades of tracking individual stars orbiting close to the galactic center — a Nobel Prize-winning body of work — had already established Sgr A*'s mass and location with high precision, providing indirect but very strong evidence for a supermassive black hole there. Radio and X-ray observations had also long identified Sgr A* as a compact, variable source consistent with an accreting black hole.
-
-What was missing before 2022 was a direct image of the shadow itself. The EHT's Sgr A* result did not discover the black hole; it provided the first direct visual confirmation consistent with a mass and behavior already well constrained by other methods.
-
-## What remains uncertain
-
-Because the final image is built by averaging over rapid variability, fine-grained details about gas dynamics, magnetic field structure, and moment-to-moment changes near the event horizon are necessarily smoothed out; higher-cadence future observations are needed to capture that faster physics directly.
-
-When you see this now-famous glowing ring, remember it represents a statistical best estimate built to handle a genuinely difficult observational problem, not a single photograph. From here, the black-hole and event-horizon concept pages fill in exactly what that ring is showing and why its size matters.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Sagittarius A* is the supermassive black hole at the center of the Milky Way, located about 27,000 light-years from Earth with a mass of roughly four million Suns. Long before any image existed, decades of precise tracking of individual stars orbiting close to the galactic center had already established Sgr A*'s mass and compact size with high confidence, work that was recognized with a share of the 2020 Nobel Prize in Physics.
 
@@ -1196,45 +978,15 @@ Readers comparing this entry with the M87* image will notice the two results wer
       ],
       conceptIds: conceptIds(ctx.concepts, ["black-hole", "event-horizon"]),
       lessonIds: blackHoleLesson,
-      quickMarkdown: `On April 10, 2019, the Event Horizon Telescope collaboration released the first-ever direct image of a black hole: the supermassive black hole at the center of the galaxy M87, roughly 55 million light-years away and about 6.5 billion times the mass of the Sun. The image shows a bright, asymmetric ring of glowing gas around a dark central shadow.
+      summaryMarkdown: `On April 10, 2019, the Event Horizon Telescope collaboration released the first-ever direct image of a black hole: the supermassive black hole at the center of the galaxy M87, roughly 55 million light-years away and about 6.5 billion times the mass of the Sun. The image shows a bright, asymmetric ring of glowing gas around a dark central shadow.
 
 The picture confirmed decades of theoretical predictions about how a black hole's event horizon should appear when backlit by infalling, glowing material, and it matched general relativity's expectations closely enough to become an immediate landmark in observational astrophysics.
 
 **Takeaway:** the M87 image was the first direct visual evidence of an event horizon, built by linking radio telescopes worldwide into a single Earth-scale instrument.
 
 **Uncertainty:** the image is a processed reconstruction from sparse data, and detailed structure near the horizon required careful validation against multiple independent imaging methods.`,
-      learnMarkdown: `## What happened
 
-On April 10, 2019, the Event Horizon Telescope (EHT) collaboration announced the first direct image of a black hole: the supermassive black hole at the center of the galaxy M87, about 55 million light-years away in the Virgo Cluster, with a mass of roughly 6.5 billion Suns. The image shows a glowing, ring-shaped structure surrounding a dark central region, matching the theoretically predicted shadow cast by a black hole's event horizon.
-
-The official ESO release (eso1907) and simultaneous papers published by the EHT collaboration described years of coordinated observation, using radio telescopes on multiple continents linked together, followed by an extensive, independently cross-checked data processing effort to produce the final image.
-
-## Why it matters
-
-This was widely described as the first time humanity had directly "seen" a black hole, and the description is broadly accurate: prior evidence for black holes, however strong, had always been indirect, based on the motion of stars or gas rather than a direct image of the region right at the edge of the event horizon. M87's image changed that.
-
-For learners, the result is a powerful case study in how theory and observation can converge: general relativity had predicted the rough shape and size of a black hole shadow long before any telescope could resolve one, and the M87 image matched those predictions closely. That match strengthened confidence in general relativity in an extreme gravity regime that had never been directly tested before.
-
-Linking the black-hole and event-horizon concepts here is central to understanding the image correctly: the dark region is not the black hole's true size but the shadow cast by light bending around it, a distinction that shapes how every subsequent black hole image, including Sgr A*'s, should be read.
-
-## How it was measured
-
-The EHT used very long baseline interferometry, combining radio telescopes across the globe to synthesize the resolving power of a telescope roughly the size of Earth — the resolution required to see something as small, in angular terms, as a black hole's shadow at this distance. Data from each telescope had to be precisely time-stamped using atomic clocks and later combined computationally.
-
-Because the resulting dataset was necessarily incomplete — no real telescope array covers Earth continuously — the collaboration used multiple independent imaging algorithms and rigorous blind analysis procedures, comparing results without cross-contamination between teams, before agreeing that the ring-like structure was a robust feature of the data rather than an artifact of any single processing method.
-
-## What scientists thought before
-
-Before 2019, evidence for M87's central black hole was already strong: measurements of gas and stellar motions near the galaxy's center had indicated a compact, extremely massive object consistent with a supermassive black hole for years, and M87's relativistic jet, one of the most studied in astronomy, was understood to be powered by such an object.
-
-What had not existed before was direct imaging of the region immediately surrounding the event horizon. The EHT project was specifically designed, years in advance, to attempt exactly this kind of observation on the two most promising targets, M87* and Sgr A*, making the 2019 result the fulfillment of a long-planned observational campaign rather than a surprise finding.
-
-## What remains uncertain
-
-While the ring's overall size and shape matched general relativity's predictions well, the resolution achieved in 2019 could not resolve finer details of the accretion flow or magnetic field structure near the horizon; those details are the target of ongoing and future EHT observations with improved sensitivity.
-
-When you look at this now-iconic orange ring, remember it represents both a landmark theoretical confirmation and the beginning, not the end, of directly imaging black hole environments. From here, the black-hole and event-horizon concept pages explain exactly what that dark center does and does not represent.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 M87 is a giant elliptical galaxy in the Virgo Cluster, about 55 million light-years from Earth, hosting a supermassive black hole of roughly 6.5 billion solar masses at its center — one of the most massive black holes known and the source of one of the best-studied relativistic jets in astronomy. Evidence for this black hole's existence and approximate mass, based on the motion of gas and stars near the galactic center, predated the Event Horizon Telescope's imaging effort by years.
 
@@ -1354,45 +1106,15 @@ Readers comparing this entry with the Sagittarius A* image released three years 
         "gravitational-wave",
         "neutron-star",
       ]),
-      quickMarkdown: `On August 17, 2017, LIGO and Virgo detectors registered ripples in spacetime from two neutron stars merging in a galaxy called NGC 4993, about 130 million light-years away. Within about two seconds, space telescopes detected a short gamma-ray burst from the same direction, and observatories raced to find light from the same event.
+      summaryMarkdown: `On August 17, 2017, LIGO and Virgo detectors registered ripples in spacetime from two neutron stars merging in a galaxy called NGC 4993, about 130 million light-years away. Within about two seconds, space telescopes detected a short gamma-ray burst from the same direction, and observatories raced to find light from the same event.
 
 That light, a fading glow called a kilonova, carried spectral evidence for freshly made heavy elements such as gold and platinum, produced through rapid neutron capture. The event, GW170817, became the first confirmed case of gravitational waves and light observed from the same cosmic source.
 
 **Takeaway:** GW170817 opened the era of multi-messenger astronomy, tying gravitational waves, gamma rays, and optical/infrared light to a single neutron star merger.
 
 **Uncertainty:** the precise total mass of heavy elements produced, and how typical this single event is of neutron star mergers generally, remain active research questions.`,
-      learnMarkdown: `## What happened
 
-On August 17, 2017, the LIGO and Virgo gravitational-wave observatories detected a signal, designated GW170817, consistent with two neutron stars spiraling together and merging in the galaxy NGC 4993, roughly 130 million light-years away. Less than two seconds later, space-based gamma-ray observatories detected a short burst of gamma rays from a consistent direction, immediately suggesting a connection between the two signals.
-
-Ground- and space-based telescopes worldwide then searched for and found a fading optical and infrared source at the location, informally called a kilonova, and designated AT2017gfo. The official ESO release (eso1733) described the intense, coordinated follow-up campaign involving dozens of observatories, framing the event as the first confirmed detection of both gravitational waves and electromagnetic light from the same astrophysical source.
-
-## Why it matters
-
-GW170817 mattered because it inaugurated what astronomers now call multi-messenger astronomy: combining gravitational-wave signals with traditional light-based observations to study the same event from multiple independent physical channels. Before this event, gravitational-wave detections had come only from black hole mergers, which are not expected to produce detectable light.
-
-The kilonova's spectrum also provided direct observational support for a decades-old theoretical idea: that neutron star mergers are a major source of the universe's heaviest elements, formed through rapid neutron capture, or the r-process. Gold, platinum, and other heavy elements found on Earth may trace their origin substantially to events like this one.
-
-Linking the gravitational-wave and neutron-star concepts here keeps both halves of the story visible: the merger itself is detected through spacetime ripples, while its aftermath — the heavy-element factory — is studied through conventional light. Neither channel alone would have told the complete story.
-
-## How it was measured
-
-LIGO and Virgo detect gravitational waves by measuring minute changes in the distance between mirrors suspended kilometers apart, changes caused by spacetime itself stretching and compressing as a wave passes. The pattern of the GW170817 signal was consistent with two compact objects of neutron-star-like mass spiraling together and merging.
-
-Following the gravitational-wave and gamma-ray detections, astronomers used the rough sky location provided by the detector network to search a patch of sky with ground-based telescopes, finding the fading kilonova within hours. Spectra of that fading light, gathered over the following days and weeks by many observatories, revealed the changing chemical signatures consistent with freshly synthesized heavy elements cooling and expanding outward.
-
-## What scientists thought before
-
-Before GW170817, theoretical work had proposed for decades that neutron star mergers could be a major site for r-process nucleosynthesis, competing with other proposed sites like certain supernovae, but direct observational evidence favoring neutron star mergers specifically had been lacking. Gravitational-wave astronomy itself was barely two years old, with LIGO's first detections in 2015 coming from black hole mergers, which produce no expected electromagnetic counterpart.
-
-The broader theoretical framework connecting neutron star mergers, short gamma-ray bursts, and heavy-element production existed before 2017; what GW170817 provided was the first direct observational link tying all three together in a single, well-observed event.
-
-## What remains uncertain
-
-How much of the universe's total gold, platinum, and other r-process elements originated from events like GW170817, versus rarer or more common merger scenarios, is still being worked out using population studies and computer models rather than this single event alone.
-
-GW170817 is a reminder that some of the most important discoveries come from combining entirely different kinds of instruments looking at the same patch of sky in short order. From here, the gravitational-wave and neutron-star concept pages explain the physics behind both halves of this landmark event.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 On August 17, 2017, LIGO and Virgo detected gravitational waves, designated GW170817, consistent with the inspiral and merger of two neutron stars in the galaxy NGC 4993, roughly 130 million light-years away. Within about two seconds, gamma-ray observatories detected a short gamma-ray burst from a consistent sky location, and within hours, ground-based telescopes located a fading optical and infrared counterpart, a kilonova designated AT2017gfo.
 
@@ -1501,45 +1223,15 @@ Readers may find it useful to compare GW170817 with the black hole merger detect
         },
       ],
       conceptIds: conceptIds(ctx.concepts, ["ice-giant"]),
-      quickMarkdown: `Webb's NIRCam image of Neptune, released in September 2022, delivered the clearest view of the planet's faint ring system in more than three decades, since Voyager 2's 1989 flyby remained the previous benchmark. Because methane in Neptune's atmosphere absorbs infrared light strongly, the planet itself appears dark and subdued rather than the vivid blue seen in visible-light images, while high-altitude clouds show up as bright streaks.
+      summaryMarkdown: `Webb's NIRCam image of Neptune, released in September 2022, delivered the clearest view of the planet's faint ring system in more than three decades, since Voyager 2's 1989 flyby remained the previous benchmark. Because methane in Neptune's atmosphere absorbs infrared light strongly, the planet itself appears dark and subdued rather than the vivid blue seen in visible-light images, while high-altitude clouds show up as bright streaks.
 
 Several of Neptune's moons are visible in the frame, including Triton, whose icy surface reflects sunlight so efficiently that it appears as a bright, star-like point complete with diffraction spikes from the telescope's optics.
 
 **Takeaway:** infrared imaging reveals Neptune's ring system and atmospheric structure with a clarity unmatched since the Voyager 2 flyby, by exploiting methane absorption rather than fighting it.
 
 **Uncertainty:** interpreting specific bright atmospheric features as storms versus other phenomena still depends on follow-up monitoring over time, not a single image.`,
-      learnMarkdown: `## What happened
 
-In September 2022, NASA, ESA, and the Canadian Space Agency released a Webb NIRCam image of Neptune showing the planet's ring system with a clarity not achieved since Voyager 2's 1989 flyby, the last time a spacecraft observed Neptune's rings up close. The image also captured several of Neptune's moons, most strikingly Triton, whose highly reflective, nitrogen-ice-covered surface makes it appear as a bright, star-like point in the frame.
-
-Unlike visible-light images that show Neptune as a vivid blue disk, Webb's infrared view renders the planet mostly dark, because methane gas in its atmosphere absorbs infrared light strongly at the wavelengths observed. Bright streaks and patches mark high-altitude clouds that reflect sunlight before it reaches the methane-absorbing layers below. The official ESA/Webb release (weic2214) frames the image as both a scientific and a historical benchmark, comparing it directly to the Voyager legacy.
-
-## Why it matters
-
-Neptune is an ice giant, a planetary category distinct from both the rocky inner planets and the larger gas giants Jupiter and Saturn, and it remains one of the least-visited and least-imaged planets in the solar system, having been seen up close by a spacecraft only once, during Voyager 2's brief 1989 flyby. Any new high-resolution look at Neptune updates a picture largely unchanged in public memory for over thirty years.
-
-For learners, this image is a clear demonstration that the "right" wavelength depends entirely on the question being asked. Optical images best capture Neptune's atmospheric color and cloud bands; infrared images, by contrast, are ideal for studying faint, dusty rings and specific atmospheric chemistry, because methane absorption suppresses the planet's overall glare relative to the fainter rings.
-
-Linking the ice-giant concept here keeps that planetary category visible: Neptune and Uranus share compositions dominated by water, ammonia, and methane ices surrounding smaller rocky cores, distinguishing them physically from the hydrogen-and-helium-dominated gas giants, a distinction this image's very appearance helps illustrate.
-
-## How it was measured
-
-Webb's NIRCam captured Neptune in near-infrared light across several filters. Because methane absorbs strongly at many near-infrared wavelengths, the bulk of Neptune's atmosphere appears dark in the resulting image, while narrow, high-altitude cloud features that sit above much of the methane layer remain comparatively bright, standing out sharply against the darker disk.
-
-That same methane absorption, rather than being a limitation, is what makes the image well suited to detecting the planet's faint, dusty rings: with the bright glare of the planet's disk suppressed, the much fainter ring material becomes far easier to distinguish against the dark background than it typically is in visible light. Confirming the nature of specific bright atmospheric patches as storms, rather than transient artifacts, still requires comparison with additional images over time.
-
-## What scientists thought before
-
-Voyager 2's 1989 flyby provided the definitive close-up study of Neptune's rings, moons, and atmosphere for over three decades, supplemented since then by more distant observations from Hubble and ground-based telescopes that tracked storms and seasonal changes but could not match Voyager's resolution for faint structures like the rings.
-
-The basic understanding that Neptune's rings are faint and dusty, and that methane dominates its infrared absorption spectrum, was already well established from Voyager-era and subsequent spectroscopic studies. Webb's contribution is a return to Voyager-level clarity for the rings specifically, using an entirely different vantage point and wavelength strategy than a flyby spacecraft could offer.
-
-## What remains uncertain
-
-Whether specific bright cloud features seen in this single image represent long-lived storm systems or shorter-lived atmospheric disturbances requires follow-up observations over subsequent months, something a single Webb image cannot settle on its own.
-
-Neptune's rings and atmosphere had waited more than thirty years for this level of renewed scrutiny; treat this image as a fresh vantage point on a planet still comparatively unexplored, not a finished study. From here, the ice-giant concept page situates Neptune within the broader family of icy outer planets.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Neptune is the outermost planet in the solar system and, along with Uranus, belongs to the ice-giant category — worlds whose interiors are dominated by water, ammonia, and methane ices around a rocky core, distinct in composition from the hydrogen-and-helium-dominated gas giants Jupiter and Saturn. Neptune has been visited up close by a spacecraft only once, during Voyager 2's 1989 flyby, which remains the definitive source for detailed studies of its rings, moons, and atmospheric structure.
 
@@ -1647,45 +1339,15 @@ Readers comparing this image with other solar system observations on Cosmic Gate
         },
       ],
       conceptIds: conceptIds(ctx.concepts, ["ocean-world"]),
-      quickMarkdown: `Webb's NIRSpec instrument captured Enceladus's water vapor plume extending roughly 9,600 kilometers into space, about 20 times the diameter of the small, icy moon, feeding material into Saturn's diffuse E ring. The image builds on more than a decade of Cassini observations that first discovered the plumes and later flew through them.
+      summaryMarkdown: `Webb's NIRSpec instrument captured Enceladus's water vapor plume extending roughly 9,600 kilometers into space, about 20 times the diameter of the small, icy moon, feeding material into Saturn's diffuse E ring. The image builds on more than a decade of Cassini observations that first discovered the plumes and later flew through them.
 
 Cassini's earlier flybys found organic molecules and mineral grains consistent with hydrothermal activity on the floor of a global subsurface ocean beneath Enceladus's icy shell, making it a leading ocean world in the search for potentially habitable environments. Webb's contribution is monitoring the plume's scale from a distance, not a search for life.
 
 **Takeaway:** Webb confirms Enceladus's plume remains active and enormous relative to the moon, extending the long-term monitoring Cassini began.
 
 **Uncertainty:** detecting habitability-relevant chemistry is not the same as detecting life, and no life-detection claim is supported by this observation.`,
-      learnMarkdown: `## What happened
 
-In May 2023, researchers using Webb's NIRSpec instrument reported observing Enceladus's water vapor plume extending approximately 9,600 kilometers from the moon's surface, roughly 20 times Enceladus's own diameter, with material visibly feeding Saturn's broad, diffuse E ring. Enceladus is a small, icy moon of Saturn known to harbor a global subsurface ocean beneath its frozen crust.
-
-The observation extends a research program that began with NASA's Cassini spacecraft, which discovered the plumes in 2005 and later flew directly through them multiple times during its mission at Saturn, sampling their composition directly. The official ESA/Webb release (weic2314) frames this new observation explicitly as continued monitoring of known plume activity rather than a new discovery of the plumes themselves.
-
-## Why it matters
-
-Enceladus is one of the most compelling ocean worlds in the solar system for astrobiology research, because Cassini's direct sampling of its plumes found organic molecules and silica nanograins consistent with ongoing hydrothermal activity at the ocean floor — the same kind of environment that, on Earth, hosts thriving microbial ecosystems near seafloor vents.
-
-Webb's ability to observe the plume's full extent from Earth orbit, rather than requiring a spacecraft to fly directly through it, matters because it allows long-term monitoring of plume activity and variability without the cost of a dedicated mission, complementing rather than replacing detailed in-situ sampling.
-
-Linking the ocean-world concept here is essential to keeping this discovery properly scoped: Enceladus's status as an ocean world with potentially habitable conditions is well supported by prior Cassini data, but "potentially habitable" describes chemistry and environment, not a detection of any organism. Cosmic Gateway keeps that boundary explicit every time Enceladus appears.
-
-## How it was measured
-
-NIRSpec captured spectra of the plume material at near-infrared wavelengths, allowing researchers to trace its extent and estimate its scale relative to the moon's small size. Measuring a plume this large from Earth orbit, roughly 1.2 billion kilometers away at Saturn's distance, demonstrates the sensitivity Webb brings to monitoring known but distant phenomena.
-
-Detailed chemical composition, including the specific organic molecules and mineral evidence for hydrothermal activity, came from Cassini's direct, in-situ sampling during its plume flybys years earlier; Webb's remote spectroscopy is well suited to tracking scale and activity level over time but does not by itself replace that kind of direct compositional sampling.
-
-## What scientists thought before
-
-Cassini's 2005 discovery of Enceladus's plumes, followed by repeated flybys through the plume material over the following decade, established the existence of a subsurface global ocean, detected organic molecules, and found silica nanograins interpreted as evidence for hydrothermal vent activity on the ocean floor. That body of work made Enceladus one of the solar system's top astrobiology targets well before this Webb observation.
-
-The prior scientific consensus already treated Enceladus as a genuine ocean world with habitability-relevant chemistry, while explicitly stopping short of any life-detection claim. This Webb observation is consistent with, and extends, that established picture rather than revising it.
-
-## What remains uncertain
-
-Whether Enceladus's subsurface ocean actually hosts any form of life remains entirely unknown; Cassini's chemical findings establish plausible ingredients and energy sources for life as understood on Earth, not evidence that life is present.
-
-Every time Enceladus appears in coverage promising exciting news, check specifically whether the claim is about plume chemistry and scale (well supported) or about life itself (not supported by any current evidence). From here, the ocean-world concept page lays out exactly what is and is not known about this moon's habitability potential.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Enceladus is a small, icy moon of Saturn, roughly 500 kilometers in diameter, that NASA's Cassini spacecraft discovered in 2005 to be venting plumes of water vapor and ice grains from fissures near its south pole. Subsequent Cassini flybys through the plume material, conducted over more than a decade at Saturn, found organic molecules and silica nanograins consistent with ongoing hydrothermal activity at the floor of a global subsurface ocean beneath the moon's icy shell.
 
@@ -1800,45 +1462,15 @@ Readers comparing Enceladus with K2-18b, another ocean-adjacent discovery covere
       ],
       conceptIds: conceptIds(ctx.concepts, ["dark-matter", "dark-energy"]),
       lessonIds: infraredLesson,
-      quickMarkdown: `In November 2023, the European Space Agency released Euclid's first test images, including a wide-field view of the Perseus Cluster capturing roughly 1,000 galaxies belonging to the cluster itself alongside more than 100,000 additional, more distant background galaxies in a single frame.
+      summaryMarkdown: `In November 2023, the European Space Agency released Euclid's first test images, including a wide-field view of the Perseus Cluster capturing roughly 1,000 galaxies belonging to the cluster itself alongside more than 100,000 additional, more distant background galaxies in a single frame.
 
 Euclid is designed for a six-year survey covering roughly a third of the sky, mapping the large-scale distribution of galaxies precisely enough to constrain dark matter and dark energy through subtle gravitational lensing effects. This Perseus image was an early demonstration of field of view and image quality, not a result about dark matter or dark energy itself.
 
 **Takeaway:** Euclid's early Perseus Cluster image showcases the survey's scale and clarity ahead of the multi-year cosmological survey it was built to conduct.
 
 **Uncertainty:** no dark-matter or dark-energy constraints come from this single demonstration image; those results depend on years of accumulated survey data.`,
-      learnMarkdown: `## What happened
 
-In November 2023, the European Space Agency released a set of early test images from its Euclid space telescope, including a striking wide-field view of the Perseus Cluster of galaxies. The image captured roughly 1,000 galaxies belonging to the cluster itself, along with more than 100,000 additional, far more distant background galaxies visible in the same single frame.
-
-Euclid launched in 2023 with the specific goal of mapping the distribution of galaxies across roughly a third of the sky over a planned six-year survey, using that map to study dark matter and dark energy through subtle distortions in galaxy shapes caused by gravitational lensing. The Perseus Cluster image was explicitly presented as an early demonstration of image quality and field of view, not as a scientific survey result.
-
-## Why it matters
-
-Euclid exists to address two of the biggest open questions in cosmology: the nature of dark matter, which outweighs ordinary matter in the universe but has never been directly detected, and dark energy, the mysterious component driving the universe's accelerating expansion. Both are studied indirectly, through their gravitational effects on how galaxies are distributed and how their images are subtly distorted by intervening mass.
-
-The Perseus image matters less for what it reveals about any single cluster and more for what it demonstrates about the mission's capability: a wide field of view combined with sharp resolution across a huge number of galaxies simultaneously, exactly the combination needed to detect the faint, statistical lensing signals dark matter and dark energy research depends on.
-
-Linking the dark-matter and dark-energy concepts here keeps the mission's actual goal visible: this single image is a promising preview, not a result. The real scientific payoff requires accumulating and analyzing data across a large fraction of the sky over years, a process this early release image is only the opening step toward.
-
-## How it was measured
-
-Euclid uses a wide-field visible-light camera alongside a near-infrared instrument to image large patches of sky in a single pointing, combining a broad field of view with resolution sharp enough to measure subtle distortions in distant galaxy shapes. The Perseus Cluster observation showcased both capabilities working together on a single, information-rich field.
-
-Extracting dark matter and dark energy constraints from Euclid's data requires statistically analyzing the shapes and positions of enormous numbers of galaxies across the full survey area, a process fundamentally different from and far more extensive than producing a single demonstration image. That full analysis depends on data collected over years, following a specific observing strategy designed for the statistical power required.
-
-## What scientists thought before
-
-Before Euclid, other surveys and telescopes, including ground-based projects and the Dark Energy Survey, had already used similar gravitational-lensing techniques on smaller sky areas or shallower data to constrain dark matter and dark energy properties, establishing the general method Euclid extends. The Perseus Cluster itself was already a well-studied structure in the local universe.
-
-What was missing before Euclid was a space-based mission specifically designed to combine Euclid's field of view, depth, and image sharpness across a large fraction of the entire sky, which is what its six-year survey aims to provide at a scale and precision beyond earlier ground-based lensing surveys.
-
-## What remains uncertain
-
-No dark-matter or dark-energy conclusions should be drawn from this single early Perseus Cluster image; those results require the accumulated statistical power of Euclid's full multi-year survey, which was still in its early stages when this image was released.
-
-Treat striking early-release images like this one as a preview of survey capability, not a scientific finding in themselves — a distinction worth applying to any big space telescope's debut images. From here, the dark-matter and dark-energy concept pages explain exactly what Euclid's eventual survey is trying to measure.`,
-      deepMarkdown: `## Context
+      articleMarkdown: `## Context
 
 Euclid is a European Space Agency mission launched in 2023, designed to conduct a six-year survey covering roughly a third of the sky with the specific goal of constraining the properties of dark matter and dark energy — two components that together account for the vast majority of the universe's total mass-energy content, yet remain poorly understood. The mission's core method relies on measuring subtle distortions in the observed shapes of distant galaxies, caused by gravitational lensing from intervening mass, including dark matter that cannot be seen directly.
 

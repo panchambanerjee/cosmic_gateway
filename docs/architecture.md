@@ -101,7 +101,7 @@ sequenceDiagram
   N->>P: findUnique published discovery
   P->>DB: SQL
   DB-->>N: row + versions, sources, concepts
-  N-->>U: HTML Quick/Learn/Deep UI
+  N-->>U: HTML Summary/Article UI
 
   U->>N: GET /admin
   N->>M: check signed cookie
@@ -124,7 +124,7 @@ sequenceDiagram
 | `lib/status.ts` | Allowed editorial status transitions |
 | `lib/admin-auth.ts` | Password verify, signed session cookie |
 | `middleware.ts` | Gate `/admin` and `/api/v1/admin/*` |
-| `components/discovery-reader.tsx` | Quick / Learn / Deep reader |
+| `components/discovery-reader.tsx` | Summary / Article reader |
 | `app/api/health` | App + DB reachability |
 
 ---
@@ -151,7 +151,7 @@ sequenceDiagram
 Editorial workflow for discoveries:  
 `draft → science_review → rights_review → ready_to_publish → published → archived`
 
-Publish gates require at least one source and either a rights-cleared hero image or an explicit no-image exception. Each published discovery stores Quick / Learn / Deep markdown versions, linked concepts and lessons, evidence status, and source records (primary facilities/papers first; news tips secondary).
+Publish gates require at least one source and either a rights-cleared hero image or an explicit no-image exception. Each published discovery stores Summary / Article markdown versions, linked concepts and lessons, evidence status, and source records (primary facilities/papers first; news tips secondary).
 
 **Evidence status policy:** `peer_reviewed` requires at least one linked `paper` source. Facility announcements without a paper link use `official_release`. Track per-article badges in [content/article-concept-links.md](./content/article-concept-links.md).
 

@@ -562,49 +562,14 @@ When you read a Webb headline about an unexpectedly mature early galaxy, ask two
     },
   });
 
-  const quickMarkdown = `Webb's infrared deep fields revealed galaxies that look surprisingly developed for the universe's first few hundred million years. Instead of only faint, immature clumps, astronomers found systems with more starlight and structure than many simple growth models expected.
+  const summaryMarkdown = `Webb's infrared deep fields revealed galaxies that look surprisingly developed for the universe's first few hundred million years. Instead of only faint, immature clumps, astronomers found systems with more starlight and structure than many simple growth models expected.
 
 That does not mean cosmology is broken. It means the earliest chapter of galaxy assembly was more efficient — or more bursty — than the simplest textbook sketches suggested. Infrared sensitivity is what made the census possible: expansion stretches ancient starlight into wavelengths Webb was built to collect, so deep fields become catalogs of early systems rather than only postcard images.
 
 **Takeaway:** the early universe built complex galaxies faster than many people assumed, and infrared telescopes are the reason we can finally see it.`;
 
-  const learnMarkdown = `## What happened
 
-Observations with the James Webb Space Telescope uncovered distant galaxies that appear more mature than expected for cosmic dawn. In deep infrared images, some systems are luminous enough — and structured enough — that they challenge the most naive versions of early galaxy growth.
-
-Webb sees this population because cosmic expansion stretches ancient ultraviolet and optical light into the infrared. What once required heroic guesses from Hubble and ground-based surveys is now a systematic infrared census. Deep fields such as SMACS 0723 are not just postcard images; they are dense catalogs of galaxies across cosmic time, stacked into a single frame.
-
-The surprise is quantitative as well as visual. Some candidates imply stellar masses or star-formation rates that press against simple expectations for how quickly gas could cool and form stars so soon after the Big Bang. That pressure is scientifically useful only when distance and luminosity are measured carefully.
-
-## Why it matters
-
-Galaxy formation is a bridge between dark matter, gas physics, and star formation. If stars assembled quickly in early dark matter halos, then cooling, feedback, and chemical enrichment timelines need revision. This is not only a pretty-picture story. It is a stress test of how cosmic structure forms.
-
-For learners, the discovery is also a gateway into three durable ideas: redshift as look-back time, spectroscopy as distance confirmation, and the difference between a candidate and a confirmed high-redshift galaxy. Once those ideas click, future headlines become easier to evaluate instead of easier to overreact to.
-
-Public understanding also benefits from patience. Early Webb papers and press releases arrived quickly. Follow-up spectra, larger samples, and independent teams then sorted durable results from temporary surprises. A learning product should teach that process, not hide it.
-
-## How it was measured
-
-Webb's NIRCam imaging identifies color-selected candidates. Photometric redshifts estimate distance from those colors by comparing observed brightness across filters with model galaxy templates. Spectroscopy — with instruments such as NIRSpec — confirms redshift by measuring spectral features shifted by expansion.
-
-That pipeline matters for reading headlines. An exciting candidate can become less extreme after a spectrum, or remain surprising after confirmation. Evidence status on Cosmic Gateway is meant to keep that distinction visible. When a claim rests on photometry alone, uncertainty should be louder than the headline.
-
-Additional complications include gravitational lensing, which can magnify background galaxies behind massive clusters, and dust, which can hide or reshape the light we use to infer stellar mass. Active galactic nuclei can also dominate an object's brightness and complicate interpretations framed purely in terms of stars.
-
-## What scientists thought before
-
-Before Webb, hierarchical models and earlier surveys sketched an early universe of relatively small, messy star-forming systems assembling gradually through mergers. Extremely luminous galaxies at the highest redshifts were expected to be rare. Hubble had already found remarkable distant objects, but the infrared window remained incomplete.
-
-The prior picture was not wrong so much as incomplete. Cosmology still expects structure to grow from small to large. The open question is the efficiency and timing of star formation inside the earliest dark matter halos — how fast baryons convert into stars, and how feedback regulates that conversion.
-
-## What remains uncertain
-
-Some early claims relied on photometric estimates alone. Dust, gravitational lensing, active nuclei, and redshift errors can all inflate apparent maturity. Larger spectroscopic samples decide which surprises survive. Responsible reading preserves uncertainty while still explaining why the result is interesting.
-
-If you leave this Learn layer with one habit, make it this: ask how distance was measured, what could fake the signal, and which concept you need next. From here, open the redshift and spectroscopy concept pages, then try the linked lesson on why infrared sees the early universe.`;
-
-  const deepMarkdown = `## Context: why early galaxies became a Webb flashpoint
+  const articleMarkdown = `## Context: why early galaxies became a Webb flashpoint
 
 Before the James Webb Space Telescope, Hubble Space Telescope and ground-based surveys sketched the first billion years of cosmic history as a messy construction site. Hierarchical models predicted gradual assembly: small clumps of dark matter and gas merge into larger galaxies over time. Extremely luminous, morphologically advanced systems at the highest redshifts were expected to be rare.
 
@@ -699,9 +664,8 @@ If you take one learning habit from this discovery, make it this: every dramatic
         create: [
           {
             versionNumber: 1,
-            quickMarkdown,
-            learnMarkdown,
-            deepMarkdown,
+            summaryMarkdown,
+            articleMarkdown,
             whatHappenedMarkdown:
               "Webb identified distant galaxies that look more luminous and structured than many early-universe models anticipated.",
             whyItMattersMarkdown:
@@ -814,41 +778,6 @@ The detection used SPHERE, an instrument with a coronagraph originally built to 
 
 **Takeaway:** Betelgeuse likely has a companion, and high-contrast imaging made the case visual rather than only statistical.`;
 
-  const betelgeuseLearn = `## What happened
-
-A team led by Miguel Montargès used the SPHERE instrument on ESO's Very Large Telescope to image a faint source consistent with Betelgeuse B, a companion orbiting the red supergiant Betelgeuse. The observation was timed for a predicted maximum elongation, when the companion should be easiest to separate from the primary's overwhelming glare.
-
-The result, reported through an ESO release and a peer-reviewed Astronomy & Astrophysics paper, is the clearest visual evidence yet that Betelgeuse is part of a binary star system. For about a century, astronomers had suspected a companion from long brightness cycles and other clues. This campaign turns that suspicion into a resolved point source next to one of the sky's most familiar stars.
-
-The candidate sits close enough that ordinary imaging would drown it. SPHERE's coronagraph and adaptive optics suppress Betelgeuse's light so a much fainter neighbor can emerge. That technical leap is why the same exoplanet-hunting toolkit now answers a classical stellar puzzle.
-
-## Why it matters
-
-Betelgeuse's brightness changes for more than one reason. Dust ejections and pulsations explained dramatic dimming episodes in recent years, but a longer secondary period kept the companion idea alive. A gravitationally bound partner could help shape that longer cycle and may influence the red supergiant's wind, surface activity, and late evolution.
-
-The discovery also matters pedagogically. It shows that instruments built for one frontier — imaging exoplanets — can reopen older questions about nearby giants. Learning terms such as Betelgeuse, red supergiant, binary star, and coronagraph make the measurement intelligible.
-
-For Cosmic Gateway readers, the story is also a source lesson. Space.com and similar outlets can tip you to a result. The durable account lives in the facility release and the journal paper, where methods, significance, and caveats are stated carefully.
-
-## How it was measured
-
-SPHERE combines extreme adaptive optics with a coronagraph that blocks most of Betelgeuse's light. High-contrast post-processing then searches for a faint point source at the predicted separation and position angle. The published analysis reports a detection at high significance, with an estimated companion mass of roughly two to three solar masses if the stars formed together and share an age.
-
-That mass estimate is model-dependent. It assumes coevality and uses brightness plus evolutionary tracks. The key observational claim is simpler: a compact source appears where a companion should be when elongation is favorable. Timing relative to earlier predictions strengthens the interpretation beyond a random speck in residual starlight.
-
-Readers should separate the imaging detection from later dynamical proof. Seeing a source once at the right place is powerful. Watching it move to the other side of the orbit is how astronomers cement that the source is gravitationally bound rather than a chance alignment or residual artifact.
-
-## What scientists thought before
-
-For decades, Betelgeuse was treated as a solitary red supergiant whose variability came from pulsations, convection, and dust. The companion hypothesis never fully died because some photometric and spectroscopic patterns looked hard to explain with a single star alone. Earlier work around 2024 sharpened the case by predicting when a putative companion would reach favorable separation for direct imaging — roughly late 2024.
-
-That forecast set up the VLT/SPHERE campaign. In other words, this was not a lucky snapshot. It was a planned observation guided by orbital expectations. The prior understanding was therefore mixed: dust and pulsations were established for short-term dimming, while a binary explanation remained plausible for longer cycles and awaited a decisive visual test.
-
-## What remains uncertain
-
-The team still wants a second-epoch observation on the other side of the orbit to confirm that the source moves as a bound companion should. Until then, the evidence is strong but not absolute. Chance alignments and residual speckles can still be debated in good faith.
-
-Uncertainty also remains about how strongly the companion shapes Betelgeuse's future — including mass loss and the path toward a supernova. Responsible reading keeps those open questions visible while still explaining why the image is a breakthrough. If you leave this Learn layer with one habit, ask what was imaged, what still needs orbital confirmation, and which concept unlocks the next sentence.`;
 
   const betelgeuseDeep = `## Context: why Betelgeuse's companion became a flashpoint
 
@@ -940,9 +869,8 @@ If you take one learning habit from this discovery, make it this: every dramatic
         create: [
           {
             versionNumber: 1,
-            quickMarkdown: betelgeuseQuick,
-            learnMarkdown: betelgeuseLearn,
-            deepMarkdown: betelgeuseDeep,
+            summaryMarkdown: betelgeuseQuick,
+            articleMarkdown: betelgeuseDeep,
             whatHappenedMarkdown:
               "VLT/SPHERE imaged a faint source consistent with Betelgeuse B near the red supergiant Betelgeuse.",
             whyItMattersMarkdown:
@@ -1253,14 +1181,12 @@ Light bends near a black hole. The dark central region in EHT images is a shadow
   });
   console.log("Reading times (approx minutes):", {
     earlyGalaxies: {
-      quick: estimateReadingMinutes(quickMarkdown),
-      learn: estimateReadingMinutes(learnMarkdown),
-      deep: estimateReadingMinutes(deepMarkdown),
+      summary: estimateReadingMinutes(summaryMarkdown),
+      article: estimateReadingMinutes(articleMarkdown),
     },
     betelgeuse: {
-      quick: estimateReadingMinutes(betelgeuseQuick),
-      learn: estimateReadingMinutes(betelgeuseLearn),
-      deep: estimateReadingMinutes(betelgeuseDeep),
+      summary: estimateReadingMinutes(betelgeuseQuick),
+      article: estimateReadingMinutes(betelgeuseDeep),
     },
   });
 }

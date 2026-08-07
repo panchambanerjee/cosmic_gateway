@@ -30,8 +30,8 @@ export function DiscoveryCard({ discovery }: { discovery: DiscoveryListItem }) {
             </p>
           ) : null}
           <p className="mt-4 text-sm text-star-200/60">
-            Quick {discovery.readingTimes.quick} · Learn{" "}
-            {discovery.readingTimes.learn} · Deep {discovery.readingTimes.deep}{" "}
+            Summary {discovery.readingTimes.summary} · Article{" "}
+            {discovery.readingTimes.article}{" "}
             min
           </p>
         </div>

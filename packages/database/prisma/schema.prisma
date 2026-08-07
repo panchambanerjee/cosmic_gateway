@@ -148,9 +148,8 @@ model DiscoveryVersion {
   id                          String   @id @default(uuid()) @db.Uuid
   discoveryId                 String   @map("discovery_id") @db.Uuid
   versionNumber               Int      @map("version_number")
-  quickMarkdown               String   @map("quick_markdown")
-  learnMarkdown               String   @map("learn_markdown")
-  deepMarkdown                String   @map("deep_markdown")
+  summaryMarkdown             String   @map("summary_markdown")
+  articleMarkdown             String   @map("article_markdown")
   whatHappenedMarkdown        String   @map("what_happened_markdown")
   whyItMattersMarkdown        String   @map("why_it_matters_markdown")
   howMeasuredMarkdown         String   @map("how_measured_markdown")
