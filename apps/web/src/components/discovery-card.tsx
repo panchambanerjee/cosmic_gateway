@@ -29,11 +29,6 @@ export function DiscoveryCard({ discovery }: { discovery: DiscoveryListItem }) {
               {discovery.subtitle}
             </p>
           ) : null}
-          <p className="mt-4 text-sm text-star-200/60">
-            Summary {discovery.readingTimes.summary} · Article{" "}
-            {discovery.readingTimes.article}{" "}
-            min
-          </p>
         </div>
         {discovery.heroImage ? (
           <CreditedImage
